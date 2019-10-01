@@ -1,0 +1,598 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Countertops</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/4.3.1/flatly/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="counterScript.js"></script>
+    <style>
+        .brand {
+            border: 2px solid white;
+            border-radius: 12px;
+            padding: 4px;
+        }
+
+        #header {
+            background: url('images/countertops/countertop_banner.jpg')no-repeat fixed;
+            height: 25em;
+            font-weight: bold;
+            background-size: 100%;
+            color: black;
+        }
+
+        .jumbo {
+            background: rgba(255, 255, 255, 0.5);
+            color: black;
+            border-radius: 20px;
+        }
+
+        #countertops a:hover{
+            color:white;
+        }
+
+        section{
+            text-align:center;
+        }
+
+        hr{
+            width:85%;
+        }
+
+        .offset:before {
+            display: block;
+            content: " ";
+            height: 150px;
+            margin-top: -150px;
+            visibility: hidden;
+        }
+
+    </style>
+
+</head>
+<body>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-md bg-primary navbar-dark sticky-top">
+        <a class="navbar-brand brand" href="index.html">HDS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav ml-auto">
+
+                <!--Links-->
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown active">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Products</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="appliances.html">Appliances</a>
+                        <a class="dropdown-item" href="cabinets.html">Cabinets</a>
+                        <a class="dropdown-item" href="lighting.html">Lighting</a>
+                        <a class="dropdown-item" href="plumbing.html">Plumbing</a>
+                        <a class="dropdown-item active" href="countertops.html">Countertops</a>
+                        <a class="dropdown-item" href="flooring.html">Flooring</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="services.html">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="locations.html">Locations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="aboutUs.html">About us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--Banner-->
+    <div class="jumbotron" id="header">
+        <div class="row">
+            <div class="col-9">
+                <div class="jumbo py-3 px-3">
+                    <h1 class="display-3">Countertops</h1>
+                    <p class="lead">We have an endless number of options for our countertops.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="offset" id="countertops">
+        <div class="jumbotron bg-light">
+            <div class="container">
+                <h2>
+                    Just pick the material, the color scheme and edge style.  Then, we'll have it made and
+                    installed.
+                </h2>
+                <div class="row mt-3">
+                    <div class="col">
+                        <button type="button" class="btn-lg btn-primary" onclick="location.href='#granite'">Granite</button>
+                    </div>
+                    <div class="col">
+                        <button type="button" class="btn-lg btn-primary" onclick="location.href='#onyx'">Onyx</button>
+                    </div>
+                    <div class="col">
+                        <button type="button" class="btn-lg btn-primary" onclick="location.href='#quartz'">Quartz</button>
+                    </div>
+                    <div class="col">
+                        <button type="button" class="btn-lg btn-primary" onclick="location.href='#soapstone'">Soapstone</button>
+                    </div>
+                    <div class="col">
+                        <button type="button" class="btn-lg btn-primary" onclick="location.href='#edges'">Edges</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="offset" id="granite">
+        <div class="container">
+            <div class="row">
+                <div class="col-8">
+                    <!--Carousel-->
+                    <div class="carousel slide" id="graniteCar" data-ride="carousel">
+
+                        <!--Granite Images-->
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img class="img-fluid" src="images/countertops/granite/amarone.jpg" />
+                            </div>
+                            <div class="carousel-item">
+                                <img class="img-fluid" src="images/countertops/granite/amber_yellow.jpg" />
+                            </div>
+                            <div class="carousel-item">
+                                <img class="img-fluid" src="images/countertops/granite/antico_cream.jpg" />
+                            </div>
+                            <div class="carousel-item">
+                                <img class="img-fluid" src="images/countertops/granite/blanco_romano.jpg" />
+                            </div>
+                            <div class="carousel-item">
+                                <img class="img-fluid" src="images/countertops/granite/costa_emerald.jpg" />
+                            </div>
+                            <div class="carousel-item">
+                                <img class="img-fluid" src="images/countertops/granite/crema_perla.jpg" />
+                            </div>
+                            <div class="carousel-item">
+                                <img class="img-fluid" src="images/countertops/granite/desert_dream.jpg" />
+                            </div>
+                            <div class="carousel-item">
+                                <img class="img-fluid" src="images/countertops/granite/river_white.jpg" />
+                            </div>
+                            <div class="carousel-item">
+                                <img class="img-fluid" src="images/countertops/granite/snowy_oak.jpg" />
+                            </div>
+                            <div class="carousel-item">
+                                <img class="img-fluid" src="images/countertops/granite/starry_night.jpg" />
+                            </div>
+                            <div class="carousel-item">
+                                <img class="img-fluid" src="images/countertops/granite/supreme_fantasy.jpg" />
+                            </div>
+                            <div class="carousel-item">
+                                <img class="img-fluid" src="images/countertops/granite/tropical_green.jpg" />
+                            </div>
+                            <div class="carousel-item">
+                                <img class="img-fluid" src="images/countertops/granite/vintage.jpg" />
+                            </div>
+                            <div class="carousel-item">
+                                <img class="img-fluid" src="images/countertops/granite/white_valley.jpg" />
+                            </div>
+                        </div>
+
+                        <!--Controls-->
+                        <a class="carousel-control-prev" href="#graniteCar" data-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#graniteCar" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-4 my-auto">
+                    <h1>Granite</h1>
+                    <p class="lead">
+                        Some stuff about granite.  Some stuff about granite. Some stuff about
+                        granite.
+                    </p>
+                    <p class="lead font-weight-bold">Some of our options include:</p>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="btn-group-vertical">
+                                <button type="button" class="btn btn-primary" data-target="#graniteCar" data-slide-to="0">
+                                    Amarone
+                                </button>
+                                <button type="button" class="btn btn-primary" data-target="#graniteCar" data-slide-to="1">
+                                    Amber Yellow
+                                </button>
+                                <button type="button" class="btn btn-primary" data-target="#graniteCar" data-slide-to="2">
+                                    Antico Cream
+                                </button>
+                                <button type="button" class="btn btn-primary" data-target="#graniteCar" data-slide-to="3">
+                                    Blanco Romano
+                                </button>
+                                <button type="button" class="btn btn-primary" data-target="#graniteCar" data-slide-to="4">
+                                    Costa Emerald
+                                </button>
+                                <button type="button" class="btn btn-primary" data-target="#graniteCar" data-slide-to="5">
+                                    Crema Perla
+                                </button>
+                                <button type="button" class="btn btn-primary" data-target="#graniteCar" data-slide-to="6">
+                                    Desert Dream
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <!--Granite Buttons-->
+                            <div class="btn-group-vertical">
+                                <button type="button" class="btn btn-primary" data-target="#graniteCar" data-slide-to="7">
+                                    River White
+                                </button>
+                                <button type="button" class="btn btn-primary" data-target="#graniteCar" data-slide-to="8">
+                                    Snowy Oak
+                                </button>
+                                <button type="button" class="btn btn-primary" data-target="#graniteCar" data-slide-to="9">
+                                    Starry Night
+                                </button>
+                                <button type="button" class="btn btn-primary" data-target="#graniteCar" data-slide-to="10">
+                                    Supreme Fantasy
+                                </button>
+                                <button type="button" class="btn btn-primary" data-target="#graniteCar" data-slide-to="11">
+                                    Tropical Green
+                                </button>
+                                <button type="button" class="btn btn-primary" data-target="#graniteCar" data-slide-to="12">
+                                    Vintage
+                                </button>
+                                <button type="button" class="btn btn-primary" data-target="#graniteCar" data-slide-to="13">
+                                    White Valley
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="my-5" />
+
+    <section class="offset" id="onyx">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 my-auto">
+                    <h1>Onyx</h1>
+                    <p class="lead">Available with backlighting</p>
+                    <div class="row">
+                        <div class="col-6">
+                            <!--Onyx Buttons-->
+                            <div class="btn-group-vertical">
+                                <button type="button" class="btn btn-primary" data-target="#onyxCar" data-slide-to="0">
+                                    Aged Oak
+                                </button>
+                                <button type="button" class="btn btn-primary" data-target="#onyxCar" data-slide-to="1">
+                                    Blizzard
+                                </button>
+                                <button type="button" class="btn btn-primary" data-target="#onyxCar" data-slide-to="2">
+                                    Cream Basin
+                                </button>
+                                <button type="button" class="btn btn-primary" data-target="#onyxCar" data-slide-to="3">
+                                    Dark Waters
+                                </button>
+                                <button type="button" class="btn btn-primary" data-target="#onyxCar" data-slide-to="4">
+                                    Meadow Brook
+                                </button>
+                                <button type="button" class="btn btn-primary" data-target="#onyxCar" data-slide-to="5">
+                                    Mellow Yellow
+                                </button>
+                                <button type="button" class="btn btn-primary" data-target="#onyxCar" data-slide-to="6">
+                                    Molden Mount
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="btn-group-vertical">
+                                <button type="button" class="btn btn-primary" data-target="#onyxCar" data-slide-to="7">
+                                    Moon Beam
+                                </button>
+                                <button type="button" class="btn btn-primary" data-target="#onyxCar" data-slide-to="8">
+                                    Peacock
+                                </button>
+                                <button type="button" class="btn btn-primary" data-target="#onyxCar" data-slide-to="9">
+                                    Pearl Wisdom
+                                </button>
+                                <button type="button" class="btn btn-primary" data-target="#onyxCar" data-slide-to="10">
+                                    Rainbow
+                                </button>
+                                <button type="button" class="btn btn-primary" data-target="#onyxCar" data-slide-to="11">
+                                    Ring of Fire
+                                </button>
+                                <button type="button" class="btn btn-primary" data-target="#onyxCar" data-slide-to="12">
+                                    Sandy Skies
+                                </button>
+                                <button type="button" class="btn btn-primary" data-target="#onyxCar" data-slide-to="13">
+                                    Sun Spot
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-8">
+                    <!--Carousel-->
+                    <div class="carousel slide" id="onyxCar" data-ride="carousel">
+
+                        <!--Onyx Images-->
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img class="img-fluid" src="images/countertops/onyx/aged_oak.jpg" />
+                            </div>
+                            <div class="carousel-item">
+                                <img class="img-fluid" src="images/countertops/onyx/blizzard.jpg" />
+                            </div>
+                            <div class="carousel-item">
+                                <img class="img-fluid" src="images/countertops/onyx/cream_basin.jpg" />
+                            </div>
+                            <div class="carousel-item">
+                                <img class="img-fluid" src="images/countertops/onyx/dark_waters.jpg" />
+                            </div>
+                            <div class="carousel-item">
+                                <img class="img-fluid" src="images/countertops/onyx/meadow_brook.jpg" />
+                            </div>
+                            <div class="carousel-item">
+                                <img class="img-fluid" src="images/countertops/onyx/mellow_yellow.jpg" />
+                            </div>
+                            <div class="carousel-item">
+                                <img class="img-fluid" src="images/countertops/onyx/molden_mount.jpg" />
+                            </div>
+                            <div class="carousel-item">
+                                <img class="img-fluid" src="images/countertops/onyx/moon_beam.jpg" />
+                            </div>
+                            <div class="carousel-item">
+                                <img class="img-fluid" src="images/countertops/onyx/peacock.jpg" />
+                            </div>
+                            <div class="carousel-item">
+                                <img class="img-fluid" src="images/countertops/onyx/pearl_wisdom.jpg" />
+                            </div>
+                            <div class="carousel-item">
+                                <img class="img-fluid" src="images/countertops/onyx/rainbow.jpg" />
+                            </div>
+                            <div class="carousel-item">
+                                <img class="img-fluid" src="images/countertops/onyx/ring_of_fire.jpg" />
+                            </div>
+                            <div class="carousel-item">
+                                <img class="img-fluid" src="images/countertops/onyx/sandy_skies.jpg" />
+                            </div>
+                            <div class="carousel-item">
+                                <img class="img-fluid" src="images/countertops/onyx/sun_spot.jpg" />
+                            </div>
+                        </div>
+
+                        <!--Controls-->
+                        <a class="carousel-control-prev" href="#onyxCar" data-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#onyxCar" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="my-5" />
+
+    <section class="offset" id="quartz">
+        <div class="container">
+            <div class="row">
+                <div class="col-8">
+                    <!--Carousel-->
+                    <div class="carousel slide" id="quartzCar" data-ride="carousel">
+
+                        <!--Quartz Images-->
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img class="img-fluid" src="images/countertops/quartz/white_marbled.jpg" />
+                            </div>
+                            <div class="carousel-item">
+                                <img class="img-fluid" src="images/countertops/quartz/taupe.jpg" />
+                            </div>
+                            <div class="carousel-item">
+                                <img class="img-fluid" src="images/countertops/quartz/haze_blend.jpg" />
+                            </div>
+                            <div class="carousel-item">
+                                <img class="img-fluid" src="images/countertops/quartz/camel.jpg" />
+                            </div>
+                            <div class="carousel-item">
+                                <img class="img-fluid" src="images/countertops/quartz/midnight_black.jpg" />
+                            </div>
+                            <div class="carousel-item">
+                                <img class="img-fluid" src="images/countertops/quartz/swirl.jpg" />
+                            </div>
+                            <div class="carousel-item">
+                                <img class="img-fluid" src="images/countertops/quartz/traditional_cream.jpg" />
+                            </div>
+                            <div class="carousel-item">
+                                <img class="img-fluid" src="images/countertops/quartz/cherry.jpg" />
+                            </div>
+                            <div class="carousel-item">
+                                <img class="img-fluid" src="images/countertops/quartz/deep_mix.jpg" />
+                            </div>
+                            <div class="carousel-item">
+                                <img class="img-fluid" src="images/countertops/quartz/black_and_white.jpg" />
+                            </div>
+                            <div class="carousel-item">
+                                <img class="img-fluid" src="images/countertops/quartz/mint.jpg" />
+                            </div>
+                            <div class="carousel-item">
+                                <img class="img-fluid" src="images/countertops/quartz/custom_purple.jpg" />
+                            </div>
+                            <div class="carousel-item">
+                                <img class="img-fluid" src="images/countertops/quartz/grey.jpg" />
+                            </div>
+                            <div class="carousel-item">
+                                <img class="img-fluid" src="images/countertops/quartz/hot_pink.jpg" />
+                            </div>
+                        </div>
+
+                        <!--Controls-->
+                        <a class="carousel-control-prev" href="#quartzCar" data-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#quartzCar" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-4 my-auto">
+                    <h1>Quartz</h1>
+                    <div class="row">
+                        <div class="col-6">
+                            <!--Quartz Buttons-->
+                            <div class="btn-group-vertical">
+                                <button type="button" class="btn btn-primary" data-target="#quartzCar" data-slide-to="0">
+                                    White Marbled
+                                </button>
+                                <button type="button" class="btn btn-primary" data-target="#quartzCar" data-slide-to="1">
+                                    Taupe
+                                </button>
+                                <button type="button" class="btn btn-primary" data-target="#quartzCar" data-slide-to="2">
+                                    Haze Blend
+                                </button>
+                                <button type="button" class="btn btn-primary" data-target="#quartzCar" data-slide-to="3">
+                                    Camel
+                                </button>
+                                <button type="button" class="btn btn-primary" data-target="#quartzCar" data-slide-to="4">
+                                    Midnight Black
+                                </button>
+                                <button type="button" class="btn btn-primary" data-target="#quartzCar" data-slide-to="5">
+                                    Swirl
+                                </button>
+                                <button type="button" class="btn btn-primary" data-target="#quartzCar" data-slide-to="6">
+                                    Traditional Cream
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="btn-group-vertical">
+                                <button type="button" class="btn btn-primary" data-target="#quartzCar" data-slide-to="7">
+                                    Cherry
+                                </button>
+                                <button type="button" class="btn btn-primary" data-target="#quartzCar" data-slide-to="8">
+                                    Deep Mix
+                                </button>
+                                <button type="button" class="btn btn-primary" data-target="#quartzCar" data-slide-to="9">
+                                    Black and White
+                                </button>
+                                <button type="button" class="btn btn-primary" data-target="#quartzCar" data-slide-to="10">
+                                    Mint
+                                </button>
+                                <button type="button" class="btn btn-primary" data-target="#quartzCar" data-slide-to="11">
+                                    Custom Purple
+                                </button>
+                                <button type="button" class="btn btn-primary" data-target="#quartzCar" data-slide-to="12">
+                                    Grey
+                                </button>
+                                <button type="button" class="btn btn-primary" data-target="#quartzCar" data-slide-to="13">
+                                    Hot Pink
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="my-5" />
+
+    <section class="offset" id="soapstone">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 my-auto">
+                    <h1>Soapstone</h1>
+                    <p class="lead">
+                        Some stuff about soapstone.  Some stuff about soapstone.  Some stuff about
+                        soapstone.
+                    </p>
+                    <p class="lead font-weight-bold">Some of our options include:</p>
+                    <!--Soapstone Buttons-->
+                    <div class="btn-group-horizontal">
+                        <button type="button" class="btn btn-primary" data-target="#soapstoneCar" data-slide-to="0">
+                            Natural
+                        </button>
+                        <button type="button" class="btn btn-primary" data-target="#soapstoneCar" data-slide-to="1">
+                            Aged
+                        </button>
+                        <button type="button" class="btn btn-primary" data-target="#soapstoneCar" data-slide-to="2">
+                            Oiled
+                        </button>
+                    </div>
+                </div>
+                <div class="col-8">
+                    <!--Carousel-->
+                    <div class="carousel slide" id="soapstoneCar" data-ride="carousel">
+
+                        <!--Soapstone Images-->
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img class="img-fluid" src="images/countertops/soapstone/natural.jpg" />
+                            </div>
+                            <div class="carousel-item">
+                                <img class="img-fluid" src="images/countertops/soapstone/aged.jpg" />
+                            </div>
+                            <div class="carousel-item">
+                                <img class="img-fluid" src="images/countertops/soapstone/oiled.jpeg" />
+                            </div>
+                        </div>
+
+                        <!--Controls-->
+                        <a class="carousel-control-prev" href="#soapstoneCar" data-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#soapstoneCar" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Footer-->
+    <footer class="bg-primary">
+        <div class="footer text-white py-5 mt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-4">
+
+                    </div>
+                    <div class="col-4">
+                        <h4>Resources</h4>
+                        <a href="services.html">Fees</a><br />
+                        <a href="#">Manufacturers</a><br />
+                        <a href="empResources.html">Employee Resources</a>
+                    </div>
+                    <div class="col-4">
+                        <h4>Headquarters</h4>
+                        <p>
+                            101 Sedalia Dr<br />
+                            Pheonix, AZ<br />
+                            85001<br />
+                            <strong>Phone:</strong> 123-456-7890<br />
+                            <strong>Fax:</strong> 123-456-7890
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

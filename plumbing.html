@@ -1,0 +1,658 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Plumbing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/4.3.1/cyborg/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="plumbingScript.js"></script>
+    <style>
+        #bath{
+            display:none;
+            text-align:center;
+        }
+
+        body{
+            background: url('images/plumbing/flush.png')no-repeat fixed;
+            background-size: 100%;
+        }
+
+        .brand {
+            border: 2px solid white;
+            border-radius: 12px;
+            padding: 4px;
+        }
+
+        .card {
+            background: rgba(0, 0, 0, 0.4);
+            text-align: left;
+            height: 100%;
+        }
+
+        .card img {
+            border: 1px solid white;
+        }
+
+        .card:hover {
+            cursor: pointer;
+            background: rgba(0, 0, 0, 0.8)
+        }
+
+        .div {
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+        }
+
+        .div-bg {
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .div-bg:hover {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            cursor: pointer;
+        }
+
+        footer{
+            background: rgba(0, 0, 0, 0.8);
+            text-align: left;
+        }
+
+        footer h4{
+            text-decoration:underline;
+        }
+
+        #heading{
+            text-align:center;
+        }
+        
+        .jumbotron {
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+        }
+
+        #kitchen{
+            text-align:center;
+            display:none;
+        }
+
+        .modal h5, p{
+            text-align:left;
+        }
+
+        .modal p{
+            font-style:italic;
+        }
+
+        .top{
+            background:rgba(0, 0, 0, 0.5);
+        }
+
+        .top:hover {
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+        }
+       
+        .top h4 {
+            color: black;
+        }        
+
+        
+    </style>
+</head>
+<body onload="createProducts()">
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand brand" href="index.html">HDS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav ml-auto">
+
+                <!--Links-->
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown active">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Products</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="appliances.html">Appliances</a>
+                        <a class="dropdown-item" href="cabinets.html">Cabinets</a>
+                        <a class="dropdown-item" href="lighting.html">Lighting</a>
+                        <a class="dropdown-item active" href="plumbing.html">Plumbing</a>
+                        <a class="dropdown-item" href="countertops.html">Countertops</a>
+                        <a class="dropdown-item" href="flooring.html">Flooring</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="services.html">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="locations.html">Locations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="aboutUs.html">About us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="heading">
+        <div class="jumbotron">
+            <h1 class="mt-5">Plumbing</h1>
+            <p class="lead text-center">Handling water with class for a decade</p>
+        </div>
+
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+        <div class="container">
+            <div class="row">
+                <div class="col-5 div-bg my-5 py-3" id="kitchenBtn">
+                    <h4>Kitchen</h4>
+                    <p class="lead text-center">
+                        Explore are unique kitchen sinks and faucets
+                    </p>
+                </div>
+                <div class="col-2"></div>
+                <div class="col-5 div-bg my-5 py-3" id="bathBtn">
+                    <h4>Bath</h4>
+                    <p class="lead text-center">
+                        Check out are beutiful showers, tubs, sinks, and faucets
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kitchen">
+        <div class="jumbotron top" id="topKitchen">
+            <h4>Go to top</h4>
+            <h1>Kitchen</h1>
+        </div>
+
+        <!--Sinks-->
+        <div class="container my-5">
+            <div class="row div">
+                <div class="col-2">
+                    <h1 class="mt-4">Sinks</h1>
+                </div>
+                <div class="col-1 align-self-center div-bg" id="kSinksLeft">
+                    <h2><</h2>
+                </div>
+
+                <!--Sink 1-->
+                <div class="col">
+                    <div class="card" data-toggle="modal" data-target="#kSinkModal1">
+                        <div class="card-header">
+                            <img class="img-fluid kSinkImg1" src="images/plumbing/kitchen/sink_divider.jpg" />
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title kSinkBrand1">Sinkster</h5>
+                            <p class="card-text kSinkDesc1">Sink with mini-divider</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="kSinkModal1">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h2 class="modal-title ml-5 kSinkBrand1">Sinkster</h2>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <img class="img-fluid kSinkImg1" src="images/plumbing/kitchen/sink_divider.jpg" />
+                                <h5 class="mt-3 ml-5 kSinkDesc1">Sink with mini-divider</h5>
+                                <p class="ml-5 kSinkModel1">SNK110</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Sink 2-->
+                <div class="col">
+                    <div class="card" data-toggle="modal" data-target="#kSinkModal2">
+                        <div class="card-header">
+                            <img class="img-fluid kSinkImg2" src="images/plumbing/kitchen/sink_copper.jpg" />
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title kSinkBrand2">DrainMe</h5>
+                            <p class="card-text kSinkDesc2">Copper sink</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="kSinkModal2">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h2 class="modal-title ml-5 kSinkBrand2">DrainMe</h2>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <img class="img-fluid kSinkImg2" src="images/plumbing/kitchen/sink_copper.jpg" />
+                                <h5 class="mt-3 ml-5 kSinkDesc2">Copper sink</h5>
+                                <p class="ml-5 kSinkModel2">DM889</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Sink 3-->
+                <div class="col">
+                    <div class="card" data-toggle="modal" data-target="#kSinkModal3">
+                        <div class="card-header">
+                            <img class="img-fluid kSinkImg3" src="images/plumbing/kitchen/sink_drainer.jpg" />
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title kSinkBrand3">VRC</h5>
+                            <p class="card-text kSinkDesc3">Sink with drainer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="kSinkModal3">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h2 class="modal-title ml-5 kSinkBrand3">VRC</h2>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <img class="img-fluid kSinkImg3" src="images/plumbing/kitchen/sink_drainer.jpg" />
+                                <h5 class="mt-3 ml-5 kSinkDesc3">Sink with drainer</h5>
+                                <p class="ml-5 kSinkModel3">VRC22</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-1 align-self-center div-bg" id="kSinksRight">
+                    <h2>></h2>
+                </div>
+            </div>
+        </div>
+
+        <!--Faucets-->
+        <div class="container my-5">
+            <div class="row div my-5">
+                <div class="col-2">
+                    <h1 class="mt-4">Faucets</h1>
+                </div>
+                <div class="col-1 align-self-center div-bg" id="kFaucetsLeft">
+                    <h2><</h2>
+                </div>
+
+                <!--Faucet 1-->
+                <div class="col">
+                    <div class="card" data-toggle="modal" data-target="#kFaucetModal1">
+                        <div class="card-header">
+                            <img class="img-fluid kFaucetImg1" src="images/plumbing/kitchen/faucet_victorian.jpg" />
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title kFaucetBrand1">Vetter</h5>
+                            <p class="card-text kFaucetDesc1">Victorian style faucet with secondary sprayer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="kFaucetModal1">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h2 class="modal-title ml-5 kFaucetBrand1">Sinkster</h2>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <img class="img-fluid kFaucetImg1" src="images/plumbing/kitchen/sink_divider.jpg" />
+                                <h5 class="mt-3 ml-5 kFaucetDesc1">Sink with mini-divider</h5>
+                                <p class="ml-5 kFaucetModel1">SNK110</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Faucet 2-->
+                <div class="col">
+                    <div class="card" data-toggle="modal" data-target="#kFaucetModal2">
+                        <div class="card-header">
+                            <img class="img-fluid kFaucetImg2" src="images/plumbing/kitchen/faucet_stilts.jpg" />
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title kFaucetBrand2">Copper Head</h5>
+                            <p class="card-text kFaucetDesc2">Victorian style lifted faucet</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="kFaucetModal2">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h2 class="modal-title ml-5 kFaucetBrand2">Sinkster</h2>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <img class="img-fluid kFaucetImg2" src="images/plumbing/kitchen/sink_divider.jpg" />
+                                <h5 class="mt-3 ml-5 kFaucetDesc2">Sink with mini-divider</h5>
+                                <p class="ml-5 kFaucetModel2">SNK110</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Faucet 3-->
+                <div class="col">
+                    <div class="card" data-toggle="modal" data-target="#kFaucetModal3">
+                        <div class="card-header">
+                            <img class="img-fluid kFaucetImg3" src="images/plumbing/kitchen/faucet_pull_spray.jpg" />
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title kFaucetBrand3">Sprayer</h5>
+                            <p class="card-text kFaucetDesc3">Modern faucet with pull out sprayer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="kFaucetModal3">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h2 class="modal-title ml-5 kFaucetBrand3">Sinkster</h2>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <img class="img-fluid kFaucetImg3" src="images/plumbing/kitchen/sink_divider.jpg" />
+                                <h5 class="mt-3 ml-5 kFaucetDesc3">Sink with mini-divider</h5>
+                                <p class="ml-5 kFaucetModel3">SNK110</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-1 align-self-center div-bg" id="kFaucetsRight">
+                    <h2>></h2>
+                </div>
+            </div>
+        </div>
+        <!--Footer-->
+        <footer>
+            <div class="footer text-white py-5 mt-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-4">
+
+                        </div>
+                        <div class="col-4">
+                            <h4>Resources</h4>
+                            <a href="services.html">Fees</a><br />
+                            <a href="#">Manufacturers</a><br />
+                            <a href="empResources.html">Employee Resources</a>
+                        </div>
+                        <div class="col-4">
+                            <h4>Headquarters</h4>
+                            <p>
+                                101 Sedalia Dr<br />
+                                Pheonix, AZ<br />
+                                85001<br />
+                                <strong>Phone:</strong> 123-456-7890<br />
+                                <strong>Fax:</strong> 123-456-7890
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+
+    <!--Bath-->
+    <section id="bath">
+        <div class="jumbotron top" id="topBath">
+            <h4>Go to top</h4>
+            <h1>Bath</h1>
+        </div>
+
+        <!--Bath Sinks-->
+        <div class="container my-5">
+            <div class="row div">
+                <div class="col-2">
+                    <h1 class="mt-4">Sinks</h1>
+                </div>
+                <div class="col-1 align-self-center div-bg" id="bSinksLeft">
+                    <h2><</h2>
+                </div>
+
+                <!--Sink 1-->
+                <div class="col">
+                    <div class="card" data-toggle="modal" data-target="#bSinkModal1">
+                        <div class="card-header">
+                            <img class="img-fluid bSinkImg1" src="images/plumbing/bath/sink_black_double.jpg" />
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title bSinkBrand1">Water Crafters</h5>
+                            <p class="card-text bSinkDesc1">Double-wide black sink</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="bSinkModal1">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h2 class="modal-title ml-5 bSinkBrand1">Water Crafters</h2>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <img class="img-fluid bSinkImg1" src="images/plumbing/bath/sink_black_double.jpg" />
+                                <h5 class="mt-3 ml-5 bSinkDesc1">Double-wide black sink</h5>
+                                <p class="ml-5 bSinkModel1">WCDW1</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Sink 2-->
+                <div class="col">
+                    <div class="card" data-toggle="modal" data-target="#bSinkModal2">
+                        <div class="card-header">
+                            <img class="img-fluid bSinkImg2" src="images/plumbing/bath/sink_brown.jpg" />
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title bSinkBrand2">Custom Flow</h5>
+                            <p class="card-text bSinkDesc2">Handcrafted brown sink</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="bSinkModal2">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h2 class="modal-title ml-5 bSinkBrand2">Custom Flow</h2>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <img class="img-fluid bSinkImg2" src="images/plumbing/bath/sink_brown.jpg" />
+                                <h5 class="mt-3 ml-5 bSinkDesc2">Handcrafted brown sink</h5>
+                                <p class="ml-5 bSinkModel2">CF01</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Sink 3-->
+                <div class="col">
+                    <div class="card" data-toggle="modal" data-target="#bSinkModal3">
+                        <div class="card-header">
+                            <img class="img-fluid bSinkImg3" src="images/plumbing/bath/sink_copper.jpg" />
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title bSinkBrand3">Copper Head</h5>
+                            <p class="card-text bSinkDesc3">His and hers copper sink</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="bSinkModal3">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h2 class="modal-title ml-5 bSinkBrand3">Copper Head</h2>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <img class="img-fluid bSinkImg3" src="images/plumbing/bath/sink_copper.jpg" />
+                                <h5 class="mt-3 ml-5 bSinkDesc3">His and hers copper sink</h5>
+                                <p class="ml-5 bSinkModel3">CH101</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-1 align-self-center div-bg" id="bSinksRight">
+                    <h2>></h2>
+                </div>
+            </div>
+        </div>
+
+        <!--Bath Faucets-->
+        <div class="container my-5">
+            <div class="row div my-5">
+                <div class="col-2">
+                    <h1 class="mt-4">Faucets</h1>
+                </div>
+                <div class="col-1 align-self-center div-bg" id="bFaucetsLeft">
+                    <h2><</h2>
+                </div>
+
+                <!--Faucet 1-->
+                <div class="col">
+                    <div class="card" data-toggle="modal" data-target="#bFaucetModal1">
+                        <div class="card-header">
+                            <img class="img-fluid bFaucetImg1" src="images/plumbing/bath/faucet_black.jpg" />
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title bFaucetBrand1">Classico</h5>
+                            <p class="card-text bFaucetDesc1">Black faucet with gold trim</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="bFaucetModal1">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h2 class="modal-title ml-5 bFaucetBrand1">Classico</h2>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <img class="img-fluid bFaucetImg1" src="images/plumbing/bath/faucet_black.jpg" />
+                                <h5 class="mt-3 ml-5 bFaucetDesc1">Black faucet with gold trim</h5>
+                                <p class="ml-5 bFaucetModel1">CL32</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Faucet 2-->
+                <div class="col">
+                    <div class="card" data-toggle="modal" data-target="#bFaucetModal2">
+                        <div class="card-header">
+                            <img class="img-fluid bFaucetImg2" src="images/plumbing/bath/faucet_chrome_waterfall.jpg" />
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title bFaucetBrand2">Flat Iron</h5>
+                            <p class="card-text bFaucetDesc2">Chrome waterfall Faucet</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="bFaucetModal2">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h2 class="modal-title ml-5 bFaucetBrand2">Flat Iron</h2>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <img class="img-fluid bFaucetImg2" src="images/plumbing/bath/faucet_chrome_waterfall.jpg" />
+                                <h5 class="mt-3 ml-5 bFaucetDesc2">Chrome waterfall faucet</h5>
+                                <p class="ml-5 bFaucetModel2">FI128</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Faucet 3-->
+                <div class="col">
+                    <div class="card" data-toggle="modal" data-target="#bFaucetModal3">
+                        <div class="card-header">
+                            <img class="img-fluid bFaucetImg3" src="images/plumbing/bath/faucet_curved_levers.jpg" />
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title bFaucetBrand3">Twisted</h5>
+                            <p class="card-text bFaucetDesc3">Spiral lever faucet</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="bFaucetModal3">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h2 class="modal-title ml-5 bFaucetBrand3">Twisted</h2>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <img class="img-fluid bFaucetImg3" src="images/plumbing/bath/faucet_curved_levers.jpg" />
+                                <h5 class="mt-3 ml-5 bFaucetDesc3">Spiral lever faucet</h5>
+                                <p class="ml-5 bFaucetModel3">TW78</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-1 align-self-center div-bg" id="bFaucetsRight">
+                    <h2>></h2>
+                </div>
+            </div>
+        </div>
+
+        <!--Footer-->
+        <footer>
+            <div class="footer text-white py-5 mt-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-4">
+
+                        </div>
+                        <div class="col-4">
+                            <h4>Resources</h4>
+                            <a href="services.html">Fees</a><br />
+                            <a href="#">Manufacturers</a><br />
+                            <a href="empResources.html">Employee Resources</a>
+                        </div>
+                        <div class="col-4">
+                            <h4>Headquarters</h4>
+                            <p>
+                                101 Sedalia Dr<br />
+                                Pheonix, AZ<br />
+                                85001<br />
+                                <strong>Phone:</strong> 123-456-7890<br />
+                                <strong>Fax:</strong> 123-456-7890
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+</body>
+</html>

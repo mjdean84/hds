@@ -1,0 +1,353 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>HDS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/4.3.1/flatly/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+        .brand {
+            border: 2px solid white;
+            border-radius: 12px;
+            padding: 4px;
+        }
+
+        .carousel-inner img{
+            width:100%;
+            height:100%;
+        }
+
+        #logoffBtn{
+            display:none;
+        }
+        
+        #inventoryBtn {
+            display: none;
+        }
+
+        .carCap{
+            background:rgba(0, 0, 0, 0.1);
+            color:rgb(200, 200, 200);
+        }
+
+        .carCap button{
+            opacity:0.2;
+        }
+
+        .carCap:hover{
+            cursor:pointer;
+            background:rgba(0, 0, 0, 0.5);
+            color:white;
+        }
+
+        .carCap:hover button{
+            opacity:1;
+        }
+
+        .carCap-active{
+            background:rgba(0, 0, 0, 0.5);
+            color:white;
+        }
+
+        .carCap-active button{
+            opacity:1;
+        }
+
+        .house-item:hover{
+            cursor:pointer;
+        }
+
+        .house-item-active{
+            background:rgb(0, 0, 0);
+            color:white;
+        }
+
+        hr{
+            width:85%;
+        }
+
+        .offset:before {
+            display: block;
+            content: " ";
+            height: 150px;
+            margin-top: -150px;
+            visibility: hidden;
+        }
+
+        hr{
+            background-color:grey;
+        }
+
+        footer h4{
+            font-weight:bold;
+            text-decoration:underline;
+        }
+
+    </style>
+
+</head>
+<body>
+    <header class="bg-primary mb-4">
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-md bg-primary navbar-dark fixed-top">
+            <a class="navbar-brand brand" href="index.html">HDS</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav ml-auto">
+
+                    <!--Links-->
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Products</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="appliances.html">Appliances</a>
+                            <a class="dropdown-item" href="cabinets.html">Cabinets</a>
+                            <a class="dropdown-item" href="lighting.html">Lighting</a>
+                            <a class="dropdown-item" href="plumbing.html">Plumbing</a>
+                            <a class="dropdown-item" href="countertops.html">Countertops</a>
+                            <a class="dropdown-item" href="flooring.html">Flooring</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="locations.html">Locations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutUs.html">About us</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
+        <!--Carousel-->
+        <div class="carousel slide" id="car1" data-ride="carousel">
+
+            <!--Car Image 1-->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="img-fluid" src="images/index/kitchen_appliances.jpg" />
+                    <div class="carousel-caption">
+                        <div class="row">
+                            <div data-target="#car1" data-slide-to="0" class="col-4 carCap carCap-active py-3">
+                                <h3>Kitchen</h3>
+                                <p>Appliances, Cabinets, and more</p>
+                                <button type="button" onclick="location.href='#kitchen'" class="btn btn-info btn-block">Take me there</button>
+                            </div>
+                            <div data-target="#car1" data-slide-to="1" class="col-4 carCap py-3">
+                                <h3>Bath</h3>
+                                <p>Showers, Tubs, Plumbing</p>
+                                <button type="button" onclick="location.href='#bath'" class="btn btn-info btn-block">Take me there</button>
+                            </div>
+                            <div data-target="#car1" data-slide-to="2" class="col-4 carCap py-3">
+                                <h3>Bed/General</h3>
+                                <p>Flooring, Lighting, Countertops</p>
+                                <button type="button" onclick="location.href='#general'" class="btn btn-info btn-block">Take me there</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Car Image 2-->
+                <div class="carousel-item">
+                    <img class="img-fluid" src="images/index/bathroom.jpg" />
+                    <div class="carousel-caption pt-3">
+                        <div class="row">
+                            <div data-target="#car1" data-slide-to="0" class="col-4 carCap py-3">
+                                <h3>Kitchen</h3>
+                                <p>Appliances, Cabinets, and more</p>
+                                <button type="button" onclick="location.href='#kitchen'" class="btn btn-info btn-block">Take me there</button>
+                            </div>
+                            <div data-target="#car1" data-slide-to="1" class="col-4 carCap carCap-active py-3">
+                                <h3>Bath</h3>
+                                <p>Showers, Tubs, Plumbing</p>
+                                <button type="button" onclick="location.href='#bath'" class="btn btn-info btn-block">Take me there</button>
+                            </div>
+                            <div data-target="#car1" data-slide-to="2" class="col-4 carCap py-3">
+                                <h3>Bed/General</h3>
+                                <p>Flooring, Lighting, Countertops</p>
+                                <button type="button" onclick="location.href='#general'" class="btn btn-info btn-block">Take me there</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--Car Image 3-->
+                <div class="carousel-item">
+                    <img class="img-fluid" src="images/index/general-home.jpg" />
+                    <div class="carousel-caption pt-3">
+                        <div class="row">
+                            <div data-target="#car1" data-slide-to="0" class="col-4 carCap py-3">
+                                <h3>Kitchen</h3>
+                                <p>Appliances, Cabinets, and more</p>
+                                <button type="button" onclick="location.href='#kitchen'" class="btn btn-info btn-block">Take me there</button>
+                            </div>
+                            <div data-target="#car1" data-slide-to="1" class="col-4 carCap py-3">
+                                <h3>Bath</h3>
+                                <p>Showers, Tubs, Plumbing</p>
+                                <button type="button" onclick="location.href='#bath'" class="btn btn-info btn-block">Take me there</button>
+                            </div>
+                            <div data-target="#car1" data-slide-to="2" class="col-4 carCap carCap-active py-3">
+                                <h3>Bed/General</h3>
+                                <p>Flooring, Lighting, Countertops</p>
+                                <button type="button" onclick="location.href='#general'" class="btn btn-info btn-block">Take me there</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Controls-->
+            <a class="carousel-control-prev" href="#car1" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#car1" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+        <h1 class="text-center text-white font-italic my-4 pb-4">We're here to turn your house into a home!!!</h1>
+    </header>
+
+    
+    <!--HDS Heading-->
+    <section class="bg-light border border-primary mb-5" id="hds">
+        <div class="jumbotron">
+            <div class="container text-center">
+                <h1 class="display-3">Home Design Solutions</h1>
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-8 lead text-center">
+                        <p>
+                            HDS is a home remodeling company specializing in kitchens and bathrooms.  We provide unique designs
+                            and upgrades to your needed areas from the ground up.  This includes flooring, cabinets, counter
+                            and table tops, appliances, and lighting.  All of our specialists are kitchen and bath design
+                            certified.
+                        </p>
+                    </div>
+                    <div class="col-2"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Kitchen-->
+    <section id="kitchen" class="offset">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 text-center">
+                    <h2>Kitchen</h2>
+                    <p class="mt-3">
+                        We have the resources and expertise to take care of all your kitchen needs.
+                        If you're looking for a full overhaul, we've got you covered.  We do everything
+                        from the flooring to the lighting, rebuilding your kitchen from the ground up.
+                    </p>
+                    <p>
+                        If you just want to putting on some finishing touches or upgrade your equipment,
+                        we have access to top of the line and current models.
+                    </p>
+                    <div class="btn-group mt-5">
+                        <a class="btn btn-primary" href="lighting.html">Lighting</a>
+                        <a class="btn btn-primary" href="countertops.html">Countertops</a>
+                        <a class="btn btn-primary" href="cabinets.html">Cabinets</a>
+                        <a class="btn btn-primary" href="appliances.html">Appliances</a>
+                        <a class="btn btn-primary" href="flooring.html">Flooring</a>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <img class="img-fluid" src="images/index/kitchen.jpg" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="my-5" />
+
+    <!--Bath-->
+    <section id="bath" class="offset">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <img class="img-fluid" src="images/index/bath.jpg" />
+                </div>
+                <div class="col-6 text-center">
+                    <h2>Bath</h2>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <hr class="my-5" />
+
+    <!--General-->
+    <section id="general" class="offset">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 text-center">
+                    <h2>Bedrooms and General Areas</h2>
+                    <p class="mt-3">
+                        We have the resources and expertise to take care of all your kitchen needs.
+                        If you're looking for a full overhaul, we've got you covered.  We do everything
+                        from the flooring to the lighting, rebuilding your kitchen from the ground up.
+                    </p>
+                    <p>
+                        If you just want to putting on some finishing touches or upgrade your equipment,
+                        we have access to all the top of the line and current models.
+                    </p>
+                    <div class="btn-group mt-5">
+                        <a class="btn btn-primary" href="lighting.html">Lighting</a>
+                        <a class="btn btn-primary" href="cabinets.html">Cabinets</a>
+                        <a class="btn btn-primary" href="flooring.html">Flooring</a>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <img class="img-fluid" src="images/index/bedroom.jpg" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer bg-primary text-white py-5 mt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-4">
+                        
+                    </div>
+                    <div class="col-4">
+                        <h4>Resources</h4>
+                        <a href="services.html">Fees</a><br />
+                        <a href="#">Manufacturers</a><br />
+                        <a href="empResources.html">Employee Resources</a>
+                    </div>
+                    <div class="col-4">
+                        <h4>Headquarters</h4>
+                        <p>
+                            101 Sedalia Dr<br />
+                            Pheonix, AZ<br />
+                            85001<br />
+                            <strong>Phone:</strong> 123-456-7890<br />
+                            <strong>Fax:</strong> 123-456-7890
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+</body>
+</html>

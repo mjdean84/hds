@@ -1,0 +1,230 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Appliances</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/4.3.1/flatly/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="applScript.js"></script>
+    <style>
+        .brand {
+            border: 2px solid white;
+            border-radius: 12px;
+            padding: 4px;
+        }
+
+        .productHeader {
+            color: black;
+        }
+
+        .product{
+            padding:15px;
+        }
+
+        .product:hover{
+            cursor:pointer;
+        }
+
+        .product img{
+            max-height:200px;
+        }
+
+        .jumbotron {
+            background: url('images/appliances/kitchen_banner.jpg')no-repeat fixed;
+            height: 30em;
+            font-weight: bold;
+            background-size:100%;
+            color:black;
+        }
+
+        .jumbo {
+            background: rgba(255, 255, 255, 0.5);
+            color: black;
+            border-radius:20px;
+        }
+    </style>
+</head>
+<body onload="createProducts()">
+
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-md bg-primary navbar-dark fixed-top">
+        <a class="navbar-brand brand" href="index.html">HDS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav ml-auto">
+
+                <!--Links-->
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown active">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Products</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item active" href="appliances.html">Appliances</a>
+                        <a class="dropdown-item" href="cabinets.html">Cabinets</a>
+                        <a class="dropdown-item" href="lighting.html">Lighting</a>
+                        <a class="dropdown-item" href="plumbing.html">Plumbing</a>
+                        <a class="dropdown-item" href="countertops.html">Countertops</a>
+                        <a class="dropdown-item" href="flooring.html">Flooring</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="services.html">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="locations.html">Locations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="aboutUs.html">About us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--Jumbo-->
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col-9">
+                <div class="jumbo">
+                    <h1 class="display-3 mt-5">Popular Appliances</h1>
+                    <p class="lead">
+                        Don't see what you want? &nbsp; Check out our manufacturers' websites. &nbsp; Just let us know what you
+                        want and we'll get it for you!
+                    </p>
+
+                    <!--Manufacturer Links-->
+                    <div class="dropdown dropright">
+                        <button type="button" class="btn dropdown-toggle border border-dark mb-3" data-toggle="dropdown">Manufacturers</button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="https://www.askona.com/" target="_blank">Asko</a>
+                            <a class="dropdown-item" href="http://www.bestrangehoods.com/home.aspx" target="_blank">Best</a>
+                            <a class="dropdown-item" href="http://www.boschappliances.com/" target="_blank">Bosch</a>
+                            <a class="dropdown-item" href="http://www.broan.com/" target="_blank">Broan</a>
+                            <a class="dropdown-item" href="http://www.dacor.com/" target="_blank">Dacor</a>
+                            <a class="dropdown-item" href="https://www.danby.com/en-us/" target="_blank">Danby</a>
+                            <a class="dropdown-item" href="http://www.dcsappliances.com/" target="_blank">DCS</a>
+                            <a class="dropdown-item" href="http://www.faberonline.com/" target="_blank">Faber</a>
+                            <a class="dropdown-item" href="http://usa.fisherpaykel.com/" target="_blank">Fisher & Paykel</a>
+                            <a class="dropdown-item" href="http://www.gaggenau.com/" target="_blank">Gaggenau</a>
+                            <a class="dropdown-item" href="https://www.geappliances.com/" target="_blank">GE</a>
+                            <a class="dropdown-item" href="http://www.insinkerator.com/" target="_blank">Insinkerator</a>
+                            <a class="dropdown-item" href="https://www.jennair.com/ranges.html" target="_blank">Jenn Air</a>
+                            <a class="dropdown-item" href="https://www.marvelrefrigeration.com/" target="_blank">Marvel</a>
+                            <a class="dropdown-item" href="http://www.miele.com/" target="_blank">Miele</a>
+                            <a class="dropdown-item" href="https://www.scotsmanhomeice.com/" target="_blank">Scotsman</a>
+                            <a class="dropdown-item" href="https://www.subzero-wolf.com/" target="_blank">Sub-Zero</a>
+                            <a class="dropdown-item" href="http://www.thermador.com/" target="_blank">Thermador</a>
+                            <a class="dropdown-item" href="http://www.u-line.com/" target="_blank">U Line</a>
+                            <a class="dropdown-item" href="http://www.venmar-ventilation.com/" target="_blank">Venmar</a>
+                            <a class="dropdown-item" href="http://www.vikingrange.com/" target="_blank">Viking</a>
+                            <a class="dropdown-item" href="https://www.subzero-wolf.com/" target="_blank">Wolf</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3"></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-8"></div>
+            <div class="col-4">
+                <!--Sort Select-->
+                <div class="form-group mt-3">
+                    <label for="sortSel">Sort by:</label>
+                    <select id="sortSel" class="form-control-sm">
+                        <option value="popular">Most Popular</option>
+                        <option value="priceLH">Price: Low to High</option>
+                        <option value="priceHL">Price: High to Low</option>
+                        <option value="brand">Brand</option>
+                        <option value="type">Type</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="float-left">
+
+        <!--Filter Type-->
+        <div class="btn-group-vertical border border-secondary ml-3 shadow">
+            <button class="btn btn-primary">Products</button>
+            <button type="button" class="btn active" onclick="createProducts()">All Types</button>
+            <button type="button" class="btn" onclick="filterType('Microwave')">Microwaves</button>
+            <button type="button" class="btn" onclick="filterType('Washer')">Washers</button>
+            <button type="button" class="btn" onclick="filterType('Dryer')">Dryers</button>
+            <button type="button" class="btn" onclick="filterType('Dishwasher')">Dishwashers</button>
+            <button type="button" class="btn" onclick="filterType('Refrigerator')">Refrigerators</button>
+            <button type="button" class="btn" onclick="filterType('Wine')">Wine</button>
+            <button type="button" class="btn" onclick="filterType('Range')">Ranges</button>
+            <button type="button" class="btn" onclick="filterType('Coffee')">Coffee</button>
+            <button type="button" class="btn" onclick="filterType('Oven')">Ovens</button>
+            <button type="button" class="btn" onclick="filterType('Cooktop')">Cooktops</button>
+            <button type="button" class="btn" onclick="filterType('Disposal')">Disposals</button>
+            <button type="button" class="btn" onclick="filterType('Icemaker')">Icemakers</button>
+        </div>
+        <br />
+        <!--Filter Brand-->
+        <div class="btn-group-vertical border border-secondary ml-3 mt-3 shadow">
+            <button class="btn btn-primary">Brands</button>
+            <button type="button" class="btn px-4" onclick="displayProducts(productArr)">All Brands</button>
+            <button type="button" class="btn" onclick="filterBrand('GE')">GE</button>
+            <button type="button" class="btn" onclick="filterBrand('Bosch')">Bosch</button>
+            <button type="button" class="btn" onclick="filterBrand('Sub-Zero')">Sub-Zero</button>
+            <button type="button" class="btn" onclick="filterBrand('Viking')">Viking</button>
+            <button type="button" class="btn" onclick="filterBrand('Miele')">Miele</button>
+            <button type="button" class="btn" onclick="filterBrand('Jenn-Air')">Jenn-Air</button>
+            <button type="button" class="btn" onclick="filterBrand('Thermador')">Thermador</button>
+            <button type="button" class="btn" onclick="filterBrand('Amana')">Amana</button>
+            <button type="button" class="btn" onclick="filterBrand('Insinkerator')">Insinkerator</button>
+            <button type="button" class="btn" onclick="filterBrand('U-Line')">U-Line</button>
+            <button type="button" class="btn" onclick="filterBrand('Dacor')">Dacor</button>
+        </div>
+    </div>
+
+    <!--Created Products (js)-->
+    <div class="container" id="productList">
+    </div>
+
+    <!--Footer-->
+    <footer class="bg-primary">
+        <div class="footer text-white py-5 mt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-4">
+
+                    </div>
+                    <div class="col-4">
+                        <h4>Resources</h4>
+                        <a href="services.html">Fees</a><br />
+                        <a href="#">Manufacturers</a><br />
+                        <a href="empResources.html">Employee Resources</a>
+                    </div>
+                    <div class="col-4">
+                        <h4>Headquarters</h4>
+                        <p>
+                            101 Sedalia Dr<br />
+                            Pheonix, AZ<br />
+                            85001<br />
+                            <strong>Phone:</strong> 123-456-7890<br />
+                            <strong>Fax:</strong> 123-456-7890
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+</body>
+</html>

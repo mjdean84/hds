@@ -1,0 +1,276 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="google" content="notranslate" />
+    <meta http-equiv="content-language" content="en" />
+    <title>Locations</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/4.3.1/flatly/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+        .brand {
+            border: 2px solid white;
+            border-radius: 12px;
+            padding: 4px;
+        }
+
+        .jumbotron{
+            background:url('images/locations.png');
+            background-size:cover;
+        }
+
+        #jumbo{
+            background:rgba(255, 255, 255, 0.5);
+            border-radius:2em;
+        }
+    </style>
+
+</head>
+<body>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-md bg-primary navbar-dark sticky-top">
+        <a class="navbar-brand brand" href="index.html">HDS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav ml-auto">
+
+                <!--Links-->
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Products</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="appliances.html">Appliances</a>
+                        <a class="dropdown-item" href="cabinets.html">Cabinets</a>
+                        <a class="dropdown-item" href="lighting.html">Lighting</a>
+                        <a class="dropdown-item" href="plumbing.html">Plumbing</a>
+                        <a class="dropdown-item" href="countertops.html">Countertops</a>
+                        <a class="dropdown-item" href="flooring.html">Flooring</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="services.html">Services</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="locations.html">Locations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="aboutUs.html">About us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--Banner-->
+    <div class="jumbotron">
+        <div class="row ">
+            <div class="col-2"></div>
+            <div class="col-6">
+                <div class="container p-3" id="jumbo">
+                    <h1 class="display-3">Locations</h1>
+                    <p class="lead">Short description/mission</p>
+                </div>
+            </div>
+            <div class="col-4"></div>
+        </div>
+    </div>
+
+    <!--Locations-->
+    <div class="container">
+        <div class="row mt-4">
+            <div class="col-3">
+                <div class="card shadow">
+                    <h3 class="card-header bg-primary text-white">Phoenix</h3>
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            101 Sedalia Dr<br />
+                            Phoenix, AZ<br />
+                            85001
+                        </h5>
+                        <h6>
+                            <strong>Phone:</strong> 123-456-7890<br />
+                            <strong>Fax:</strong> 123-456-7890
+                        </h6>
+                        <a class="d-block my-2" href="https://www.google.com/maps/dir//101+Sedalia+Dr+Phoenix,+AZ+85001/@28.6285654,-81.1526868,15z"
+                           target="_blank">Directions</a>
+                        <div class="dropdown">
+                            <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">Hours of operation</button>
+                            <div class="dropdown-menu">
+                                <span class="dropdown-item"><strong>Monday:</strong> 9am-5pm</span>
+                                <span class="dropdown-item"><strong>Tuesday:</strong> 9am-5pm</span>
+                                <span class="dropdown-item"><strong>Wednesday:</strong> 9am-5pm</span>
+                                <span class="dropdown-item"><strong>Thursday:</strong> 9am-5pm</span>
+                                <span class="dropdown-item"><strong>Friday:</strong> 9am-5pm</span>
+                                <span class="dropdown-item"><strong>Saturday:</strong> closed</span>
+                                <span class="dropdown-item"><strong>Sunday:</strong> closed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-3">
+                <div class="card shadow">
+                    <h3 class="card-header bg-primary text-white">Scottsdale</h3>
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            456 S 42nd St<br />
+                            Scottsdale, AZ<br />
+                            12345
+                        </h5>
+                        <h6>
+                            <strong>Phone:</strong> 123-456-7890<br />
+                            <strong>Fax:</strong> 123-456-7890
+                        </h6>
+                        <a class="d-block my-2" href="https://www.google.com/maps/dir//456+S+42nd+St+Scottsdale,+AZ+12345/@28.6285654,-81.1526868,15z"
+                           target="_blank">Directions</a>
+                        <div class="dropdown">
+                            <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">Hours of operation</button>
+                            <div class="dropdown-menu">
+                                <span class="dropdown-item"><strong>Monday:</strong> 9am-5pm</span>
+                                <span class="dropdown-item"><strong>Tuesday:</strong> 9am-5pm</span>
+                                <span class="dropdown-item"><strong>Wednesday:</strong> 9am-5pm</span>
+                                <span class="dropdown-item"><strong>Thursday:</strong> 9am-5pm</span>
+                                <span class="dropdown-item"><strong>Friday:</strong> 9am-5pm</span>
+                                <span class="dropdown-item"><strong>Saturday:</strong> closed</span>
+                                <span class="dropdown-item"><strong>Sunday:</strong> closed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-3">
+                <div class="card shadow">
+                    <h3 class="card-header bg-primary text-white">Tucson</h3>
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            789 Dean St<br />
+                            Tucson, AZ<br />
+                            12345
+                        </h5>
+                        <h6>
+                            <strong>Phone:</strong> 123-456-7890<br />
+                            <strong>Fax:</strong> 123-456-7890
+                        </h6>
+                        <a class="d-block my-2" href="https://www.google.com/maps/dir//789+Dean+St+Tucson,+AZ+12345/@28.6285654,-81.1526868,15z"
+                           target="_blank">Directions</a>
+                        <div class="dropdown">
+                            <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">Hours of operation</button>
+                            <div class="dropdown-menu">
+                                <span class="dropdown-item"><strong>Monday:</strong> 9am-5pm</span>
+                                <span class="dropdown-item"><strong>Tuesday:</strong> 9am-5pm</span>
+                                <span class="dropdown-item"><strong>Wednesday:</strong> 9am-5pm</span>
+                                <span class="dropdown-item"><strong>Thursday:</strong> 9am-5pm</span>
+                                <span class="dropdown-item"><strong>Friday:</strong> 9am-5pm</span>
+                                <span class="dropdown-item"><strong>Saturday:</strong> closed</span>
+                                <span class="dropdown-item"><strong>Sunday:</strong> closed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-3">
+                <div class="card shadow">
+                    <h3 class="card-header bg-primary text-white">Las Vegas</h3>
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            123 Sin City Blvd<br />
+                            Las Vegas, NV<br />
+                            12345
+                        </h5>
+                        <h6>
+                            <strong>Phone:</strong> 123-456-7890<br />
+                            <strong>Fax:</strong> 123-456-7890
+                        </h6>
+                        <a class="d-block my-2" href="https://www.google.com/maps/dir//123+Sin+City+Blvd+Las+Vegas,+NV+12345/@28.6285654,-81.1526868,15z"
+                           target="_blank">Directions</a>
+                        <div class="dropdown">
+                            <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">Hours of operation</button>
+                            <div class="dropdown-menu">
+                                <span class="dropdown-item"><strong>Monday:</strong> 9am-5pm</span>
+                                <span class="dropdown-item"><strong>Tuesday:</strong> 9am-5pm</span>
+                                <span class="dropdown-item"><strong>Wednesday:</strong> 9am-5pm</span>
+                                <span class="dropdown-item"><strong>Thursday:</strong> 9am-5pm</span>
+                                <span class="dropdown-item"><strong>Friday:</strong> 9am-5pm</span>
+                                <span class="dropdown-item"><strong>Saturday:</strong> closed</span>
+                                <span class="dropdown-item"><strong>Sunday:</strong> closed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row my-4">
+            <div class="col-3">
+                <div class="card shadow">
+                    <h3 class="card-header bg-primary text-white">Albuquerque</h3>
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            456 Cool Name Rd<br />
+                            Albuquerque, NM<br />
+                            12345
+                        </h5>
+                        <h6>
+                            <strong>Phone:</strong> 123-456-7890<br />
+                            <strong>Fax:</strong> 123-456-7890
+                        </h6>
+                        <a class="d-block my-2" href="https://www.google.com/maps/dir//456+Cool+Name+Rd+Albuquerque,+NM+12345/@28.6285654,-81.1526868,15z"
+                           target="_blank">Directions</a>
+                        <div class="dropdown">
+                            <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">Hours of operation</button>
+                            <div class="dropdown-menu">
+                                <span class="dropdown-item"><strong>Monday:</strong> 9am-5pm</span>
+                                <span class="dropdown-item"><strong>Tuesday:</strong> 9am-5pm</span>
+                                <span class="dropdown-item"><strong>Wednesday:</strong> 9am-5pm</span>
+                                <span class="dropdown-item"><strong>Thursday:</strong> 9am-5pm</span>
+                                <span class="dropdown-item"><strong>Friday:</strong> 9am-5pm</span>
+                                <span class="dropdown-item"><strong>Saturday:</strong> closed</span>
+                                <span class="dropdown-item"><strong>Sunday:</strong> closed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Footer-->
+    <footer class="bg-primary">
+        <div class="footer text-white py-5 mt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-4">
+
+                    </div>
+                    <div class="col-4">
+                        <h4>Resources</h4>
+                        <a href="services.html">Fees</a><br />
+                        <a href="#">Manufacturers</a><br />
+                        <a href="empResources.html">Employee Resources</a>
+                    </div>
+                    <div class="col-4">
+                        <h4>Headquarters</h4>
+                        <p>
+                            101 Sedalia Dr<br />
+                            Pheonix, AZ<br />
+                            85001<br />
+                            <strong>Phone:</strong> 123-456-7890<br />
+                            <strong>Fax:</strong> 123-456-7890
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,198 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="google" content="notranslate" />
+    <meta http-equiv="content-language" content="en" />
+    <title>Services</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/4.3.1/flatly/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" 
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <script src="resScript.js"></script>
+    <style>
+        .brand {
+            border: 2px solid white;
+            border-radius: 12px;
+            padding: 4px;
+        }
+
+        thead:hover{
+            cursor:pointer;
+        }    
+        
+        #resources{
+            display:none;
+        }
+
+        .jumbotron{
+            background:url('images/resources.jpg')no-repeat fixed;
+            background-size:100%;
+            height:17em;
+        }
+
+        .jumbo {
+            background: rgba(255, 255, 255, 0.5);
+            color: black;
+            border-radius: 20px;
+        }
+
+    </style>
+</head>
+<body onload="createInv()">
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-md bg-primary navbar-dark sticky-top">
+        <a class="navbar-brand brand" href="index.html">HDS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav ml-auto">
+
+                <!--Links-->
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Products</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="appliances.html">Appliances</a>
+                        <a class="dropdown-item" href="cabinets.html">Cabinets</a>
+                        <a class="dropdown-item" href="lighting.html">Lighting</a>
+                        <a class="dropdown-item" href="plumbing.html">Plumbing</a>
+                        <a class="dropdown-item" href="countertops.html">Countertops</a>
+                        <a class="dropdown-item" href="flooring.html">Flooring</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="services.html">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="locations.html">Locations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="aboutUs.html">About us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--Banner-->
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col-9">
+                <div class="jumbo py-3 px-3">
+                    <h1 class="display-3">Employee Resources</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="login">
+        <div class="container">
+            <h4>
+                Password: <input type="text" id="password" /><button type="button" onclick="checkPassword()">
+                    Submit
+                </button>
+            </h4>
+        </div>
+    </section>
+
+    <section id="resources">
+        <div class="container">
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-4">
+                    <input class="form-control" id="searchInput" type="text" placeholder="Search..." />
+                </div>
+                <div class="col-4"></div>
+            </div>
+        </div>
+
+        <!--Tabs-->
+        <div class="container mt-3">
+            <ul class="nav nav-tabs">
+                <li class="nav-item bg-light">
+                    <a id="invTab" class="nav-link active" data-toggle="tab" href="#inventory">Inventory</a>
+                </li>
+                <li class="nav-item bg-light" id="clientsTab">
+                    <a id="clientsTab" class="nav-link" data-toggle="tab" href="#clients">Clients</a>
+                </li>
+            </ul>
+        </div>
+
+        <!--Tables-->
+        <div class="tab-content">
+            <!--Inventory-->
+            <div id="inventory" class="container tab-pane active">
+                <table class="table table-striped bg-white" id="invTable">
+                    <thead class="thead-dark" id="invHead">
+                        <tr>
+                            <th id="typeHead">Type <i id="typeIcon"></i></th>
+                            <th id="brandHead">Brand <i id="brandIcon"></i></th>
+                            <th id="modelHead">Model # <i id="modelIcon"></i></th>
+                            <th id="serialHead">Serial # <i id="serialIcon"></i></th>
+                            <th id="descHead">Description <i id="descIcon"></i></th>
+                            <th id="costHead">Cost <i id="costIcon"></i></th>
+                            <th id="priceHead">List Price <i id="priceIcon"></i></th>
+                        </tr>
+                    </thead>
+                    <tbody id="invBody"></tbody>
+                </table>
+            </div>
+
+            <!--Clients-->
+            <div id="clients" class="container tab-pane fade">
+                <table class="table table-striped bg-white">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Last Name</th>
+                            <th>First Name</th>
+                            <th>MI</th>
+                            <th>Street Address</th>
+                            <th>City</th>
+                            <th>State</th>
+                            <th>Zip</th>
+                        </tr>
+                    </thead>
+                    <tbody id="clientsBody">
+                        <tr>
+                            <td>Kim</td>
+                            <td>Abercrombie</td>
+                            <td>B</td>
+                            <td>1226 Shoe St</td>
+                            <td>Scottsdale</td>
+                            <td>AZ</td>
+                            <td>85256</td>
+                        </tr>
+                        <tr>
+                            <td>Abolrous</td>
+                            <td>Hazem</td>
+                            <td>E</td>
+                            <td>1399 Firestone Dr</td>
+                            <td>Yuma</td>
+                            <td>AZ</td>
+                            <td>85364</td>
+                        </tr>
+                        <tr>
+                            <td>Adams</td>
+                            <td>Angel</td>
+                            <td>C</td>
+                            <td>6872 Thornwood Dr</td>
+                            <td>Yuma</td>
+                            <td>AZ</td>
+                            <td>85364</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+
+</body>
+</html>

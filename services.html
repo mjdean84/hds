@@ -1,0 +1,254 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Services</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/4.3.1/flatly/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+        .brand {
+            border: 2px solid white;
+            border-radius: 12px;
+            padding: 4px;
+        }
+
+    </style>
+</head>
+<body>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-md bg-primary navbar-dark sticky-top">
+        <a class="navbar-brand brand" href="index.html">HDS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav ml-auto">
+
+                <!--Links-->
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Products</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="appliances.html">Appliances</a>
+                        <a class="dropdown-item" href="cabinets.html">Cabinets</a>
+                        <a class="dropdown-item" href="lighting.html">Lighting</a>
+                        <a class="dropdown-item" href="plumbing.html">Plumbing</a>
+                        <a class="dropdown-item" href="countertops.html">Countertops</a>
+                        <a class="dropdown-item" href="flooring.html">Flooring</a>
+                    </div>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="services.html">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="locations.html">Locations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="aboutUs.html">About us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--Banner-->
+    <div class="jumbotron">
+        <h1 class="display-3">Home Design Solutions</h1>
+        <p class="lead">Short description/mission</p>
+        <div class="row fluid">
+            <div class="col-2">
+                <img class="img-fluid" src="images/services/home_meeting.jpg" />
+            </div>
+            <div class="col-2">
+                <img class="img-fluid" src="images/services/blueprint.jpg" />
+            </div>
+            <div class="col-2">
+                <img class="img-fluid" src="images/services/cabinet_production.jpg" />
+            </div>
+            <div class="col-2">
+                <img class="img-fluid" src="images/services/delivery.jpg" />
+            </div>
+            <div class="col-2">
+                <img class="img-fluid" src="images/services/cabinet_installation.jpg" />
+            </div>
+            <div class="col-2">
+                <img class="img-fluid" src="images/services/completed_kitchen.jpg" />
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <!--Carousel-->
+                <div id="processCar" class="carousel slide" data-ride="carousel">
+
+                    <!--Indicators-->
+                    <ul class="carousel-indicators">
+                        <li data-target="#processCar" data-slide-to="0" class="active"></li>
+                        <li data-target="#processCar" data-slide-to="1"></li>
+                        <li data-target="#processCar" data-slide-to="2"></li>
+                        <li data-target="#processCar" data-slide-to="2"></li>
+                        <li data-target="#processCar" data-slide-to="2"></li>
+                        <li data-target="#processCar" data-slide-to="2"></li>
+                    </ul>
+
+                    <!--Images-->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="img-fluid" src="images/services/home_meeting.jpg" />
+                            <div class="carousel-caption text-primary">
+                                <h3>Consultation</h3>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="img-fluid" src="images/services/blueprint.jpg" />
+                            <div class="carousel-caption text-primary">
+                                <h3>Design</h3>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="img-fluid" src="images/services/cabinet_production.jpg" />
+                            <div class="carousel-caption">
+                                <h3>Production</h3>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="img-fluid" src="images/services/delivery.jpg" />
+                            <div class="carousel-caption">
+                                <h3>Delivery</h3>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="img-fluid" src="images/services/cabinet_installation.jpg" />
+                            <div class="carousel-caption text-primary">
+                                <h3>Installation</h3>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="img-fluid" src="images/services/completed_kitchen.jpg" />
+                            <div class="carousel-caption">
+                                <h3>Your new home!!!</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Controls-->
+                    <a class="carousel-control-prev" href="#processCar" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#processCar" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-6"></div>
+        </div>
+    </div>
+
+    <!--Table-->
+    <div class="container mt-5">
+        <h1>Services</h1>
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Service</th>
+                    <th>Hourly Fee</th>
+                    <th>Minimum</th>
+                    <th>Comments</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Design</td>
+                    <td>$100</td>
+                    <td>$500/job</td>
+                    <td>Includes onsite visits.</td>
+                </tr>
+                <tr>
+                    <td>Cabinet Installation</td>
+                    <td>$75</td>
+                    <td>$750/kitchen</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Cabinet Re-facing</td>
+                    <td>$75</td>
+                    <td>$750/kitchen</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Plumbing</td>
+                    <td>$85</td>
+                    <td>$500/kitchen</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Electrical</td>
+                    <td>$85</td>
+                    <td>$500/kitchen</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Painting</td>
+                    <td>N/A</td>
+                    <td>$500/kitchen</td>
+                    <td>Contracted to AZ design. Subcontractor will provide details.</td>
+                </tr>
+                <tr>
+                    <td>Wallpaper</td>
+                    <td>$40</td>
+                    <td>N/A</td>
+                    <td>Contracted to AZ design. Subcontractor will provide details.</td>
+                </tr>
+                <tr>
+                    <td>General Construction</td>
+                    <td>$60</td>
+                    <td>N/A</td>
+                    <td>Moving walls, sheetrock, framing windows, etc.  May be contracted out if needed.</td>
+                </tr>
+            </tbody>
+        </table>
+        <br />
+        <p>
+            *Deliveries are also available.  There is a $50 minimum on 1st piece and then $25 for each extra piece. Large items will incur
+            a $100 surcharge for delivery. Any installation required will be charged at the standard hourly
+            rate of $85 per hour.
+        </p>
+    </div>
+    
+    <!--Footer-->
+    <footer class="bg-primary">
+        <div class="footer text-white py-5 mt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-4">
+
+                    </div>
+                    <div class="col-4">
+                        <h4>Resources</h4>
+                        <a href="services.html">Fees</a><br />
+                        <a href="#">Manufacturers</a><br />
+                        <a href="empResources.html">Employee Resources</a>
+                    </div>
+                    <div class="col-4">
+                        <h4>Headquarters</h4>
+                        <p>
+                            101 Sedalia Dr<br />
+                            Pheonix, AZ<br />
+                            85001<br />
+                            <strong>Phone:</strong> 123-456-7890<br />
+                            <strong>Fax:</strong> 123-456-7890
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

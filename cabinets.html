@@ -1,0 +1,393 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Cabinets</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/4.3.1/flatly/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+        .brand {
+            border: 2px solid white;
+            border-radius: 12px;
+            padding: 4px;
+        }
+
+        .jumbotron {
+            background: url('images/cabinets/cabinet_banner.png')no-repeat fixed;
+            height: 25em;
+            font-weight: bold;
+            background-size: 100%;
+            color: black;
+        }
+
+        .jumbo {
+            background: rgba(255, 255, 255, 0.5);
+            color: black;
+            border-radius: 20px;
+        }
+
+        #manufacturers img:hover{
+            opacity:0.3;
+        }
+
+        .row img:hover{
+            cursor:zoom-in;
+            opacity:0.6;
+        }
+    </style>
+
+</head>
+<body>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-md bg-primary navbar-dark sticky-top">
+        <a class="navbar-brand brand" href="index.html">HDS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav ml-auto">
+
+                <!--Links-->
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown active">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Products</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="appliances.html">Appliances</a>
+                        <a class="dropdown-item active" href="cabinets.html">Cabinets</a>
+                        <a class="dropdown-item" href="lighting.html">Lighting</a>
+                        <a class="dropdown-item" href="plumbing.html">Plumbing</a>
+                        <a class="dropdown-item" href="countertops.html">Countertops</a>
+                        <a class="dropdown-item" href="flooring.html">Flooring</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="services.html">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="locations.html">Locations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="aboutUs.html">About us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--Banner-->
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col-9">
+                <div class="jumbo py-3 px-3">
+                    <h1 class="display-3">Cabinets</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="text-center">
+        <div class="container">
+            <h1>The Process</h1>
+            <hr />
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col-8">
+                    <p class="lead">
+                        To ensure our clients get the perfect cabinets for their unique tastes, HDS does not
+                        keep cabinets in stock.  We begin with a consultation with the client where the style
+                        and colors are determined.  We then custom order the cabinets from our manufacturers.
+                        If you'd like to get ideas of what may work for you, you can check out some of our
+                        completed works below or stop by one of our locations.  Each of our convenient locations
+                        are fitted with beautiful kitchen displays.
+                    </p>
+                </div>
+                <div class="col-2"></div>
+            </div>
+            <hr class="my-5" />
+        </div>
+    </section>
+
+    <section class="text-center" id="woods">
+        <div class="container">
+
+            <!--Red Oak-->
+            <div class="row">
+                <div class="col-6 my-auto">
+                    <h1>Red Oak</h1>
+                    <p class="lead">
+                        Red Oak is commonly used for more traditionally styled cabinets.  Its rich grain
+                        patterns give it a naturally classic appearance.  This wood is known for being
+                        strong, durable, and relatively inexpensive.
+                    </p>
+                </div>
+                <div class="col-6">
+                    <img class="img-fluid" src="images/cabinets/red_oak_cabinets.jpg" data-toggle="modal" data-target="#redOakModal" />
+                </div>
+            </div>
+
+            <div class="modal" id="redOakModal">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 class="modal-title">Red Oak Cabinets</h2>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="img-fluid" src="images/cabinets/red_oak_cabinets.jpg" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-5" />
+
+            <!--White Oak-->
+            <div class="row">
+                <div class="col-6">
+                    <img class="img-fluid" src="images/cabinets/white_oak_cabinets.jpg" data-toggle="modal" data-target="#whiteOakModal" />
+                </div>
+                <div class="col-6 my-auto">
+                    <h1>White Oak</h1>
+                    <p class="lead">
+                        White Oak has less pronounced grain patterns.  It gives the room a more subtle, artsy
+                        look.  It is just as durable as Red Oak but stronger.  Great for the more modern of
+                        tastes.
+                    </p>
+                </div>
+            </div>
+
+            <div class="modal" id="whiteOakModal">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 class="modal-title">White Oak Cabinets</h2>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="img-fluid" src="images/cabinets/white_oak_cabinets.jpg" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-5" />
+
+            <!--Maple-->
+            <div class="row">
+                <div class="col-6 my-auto">
+                    <h1>Maple</h1>
+                    <p class="lead">
+                        Hard Maple is another wonderful option.  It's fine-grain and range golden to deep
+                        mahogany tones provide the perfect canvas for a variety of finishes.  It is considered
+                        one of the hardest woods suitable for cabinetry.
+                    </p>
+                </div>
+                <div class="col-6">
+                    <img class="img-fluid" src="images/cabinets/hard_maple_cabinets.jpg" data-toggle="modal" data-target="#mapleModal" />
+                </div>
+            </div>
+
+            <div class="modal" id="mapleModal">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 class="modal-title">Maple Cabinets</h2>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="img-fluid" src="images/cabinets/hard_maple_cabinets.jpg" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-5" />
+
+            <!--Hickory-->
+            <div class="row">
+                <div class="col-6">
+                    <img class="img-fluid" src="images/cabinets/hickory_cabinets.jpg" data-toggle="modal" data-target="#hickoryModal" />
+                </div>
+                <div class="col-6 my-auto">
+                    <h1>Hickory</h1>
+                    <p class="lead">
+                        Hickory is known for its more rustic style.  Natural finishes bring out its inner
+                        beauty.  Hickory is lighter than Oak yet similar in strength.
+                    </p>
+                </div>
+            </div>
+
+            <div class="modal" id="hickoryModal">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 class="modal-title">Hickory Cabinets</h2>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="img-fluid" src="images/cabinets/hickory_cabinets.jpg" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-5" />
+
+            <!--Cherry-->
+            <div class="row">
+                <div class="col-6 my-auto">
+                    <h1>Cherry</h1>
+                    <p class="lead">
+                        Cherry wood provides a beautifully elegant and formal look.  It plays well to more
+                        traditional style.  It darkens with age and commonly stained for a more uniformed
+                        color.  Cherry is strong enough to withstand a beating.
+                    </p>
+                </div>
+                <div class="col-6">
+                    <img class="img-fluid" src="images/cabinets/Cherry_cabinets.jpg" data-toggle="modal" data-target="#cherryModal" />
+                </div>
+            </div>
+
+            <div class="modal" id="cherryModal">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 class="modal-title">Cherry Cabinets</h2>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="img-fluid" src="images/cabinets/cherry_cabinets.jpg" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-5" />
+
+            <!--Birch-->
+            <div class="row">
+                <div class="col-6">
+                    <img class="img-fluid" src="images/cabinets/birch_cabinets.jpg" data-toggle="modal" data-target="#birchModal" />
+                </div>
+                <div class="col-6 my-auto">
+                    <h1>Birch</h1>
+                    <p class="lead">
+                        Birch is a pale wood and looks best with a natural finish.  It is popular in more
+                        traditional kitchens.  It is not as strong as some other woods but inexpensive, great
+                        for homeowners on a budget.
+                    </p>
+                </div>
+            </div>
+
+            <div class="modal" id="birchModal">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 class="modal-title">Birch Cabinets</h2>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="img-fluid" src="images/cabinets/birch_cabinets.jpg" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-5" />
+
+            <!--Ash-->
+            <div class="row">
+                <div class="col-6 my-auto">
+                    <h1>Ash</h1>
+                    <p class="lead">
+                        Ash wood is great for more contemporary styles.  Looks great with a clear or natural
+                        finish.  Ash is similar to Oak in strength and durability but lighter in color.
+                    </p>
+                </div>
+                <div class="col-6">
+                    <img class="img-fluid" src="images/cabinets/ash_cabinets.jpg" data-toggle="modal" data-target="#ashModal" />
+                </div>
+            </div>
+
+            <div class="modal" id="ashModal">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 class="modal-title">Ash Cabinets</h2>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="img-fluid" src="images/cabinets/ash_cabinets.jpg" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-5" />
+
+            <!--Pine-->
+            <div class="row">
+                <div class="col-6">
+                    <img class="img-fluid" src="images/cabinets/pine_cabinets.jpg" data-toggle="modal" data-target="#pineModal" />
+                </div>
+                <div class="col-6 my-auto">
+                    <h1>Pine</h1>
+                    <p class="lead">
+                        Pine provides a more traditional and country style.  It is the only softwood used in
+                        cabinetry making it more susceptible to denting.
+                    </p>
+                </div>
+            </div>
+
+            <div class="modal" id="pineModal">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 class="modal-title">Pine Cabinets</h2>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="img-fluid" src="images/cabinets/pine_cabinets.jpg" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Footer-->
+    <footer class="bg-primary">
+        <div class="footer text-white py-5 mt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-4">
+
+                    </div>
+                    <div class="col-4">
+                        <h4>Resources</h4>
+                        <a href="services.html">Fees</a><br />
+                        <a href="#">Manufacturers</a><br />
+                        <a href="empResources.html">Employee Resources</a>
+                    </div>
+                    <div class="col-4">
+                        <h4>Headquarters</h4>
+                        <p>
+                            101 Sedalia Dr<br />
+                            Pheonix, AZ<br />
+                            85001<br />
+                            <strong>Phone:</strong> 123-456-7890<br />
+                            <strong>Fax:</strong> 123-456-7890
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
