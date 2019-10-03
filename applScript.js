@@ -1,7 +1,31 @@
 $(document).ready(function () {
-    $("select").change(function () {
+    $('select').change(function () {
         displayProducts();
-    });
+    })
+    $('#type-filter-head').click(function () {
+        if ($('#type-filter-head').html() == 'Product Types +')
+            $('#type-filter-head').html('Product Types -');
+        else $('#type-filter-head').html('Product Types +')
+        $('#type-filter').slideToggle('slow');
+    })
+    $('#brand-filter-head').click(function () {
+        if ($('#brand-filter-head').html() == 'Brand Names +')
+            $('#brand-filter-head').html('Brand Names -');
+        else $('#brand-filter-head').html('Brand Names +')
+        $('#brand-filter').slideToggle('slow');
+    })
+    $('#all-types').click(function () {
+        $('.type').prop('checked', false);
+    })
+    $('.type').click(function () {
+        $('#all-types').prop('checked', false);
+    })
+    $('#all-brands').click(function () {
+        $('.brand').prop('checked', false);
+    })
+    $('.brand').click(function () {
+        $('#all-brands').prop('checked', false);
+    })
 })
 
 
@@ -61,7 +85,7 @@ function createProducts() {
     for (let i = 0; i < productArr.length; i++) {
         productArr[i].popularity = i + 1;
     }
-    tempArr = productArr;
+    //tempArr = productArr;
     displayProducts();
 }
 
@@ -70,27 +94,34 @@ function createProducts() {
 var typeArr = [];
 var brandArr = [];
 
-function filterType(type) {
-    typeArr.length = 0;
-    for (let i = 0; i < productArr.length; i++) {
-        if (productArr[i].type == type) {
-            typeArr.push(productArr[i]);
+
+function typeFilter(type) {
+    if (type == 'All Types')
+        typeArr.length = 0;
+    else if (typeArr.includes(type))
+        for (let i = 0; i < typeArr.length; i++) {
+            if (typeArr[i] == type)
+                typeArr.splice(i, 1);
         }
-    }
-    tempArr = typeArr;
+    else
+        typeArr.push(type);
     displayProducts();
 }
 
-function filterBrand(brand) {
-    brandArr.length = 0;
-    for (let i = 0; i < productArr.length; i++) {
-        if (productArr[i].brand == brand) {
-            brandArr.push(productArr[i]);
+function brandFilter(brand) {
+    if (brand == 'All Brands')
+        brandArr.length = 0;
+    else if (brandArr.includes(brand))
+        for (let i = 0; i < brandArr.length; i++) {
+            if (brandArr[i] == brand)
+                brandArr.splice(i, 1);
         }
-    }
-    tempArr = brandArr;
+    else
+        brandArr.push(brand);
     displayProducts();
 }
+
+//------------------------------------------------------------------------------
 
 //Convert to Currency
 var invArr = [];
@@ -99,9 +130,31 @@ var convUSD = new Intl.NumberFormat('en-US', {
     currency: 'USD'
 })
 
-
 function displayProducts() {
     $('#productList').empty();
+    tempArr.length = 0;
+
+    if (typeArr.length > 0) {
+        for (let i = 0; i < productArr.length; i++) {
+            if (typeArr.includes(productArr[i].type))
+                tempArr.push(productArr[i]);
+        }
+    } else {
+        for (let i = 0; i < productArr.length; i++) {
+            tempArr.push(productArr[i]);
+        }
+    }
+
+    if (brandArr.length > 0) {
+        console.log(brandArr);
+        for (let i = 0; i < tempArr.length; i++) {
+            if (!brandArr.includes(tempArr[i].brand)) {
+                tempArr.splice(i, 1);
+                i--;
+            }
+        }
+        console.log(tempArr);
+    }
 
     let sortBy = document.getElementById('sortSel').value;
     sortAppl(sortBy);

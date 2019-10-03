@@ -17,6 +17,14 @@
             padding: 4px;
         }
 
+        .filter-body{
+            display:none;
+        }
+
+        .filter-head:hover{
+            cursor:pointer;
+        }
+
         .productHeader {
             color: black;
         }
@@ -151,46 +159,153 @@
     </div>
 
 
-    <div class="float-left">
+    <div class="row">
+        <div class="col-2">
+            <div class="ml-3">
+                <h5 class="filter-head" id="type-filter-head">Product Types +</h5>
+                <hr color="black" />
+                <div class="filter-body ml-3 mb-3" id="type-filter">
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" id="all-types" onclick="typeFilter('All Types')" checked>All Types
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input type" onclick="typeFilter('Coffee')">Coffee
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input type" onclick="typeFilter('Cooktop')">Cooktops
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input type" onclick="typeFilter('Dishwasher')">Dishwashers
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input type" onclick="typeFilter('Disposal')">Disposals
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input type" onclick="typeFilter('Dryer')">Dryers
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input type" onclick="typeFilter('Icemaker')">Icemakers
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input type" onclick="typeFilter('Microwave')">Microwave
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input type" onclick="typeFilter('Oven')">Ovens
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input type" onclick="typeFilter('Range')">Ranges
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input type" onclick="typeFilter('Refrigerator')">Refrigerators
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input type" onclick="typeFilter('Washer')">Washers
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input type" onclick="typeFilter('Wine')">Wine
+                        </label>
+                    </div>
+                </div>
 
-        <!--Filter Type-->
-        <div class="btn-group-vertical border border-secondary ml-3 shadow">
-            <button class="btn btn-primary">Products</button>
-            <button type="button" class="btn active" onclick="createProducts()">All Types</button>
-            <button type="button" class="btn" onclick="filterType('Microwave')">Microwaves</button>
-            <button type="button" class="btn" onclick="filterType('Washer')">Washers</button>
-            <button type="button" class="btn" onclick="filterType('Dryer')">Dryers</button>
-            <button type="button" class="btn" onclick="filterType('Dishwasher')">Dishwashers</button>
-            <button type="button" class="btn" onclick="filterType('Refrigerator')">Refrigerators</button>
-            <button type="button" class="btn" onclick="filterType('Wine')">Wine</button>
-            <button type="button" class="btn" onclick="filterType('Range')">Ranges</button>
-            <button type="button" class="btn" onclick="filterType('Coffee')">Coffee</button>
-            <button type="button" class="btn" onclick="filterType('Oven')">Ovens</button>
-            <button type="button" class="btn" onclick="filterType('Cooktop')">Cooktops</button>
-            <button type="button" class="btn" onclick="filterType('Disposal')">Disposals</button>
-            <button type="button" class="btn" onclick="filterType('Icemaker')">Icemakers</button>
-        </div>
-        <br />
-        <!--Filter Brand-->
-        <div class="btn-group-vertical border border-secondary ml-3 mt-3 shadow">
-            <button class="btn btn-primary">Brands</button>
-            <button type="button" class="btn px-4" onclick="displayProducts(productArr)">All Brands</button>
-            <button type="button" class="btn" onclick="filterBrand('GE')">GE</button>
-            <button type="button" class="btn" onclick="filterBrand('Bosch')">Bosch</button>
-            <button type="button" class="btn" onclick="filterBrand('Sub-Zero')">Sub-Zero</button>
-            <button type="button" class="btn" onclick="filterBrand('Viking')">Viking</button>
-            <button type="button" class="btn" onclick="filterBrand('Miele')">Miele</button>
-            <button type="button" class="btn" onclick="filterBrand('Jenn-Air')">Jenn-Air</button>
-            <button type="button" class="btn" onclick="filterBrand('Thermador')">Thermador</button>
-            <button type="button" class="btn" onclick="filterBrand('Amana')">Amana</button>
-            <button type="button" class="btn" onclick="filterBrand('Insinkerator')">Insinkerator</button>
-            <button type="button" class="btn" onclick="filterBrand('U-Line')">U-Line</button>
-            <button type="button" class="btn" onclick="filterBrand('Dacor')">Dacor</button>
-        </div>
-    </div>
 
-    <!--Created Products (js)-->
-    <div class="container" id="productList">
+                <h5 class="filter-head" id="brand-filter-head">Brand Names +</h5>
+                <hr color="black" />
+                <div class="filter-body ml-3" id="brand-filter">
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" id="all-brands" onclick="brandFilter('All Brands')" checked>All Brands
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input brand" onclick="brandFilter('Amana')">Amana
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input brand" onclick="brandFilter('Bosch')">Bosch
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input brand" onclick="brandFilter('Dacor')">Dacor
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input brand" onclick="brandFilter('GE')">GE
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input brand" onclick="brandFilter('Insinkerator')">Insinkerator
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input brand" onclick="brandFilter('Jenn-Air')">Jenn-Air
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input brand" onclick="brandFilter('Miele')">Miele
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input brand" onclick="brandFilter('Sub-Zero')">Sub-Zero
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input brand" onclick="brandFilter('Thermador')">Thermador
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input brand" onclick="brandFilter('U-Line')">U-Line
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input brand" onclick="brandFilter('Viking')">Viking
+                        </label>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="col-10">
+            <!--Created Products (js)-->
+            <div class="container" id="productList">
+            </div>
+
+        </div>
     </div>
 
     <!--Footer-->
