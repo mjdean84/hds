@@ -11,6 +11,10 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="counterScript.js"></script>
     <style>
+        nav{
+            background:rgba(0, 0, 0, 0.6);
+        }
+
         .brand {
             border: 2px solid white;
             border-radius: 12px;
@@ -21,7 +25,7 @@
             text-align: center;
         }
 
-        #hardwood {
+        body {
             background: url('images/flooring/hardwood/hardwood.jpg')no-repeat fixed;
             background-size: 100%;
         }
@@ -102,66 +106,66 @@
             //Change Background Images
             //Hardwood
             $('#acaciaImg').click(function () {
-                $('#hardwood').css('background', 'url(images/flooring/hardwood/bg/acacia_bg.jpg)no-repeat fixed');
+                $('body').css('background', 'url(images/flooring/hardwood/bg/acacia_bg.jpg)no-repeat fixed');
             });
             $('#bambooImg').click(function () {
-                $('#hardwood').css('background', 'url(images/flooring/hardwood/bg/bamboo_bg.jpg)no-repeat fixed');
+                $('body').css('background', 'url(images/flooring/hardwood/bg/bamboo_bg.jpg)no-repeat fixed');
             });
             $('#hickoryImg').click(function () {
-                $('#hardwood').css('background', 'url(images/flooring/hardwood/bg/hickory_bg.jpg)no-repeat fixed');
+                $('body').css('background', 'url(images/flooring/hardwood/bg/hickory_bg.jpg)no-repeat fixed');
             });
             $('#mapleImg').click(function () {
-                $('#hardwood').css('background', 'url(images/flooring/hardwood/bg/maple_bg.jpg)no-repeat fixed');
+                $('body').css('background', 'url(images/flooring/hardwood/bg/maple_bg.jpg)no-repeat fixed');
             });
             $('#oakImg').click(function () {
-                $('#hardwood').css('background', 'url(images/flooring/hardwood/bg/oak_bg.jpg)no-repeat fixed');
+                $('body').css('background', 'url(images/flooring/hardwood/bg/oak_bg.jpg)no-repeat fixed');
             });
             $('#combo1Img').click(function () {
-                $('#hardwood').css('background', 'url(images/flooring/hardwood/bg/combo1_bg.jpg)no-repeat fixed');
+                $('body').css('background', 'url(images/flooring/hardwood/bg/combo1_bg.jpg)no-repeat fixed');
             });
             $('#combo2Img').click(function () {
-                $('#hardwood').css('background', 'url(images/flooring/hardwood/bg/combo2_bg.jpg)no-repeat fixed');
+                $('body').css('background', 'url(images/flooring/hardwood/bg/combo2_bg.jpg)no-repeat fixed');
             });
             $('#centerpieceImg').click(function () {
-                $('#hardwood').css('background', 'url(images/flooring/hardwood/bg/centerpiece_bg.jpg)no-repeat fixed');
+                $('body').css('background', 'url(images/flooring/hardwood/bg/centerpiece_bg.jpg)no-repeat fixed');
             });
             $('#ovalImg').click(function () {
-                $('#hardwood').css('background', 'url(images/flooring/hardwood/bg/oval_bg.jpg)no-repeat fixed');
+                $('body').css('background', 'url(images/flooring/hardwood/bg/oval_bg.jpg)no-repeat fixed');
             });
             $('#squaresImg').click(function () {
-                $('#hardwood').css('background', 'url(images/flooring/hardwood/bg/squares_bg.jpg)no-repeat fixed');
+                $('body').css('background', 'url(images/flooring/hardwood/bg/squares_bg.jpg)no-repeat fixed');
             });
 
             //Tile
             $('#ceramicImg').click(function () {
-                $('#hardwood').css('background', 'url(images/flooring/tile/bg/ceramic_bg.jpg)no-repeat fixed');
+                $('body').css('background', 'url(images/flooring/tile/bg/ceramic_bg.jpg)no-repeat fixed');
             });
             $('#graniteImg').click(function () {
-                $('#hardwood').css('background', 'url(images/flooring/tile/bg/granite_bg.jpg)no-repeat fixed');
+                $('body').css('background', 'url(images/flooring/tile/bg/granite_bg.jpg)no-repeat fixed');
             });
             $('#laminateImg').click(function () {
-                $('#hardwood').css('background', 'url(images/flooring/tile/bg/laminate_bg.jpg)no-repeat fixed');
+                $('body').css('background', 'url(images/flooring/tile/bg/laminate_bg.jpg)no-repeat fixed');
             });
             $('#limestoneImg').click(function () {
-                $('#hardwood').css('background', 'url(images/flooring/tile/bg/limestone_bg.jpg)no-repeat fixed');
+                $('body').css('background', 'url(images/flooring/tile/bg/limestone_bg.jpg)no-repeat fixed');
             });
             $('#linoleumImg').click(function () {
-                $('#hardwood').css('background', 'url(images/flooring/tile/bg/linoleum_bg.jpg)no-repeat fixed');
+                $('body').css('background', 'url(images/flooring/tile/bg/linoleum_bg.jpg)no-repeat fixed');
             });
             $('#marbleImg').click(function () {
-                $('#hardwood').css('background', 'url(images/flooring/tile/bg/marble_bg.jpg)no-repeat fixed');
+                $('body').css('background', 'url(images/flooring/tile/bg/marble_bg.jpg)no-repeat fixed');
             });
             $('#porcelainImg').click(function () {
-                $('#hardwood').css('background', 'url(images/flooring/tile/bg/porcelain_bg.jpg)no-repeat fixed');
+                $('body').css('background', 'url(images/flooring/tile/bg/porcelain_bg.jpg)no-repeat fixed');
             });
             $('#slateImg').click(function () {
-                $('#hardwood').css('background', 'url(images/flooring/tile/bg/slate_bg.jpg)no-repeat fixed');
+                $('body').css('background', 'url(images/flooring/tile/bg/slate_bg.jpg)no-repeat fixed');
             });
             $('#terracottaImg').click(function () {
-                $('#hardwood').css('background', 'url(images/flooring/tile/bg/terracotta_bg.jpg)no-repeat fixed');
+                $('body').css('background', 'url(images/flooring/tile/bg/terracotta_bg.jpg)no-repeat fixed');
             });
             $('#vinylImg').click(function () {
-                $('#hardwood').css('background', 'url(images/flooring/tile/bg/vinyl_bg.jpeg)no-repeat fixed');
+                $('body').css('background', 'url(images/flooring/tile/bg/vinyl_bg.jpeg)no-repeat fixed');
             });
 
 
@@ -185,7 +189,7 @@
 </head>
 <body>
     <!--Navbar-->
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top">
         <a class="navbar-brand brand" href="index.html">HDS</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
             <span class="navbar-toggler-icon"></span>
@@ -215,6 +219,9 @@
                     <a class="nav-link" href="locations.html">Locations</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="gallery.html">Gallery</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="aboutUs.html">About us</a>
                 </li>
             </ul>
@@ -222,11 +229,12 @@
     </nav>
 
     <!--Banner-->
-    <section class="offset mt-5 pt-5" id="hardwood">
+    <section class="mt-5 pt-5" id="hardwood">
         <div class="row div-dbg py-3">
             <div class="col-12">
                 <h1 class="display-3">Flooring</h1>
-                <p class="lead">Feel free to get creative.</p>
+                <p class="lead">Feel free to get creative.  Check out our
+                <a href="manufacturers.html">manufacturers' websites</a> for more options.</p>
             </div>
         </div>
 
@@ -803,13 +811,13 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-4">
-
+                            <img class="img-fluid" src="images/nkba.jpg" />
                         </div>
                         <div class="col-4">
                             <h4>Resources</h4>
                             <a href="faqs.html">FAQs</a><br />
                             <a href="services.html">Fees</a><br />
-                            <a href="#">Manufacturers</a><br />
+                            <a href="manufacturers.html">Manufacturers</a><br />
                             <a href="empResources.html">Employee Resources</a>
                         </div>
                         <div class="col-4">

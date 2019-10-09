@@ -22,7 +22,12 @@
             height: 25em;
             font-weight: bold;
             background-size: 100%;
-            color: black;
+        }
+
+        #banner2 {
+            background: url('images/countertops/countertop_banner2.jpg')no-repeat fixed;
+            height: 20em;
+            background-size: cover;
         }
 
         .jumbo {
@@ -52,7 +57,11 @@
         }
 
     </style>
-
+    <script>
+        $(document).ready(function () {
+            $('figcaption').addClass('lead text-left');
+        })
+    </script>
 </head>
 <body>
     <!--Navbar-->
@@ -86,6 +95,9 @@
                     <a class="nav-link" href="locations.html">Locations</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="gallery.html">Gallery</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="aboutUs.html">About us</a>
                 </li>
             </ul>
@@ -98,7 +110,10 @@
             <div class="col-9">
                 <div class="jumbo py-3 px-3">
                     <h1 class="display-3">Countertops</h1>
-                    <p class="lead">We have an endless number of options for our countertops.</p>
+                    <p class="lead">
+                        We have an endless number of options for our countertops.  If you'd like to see more, check out
+                        our <a class="text-info" href="manufacturers.html">manufacturers' websites.</a>
+                    </p>
                 </div>
             </div>
         </div>
@@ -111,23 +126,6 @@
                     Just pick the material, the color scheme and edge style.  Then, we'll have it made and
                     installed.
                 </h2>
-                <div class="row mt-3">
-                    <div class="col">
-                        <button type="button" class="btn-lg btn-primary" onclick="location.href='#granite'">Granite</button>
-                    </div>
-                    <div class="col">
-                        <button type="button" class="btn-lg btn-primary" onclick="location.href='#onyx'">Onyx</button>
-                    </div>
-                    <div class="col">
-                        <button type="button" class="btn-lg btn-primary" onclick="location.href='#quartz'">Quartz</button>
-                    </div>
-                    <div class="col">
-                        <button type="button" class="btn-lg btn-primary" onclick="location.href='#soapstone'">Soapstone</button>
-                    </div>
-                    <div class="col">
-                        <button type="button" class="btn-lg btn-primary" onclick="location.href='#edges'">Edges</button>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -142,46 +140,88 @@
                         <!--Granite Images-->
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img class="img-fluid" src="images/countertops/granite/amarone.jpg" />
+                                <figure>
+                                    <img class="img-fluid" src="images/countertops/granite/amarone.jpg" />
+                                    <figcaption>Amarone</figcaption>
+                                </figure>
                             </div>
                             <div class="carousel-item">
-                                <img class="img-fluid" src="images/countertops/granite/amber_yellow.jpg" />
+                                <figure>
+                                    <img class="img-fluid" src="images/countertops/granite/amber_yellow.jpg" />
+                                    <figcaption>Amber Yellow</figcaption>
+                                </figure>
                             </div>
                             <div class="carousel-item">
-                                <img class="img-fluid" src="images/countertops/granite/antico_cream.jpg" />
+                                <figure>
+                                    <img class="img-fluid" src="images/countertops/granite/antico_cream.jpg" />
+                                    <figcaption class="lead">Antico Cream</figcaption>
+                                </figure>
                             </div>
                             <div class="carousel-item">
-                                <img class="img-fluid" src="images/countertops/granite/blanco_romano.jpg" />
+                                <figure>
+                                    <img class="img-fluid" src="images/countertops/granite/blanco_romano.jpg" />
+                                    <figcaption>Blanco Romano</figcaption>
+                                </figure>
                             </div>
                             <div class="carousel-item">
-                                <img class="img-fluid" src="images/countertops/granite/costa_emerald.jpg" />
+                                <figure>
+                                    <img class="img-fluid" src="images/countertops/granite/costa_emerald.jpg" />
+                                    <figcaption>Costa Emerald</figcaption>
+                                </figure>
                             </div>
                             <div class="carousel-item">
-                                <img class="img-fluid" src="images/countertops/granite/crema_perla.jpg" />
+                                <figure>
+                                    <img class="img-fluid" src="images/countertops/granite/crema_perla.jpg" />
+                                    <figcaption>Crema Perla</figcaption>
+                                </figure>
                             </div>
                             <div class="carousel-item">
-                                <img class="img-fluid" src="images/countertops/granite/desert_dream.jpg" />
+                                <figure>
+                                    <img class="img-fluid" src="images/countertops/granite/desert_dream.jpg" />
+                                    <figcaption>Desert Dream</figcaption>
+                                </figure>
                             </div>
                             <div class="carousel-item">
-                                <img class="img-fluid" src="images/countertops/granite/river_white.jpg" />
+                                <figure>
+                                    <img class="img-fluid" src="images/countertops/granite/river_white.jpg" />
+                                    <figcaption>River White</figcaption>
+                                </figure>
                             </div>
                             <div class="carousel-item">
-                                <img class="img-fluid" src="images/countertops/granite/snowy_oak.jpg" />
+                                <figure>
+                                    <img class="img-fluid" src="images/countertops/granite/snowy_oak.jpg" />
+                                    <figcaption>Snowy Oak</figcaption>
+                                </figure>
                             </div>
                             <div class="carousel-item">
-                                <img class="img-fluid" src="images/countertops/granite/starry_night.jpg" />
+                                <figure>
+                                    <img class="img-fluid" src="images/countertops/granite/starry_night.jpg" />
+                                    <figcaption>Starry Night</figcaption>
+                                </figure>
                             </div>
                             <div class="carousel-item">
-                                <img class="img-fluid" src="images/countertops/granite/supreme_fantasy.jpg" />
+                                <figure>
+                                    <img class="img-fluid" src="images/countertops/granite/supreme_fantasy.jpg" />
+                                    <figcaption>Supreme Fantasy</figcaption>
+                                </figure>
                             </div>
                             <div class="carousel-item">
-                                <img class="img-fluid" src="images/countertops/granite/tropical_green.jpg" />
+                                <figure>
+                                    <img class="img-fluid" src="images/countertops/granite/tropical_green.jpg" />
+                                    <figcaption>Tropical Green</figcaption>
+                                </figure>
                             </div>
                             <div class="carousel-item">
-                                <img class="img-fluid" src="images/countertops/granite/vintage.jpg" />
+                                <figure>
+                                    <img class="img-fluid" src="images/countertops/granite/vintage.jpg" />
+                                    <figcaption>Vintage</figcaption>
+                                </figure>
                             </div>
                             <div class="carousel-item">
-                                <img class="img-fluid" src="images/countertops/granite/white_valley.jpg" />
+                                <figure>
+                                    <img class="img-fluid" src="images/countertops/granite/white_valley.jpg" />
+                                    <figcaption>White Valley</figcaption>
+                                </figure>
                             </div>
                         </div>
 
@@ -330,46 +370,88 @@
                         <!--Onyx Images-->
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img class="img-fluid" src="images/countertops/onyx/aged_oak.jpg" />
+                                <figure>
+                                    <img class="img-fluid" src="images/countertops/onyx/aged_oak.jpg" />
+                                    <figcaption>Aged Oak</figcaption>
+                                </figure>
                             </div>
                             <div class="carousel-item">
-                                <img class="img-fluid" src="images/countertops/onyx/blizzard.jpg" />
+                                <figure>
+                                    <img class="img-fluid" src="images/countertops/onyx/blizzard.jpg" />
+                                    <figcaption>Blizzard</figcaption>
+                                </figure>
                             </div>
                             <div class="carousel-item">
-                                <img class="img-fluid" src="images/countertops/onyx/cream_basin.jpg" />
+                                <figure>
+                                    <img class="img-fluid" src="images/countertops/onyx/cream_basin.jpg" />
+                                    <figcaption>Cream Basin</figcaption>
+                                </figure>
                             </div>
                             <div class="carousel-item">
-                                <img class="img-fluid" src="images/countertops/onyx/dark_waters.jpg" />
+                                <figure>
+                                    <img class="img-fluid" src="images/countertops/onyx/dark_waters.jpg" />
+                                    <figcaption>Dark Waters</figcaption>
+                                </figure>
                             </div>
                             <div class="carousel-item">
-                                <img class="img-fluid" src="images/countertops/onyx/meadow_brook.jpg" />
+                                <figure>
+                                    <img class="img-fluid" src="images/countertops/onyx/meadow_brook.jpg" />
+                                    <figcaption>Meadow Brook</figcaption>
+                                </figure>
                             </div>
                             <div class="carousel-item">
-                                <img class="img-fluid" src="images/countertops/onyx/mellow_yellow.jpg" />
+                                <figure>
+                                    <img class="img-fluid" src="images/countertops/onyx/mellow_yellow.jpg" />
+                                    <figcaption>Mellow Yellow</figcaption>
+                                </figure>
                             </div>
                             <div class="carousel-item">
-                                <img class="img-fluid" src="images/countertops/onyx/molden_mount.jpg" />
+                                <figure>
+                                    <img class="img-fluid" src="images/countertops/onyx/molden_mount.jpg" />
+                                    <figcaption>Molden Mount</figcaption>
+                                </figure>
                             </div>
                             <div class="carousel-item">
-                                <img class="img-fluid" src="images/countertops/onyx/moon_beam.jpg" />
+                                <figure>
+                                    <img class="img-fluid" src="images/countertops/onyx/moon_beam.jpg" />
+                                    <figcaption>Moon Beam</figcaption>
+                                </figure>
                             </div>
                             <div class="carousel-item">
-                                <img class="img-fluid" src="images/countertops/onyx/peacock.jpg" />
+                                <figure>
+                                    <img class="img-fluid" src="images/countertops/onyx/peacock.jpg" />
+                                    <figcaption>Peacock</figcaption>
+                                </figure>
                             </div>
                             <div class="carousel-item">
-                                <img class="img-fluid" src="images/countertops/onyx/pearl_wisdom.jpg" />
+                                <figure>
+                                    <img class="img-fluid" src="images/countertops/onyx/pearl_wisdom.jpg" />
+                                    <figcaption>Pearl Wisdom</figcaption>
+                                </figure>
                             </div>
                             <div class="carousel-item">
-                                <img class="img-fluid" src="images/countertops/onyx/rainbow.jpg" />
+                                <figure>
+                                    <img class="img-fluid" src="images/countertops/onyx/rainbow.jpg" />
+                                    <figcaption>Rainbow</figcaption>
+                                </figure>
                             </div>
                             <div class="carousel-item">
-                                <img class="img-fluid" src="images/countertops/onyx/ring_of_fire.jpg" />
+                                <figure>
+                                    <img class="img-fluid" src="images/countertops/onyx/ring_of_fire.jpg" />
+                                    <figcaption>Ring of Fire</figcaption>
+                                </figure>
                             </div>
                             <div class="carousel-item">
-                                <img class="img-fluid" src="images/countertops/onyx/sandy_skies.jpg" />
+                                <figure>
+                                    <img class="img-fluid" src="images/countertops/onyx/sandy_skies.jpg" />
+                                    <figcaption>Sandy Skies</figcaption>
+                                </figure>
                             </div>
                             <div class="carousel-item">
-                                <img class="img-fluid" src="images/countertops/onyx/sun_spot.jpg" />
+                                <figure>
+                                    <img class="img-fluid" src="images/countertops/onyx/sun_spot.jpg" />
+                                    <figcaption>Sun Spot</figcaption>
+                                </figure>
                             </div>
                         </div>
 
@@ -398,46 +480,88 @@
                         <!--Quartz Images-->
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img class="img-fluid" src="images/countertops/quartz/white_marbled.jpg" />
+                                <figure>
+                                    <img class="img-fluid" src="images/countertops/quartz/white_marbled.jpg" />
+                                    <figcaption>White Marbled</figcaption>
+                                </figure>
                             </div>
                             <div class="carousel-item">
-                                <img class="img-fluid" src="images/countertops/quartz/taupe.jpg" />
+                                <figure>
+                                    <img class="img-fluid" src="images/countertops/quartz/taupe.jpg" />
+                                    <figcaption>Taupe</figcaption>
+                                </figure>
                             </div>
                             <div class="carousel-item">
-                                <img class="img-fluid" src="images/countertops/quartz/haze_blend.jpg" />
+                                <figure>
+                                    <img class="img-fluid" src="images/countertops/quartz/haze_blend.jpg" />
+                                    <figcaption>Haze Blend</figcaption>
+                                </figure>
                             </div>
                             <div class="carousel-item">
-                                <img class="img-fluid" src="images/countertops/quartz/camel.jpg" />
+                                <figure>
+                                    <img class="img-fluid" src="images/countertops/quartz/camel.jpg" />
+                                    <figcaption>Camel</figcaption>
+                                </figure>
                             </div>
                             <div class="carousel-item">
-                                <img class="img-fluid" src="images/countertops/quartz/midnight_black.jpg" />
+                                <figure>
+                                    <img class="img-fluid" src="images/countertops/quartz/midnight_black.jpg" />
+                                    <figcaption>Midnight Black</figcaption>
+                                </figure>
                             </div>
                             <div class="carousel-item">
-                                <img class="img-fluid" src="images/countertops/quartz/swirl.jpg" />
+                                <figure>
+                                    <img class="img-fluid" src="images/countertops/quartz/swirl.jpg" />
+                                    <figcaption>Swirl</figcaption>
+                                </figure>
                             </div>
                             <div class="carousel-item">
-                                <img class="img-fluid" src="images/countertops/quartz/traditional_cream.jpg" />
+                                <figure>
+                                    <img class="img-fluid" src="images/countertops/quartz/traditional_cream.jpg" />
+                                    <figcaption>Traditional Cream</figcaption>
+                                </figure>
                             </div>
                             <div class="carousel-item">
-                                <img class="img-fluid" src="images/countertops/quartz/cherry.jpg" />
+                                <figure>
+                                    <img class="img-fluid" src="images/countertops/quartz/cherry.jpg" />
+                                    <figcaption>Cherry</figcaption>
+                                </figure>
                             </div>
                             <div class="carousel-item">
-                                <img class="img-fluid" src="images/countertops/quartz/deep_mix.jpg" />
+                                <figure>
+                                    <img class="img-fluid" src="images/countertops/quartz/deep_mix.jpg" />
+                                    <figcaption>Deep Mix</figcaption>
+                                </figure>
                             </div>
                             <div class="carousel-item">
-                                <img class="img-fluid" src="images/countertops/quartz/black_and_white.jpg" />
+                                <figure>
+                                    <img class="img-fluid" src="images/countertops/quartz/black_and_white.jpg" />
+                                    <figcaption>Black and White</figcaption>
+                                </figure>
                             </div>
                             <div class="carousel-item">
-                                <img class="img-fluid" src="images/countertops/quartz/mint.jpg" />
+                                <figure>
+                                    <img class="img-fluid" src="images/countertops/quartz/mint.jpg" />
+                                    <figcaption>Mint</figcaption>
+                                </figure>
                             </div>
                             <div class="carousel-item">
-                                <img class="img-fluid" src="images/countertops/quartz/custom_purple.jpg" />
+                                <figure>
+                                    <img class="img-fluid" src="images/countertops/quartz/custom_purple.jpg" />
+                                    <figcaption>Custom Purple</figcaption>
+                                </figure>
                             </div>
                             <div class="carousel-item">
-                                <img class="img-fluid" src="images/countertops/quartz/grey.jpg" />
+                                <figure>
+                                    <img class="img-fluid" src="images/countertops/quartz/grey.jpg" />
+                                    <figcaption>Grey</figcaption>
+                                </figure>
                             </div>
                             <div class="carousel-item">
-                                <img class="img-fluid" src="images/countertops/quartz/hot_pink.jpg" />
+                                <figure>
+                                    <img class="img-fluid" src="images/countertops/quartz/hot_pink.jpg" />
+                                    <figcaption>Hot Pink</figcaption>
+                                </figure>
                             </div>
                         </div>
 
@@ -542,13 +666,22 @@
                         <!--Soapstone Images-->
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img class="img-fluid" src="images/countertops/soapstone/natural.jpg" />
+                                <figure>
+                                    <img class="img-fluid" src="images/countertops/soapstone/natural.jpg" />
+                                    <figcaption>Natural</figcaption>
+                                </figure>
                             </div>
                             <div class="carousel-item">
-                                <img class="img-fluid" src="images/countertops/soapstone/aged.jpg" />
+                                <figure>
+                                    <img class="img-fluid" src="images/countertops/soapstone/aged.jpg" />
+                                    <figcaption>Aged</figcaption>
+                                </figure>
                             </div>
                             <div class="carousel-item">
-                                <img class="img-fluid" src="images/countertops/soapstone/oiled.jpeg" />
+                                <figure>
+                                    <img class="img-fluid" src="images/countertops/soapstone/oiled.jpeg" />
+                                    <figcaption>Oiled</figcaption>
+                                </figure>
                             </div>
                         </div>
 
@@ -565,19 +698,63 @@
         </div>
     </section>
 
+        
+    <div class="jumbotron" id="banner2"></div>
+    <div class="container">
+        <h1>Edges</h1>
+        <hr />
+        <div class="row">
+            <div class="col-3">
+                <p class="lead">Crystal Cornered</p>
+                <img class="img-fluid" src="images/countertops/edges/crystal_corner.jpg" />
+            </div>
+            <div class="col-3">
+                <p class="lead">Layered</p>
+                <img class="img-fluid" src="images/countertops/edges/layered.jpg" />
+            </div>
+            <div class="col-3">
+                <p class="lead">Lipped</p>
+                <img class="img-fluid" src="images/countertops/edges/Lip.jpg" />
+            </div>
+            <div class="col-3">
+                <p class="lead">Rippled</p>
+                <img class="img-fluid" src="images/countertops/edges/ripple.jpg" />
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-3">
+                <p class="lead">Corner Hump</p>
+                <img class="img-fluid" src="images/countertops/edges/corner_hump.jpg" />
+            </div>
+            <div class="col-3">
+                <p class="lead">Classical Block</p>
+                <img class="img-fluid" src="images/countertops/edges/block.jpg" />
+            </div>
+            <div class="col-3">
+                <p class="lead">Royal Corner</p>
+                <img class="img-fluid" src="images/countertops/edges/royal_corner.jpg" />
+            </div>
+            <div class="col-3">
+                <p class="lead">Corner Crown</p>
+                <img class="img-fluid" src="images/countertops/edges/corner_crown.jpg" />
+            </div>
+        </div>
+    </div>
+
     <!--Footer-->
     <footer class="bg-primary">
         <div class="footer text-white py-5 mt-5">
             <div class="container">
                 <div class="row">
                     <div class="col-4">
-
+                        <img class="img-fluid" src="images/nkba.jpg" />
                     </div>
                     <div class="col-4">
                         <h4>Resources</h4>
                         <a href="faqs.html">FAQs</a><br />
                         <a href="services.html">Fees</a><br />
-                        <a href="#">Manufacturers</a><br />
+                        <a href="manufacturers.html">Manufacturers</a><br />
                         <a href="empResources.html">Employee Resources</a>
                     </div>
                     <div class="col-4">
