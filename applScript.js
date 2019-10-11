@@ -143,17 +143,18 @@ function displayProducts() {
         for (let i = 0; i < productArr.length; i++) {
             tempArr.push(productArr[i]);
         }
+        $('#all-types').prop('check', true);
     }
 
     if (brandArr.length > 0) {
-        console.log(brandArr);
         for (let i = 0; i < tempArr.length; i++) {
             if (!brandArr.includes(tempArr[i].brand)) {
                 tempArr.splice(i, 1);
                 i--;
             }
         }
-        console.log(tempArr);
+    } else {
+        $('#all-brands').prop('check', true);
     }
 
     let sortBy = document.getElementById('sortSel').value;
