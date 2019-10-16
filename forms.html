@@ -1,0 +1,542 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="google" content="notranslate" />
+    <meta http-equiv="content-language" content="en" />
+    <title>Services</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/4.3.1/flatly/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+        .brand {
+            border: 2px solid white;
+            border-radius: 12px;
+            padding: 4px;
+        }
+
+        .jumbotron {
+            background: url('images/resources.jpg')no-repeat fixed;
+            background-size:100%;
+            height: 17em;
+        }
+
+        .jumbo {
+            background: rgba(255, 255, 255, 0.5);
+            color: black;
+            border-radius: 20px;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $('form input').addClass('form-control');
+            $('form textarea').addClass('form-control');
+            $('form button').addClass('form-control btn btn-info');
+            $('form div').addClass('my-1');
+        })
+    </script>
+</head>
+<body onload="createInv()">
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-md bg-primary navbar-dark sticky-top">
+        <a class="navbar-brand brand" href="index.html">HDS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav ml-auto">
+
+                <!--Links-->
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Products</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="appliances.html">Appliances</a>
+                        <a class="dropdown-item" href="cabinets.html">Cabinets</a>
+                        <a class="dropdown-item" href="lighting.html">Lighting</a>
+                        <a class="dropdown-item" href="plumbing.html">Plumbing</a>
+                        <a class="dropdown-item" href="countertops.html">Countertops</a>
+                        <a class="dropdown-item" href="flooring.html">Flooring</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="services.html">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="locations.html">Locations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="gallery.html">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="aboutUs.html">About us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container my-3">
+        <h1>Forms</h1>
+        <a href="reports.html">Go to reports</a>
+    </div>
+
+    <section id="resources">
+
+        <!--Tabs-->
+        <div class="container mt-3">
+            <ul class="nav nav-tabs">
+                <li class="nav-item bg-light">
+                    <a id="invTab" class="nav-link active" data-toggle="tab" href="#inventory">Inventory</a>
+                </li>
+                <li class="nav-item bg-light">
+                    <a id="clientTab" class="nav-link" data-toggle="tab" href="#client">Client</a>
+                </li>
+                <li class="nav-item bg-light">
+                    <a id="emplTab" class="nav-link" data-toggle="tab" href="#employee">Employee</a>
+                </li>
+                <li class="nav-item bg-light">
+                    <a id="saleTab" class="nav-link" data-toggle="tab" href="#sale">Sale</a>
+                </li>
+                <li class="nav-item bg-light">
+                    <a id="jobTab" class="nav-link" data-toggle="tab" href="#job">Job</a>
+                </li>
+                <li class="nav-item bg-light">
+                    <a id="bidTab" class="nav-link" data-toggle="tab" href="#bid">Job Bid</a>
+                </li>
+                <li class="nav-item bg-light">
+                    <a id="branchTab" class="nav-link" data-toggle="tab" href="#branch">Branch</a>
+                </li>
+            </ul>
+        </div>
+
+        <!--Forms-->
+        <div class="tab-content">
+
+
+            <!--Inventory-->
+            <div id="inventory" class="container tab-pane active">
+                <form>
+                    <div class="row">
+                        <div class="col-1">
+                            <label>Serial:</label>
+                        </div>
+                        <div class="col-3">
+                            <input type="text" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1">
+                            <label>Model:</label>
+                        </div>
+                        <div class="col-3">
+                            <input type="text" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1">
+                            <label>Brand:</label>
+                        </div>
+                        <div class="col-3">
+                            <input type="text" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1">
+                            <label>Type:</label>
+                        </div>
+                        <div class="col-3">
+                            <input type="text" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1">
+                            <label>Description:</label>
+                        </div>
+                        <div class="col-3">
+                            <textarea></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1">
+                            <label>Cost:</label>
+                        </div>
+                        <div class="col-3">
+                            <input type="text" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1">
+                            <label>Price:</label>
+                        </div>
+                        <div class="col-3">
+                            <input type="text" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <button type="submit">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+
+
+            <!--Client-->
+            <div id="client" class="container tab-pane fade">
+                <form>
+                    <div class="row">
+                        <div class="col-4">
+                            <label for="fname">First Name:</label>
+                            <input type="text" id="fname" placeholder="First Name" />
+                        </div>
+                        <div class="col-1">
+                            <label for="mi">M.I.:</label>
+                            <input type="text" id="mi" placeholder="MI" />
+                        </div>
+                        <div class="col-4">
+                            <label for="fname">Last Name:</label>
+                            <input type="text" id="lname" placeholder="Last Name" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-9">
+                            <label for="addr">Street Address:</label>
+                            <input type="text" id="addr" placeholder="Street Address" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <label for="city">City:</label>
+                            <input type="text" id="city" placeholder="City" />
+                        </div>
+                        <div class="col-1">
+                            <label for="state">State:</label>
+                            <input type="text" id="state" placeholder="ST" />
+                        </div>
+                        <div class="col-4">
+                            <label for="zip">Zip Code:</label>
+                            <input type="text" id="zip" placeholder="Zip" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <label for="phone">Phone:</label>
+                            <input type="text" id="phone" placeholder="XXX - XXX - XXXX" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-9">
+                            <p class="text-info">Client ID will be generated automatically.</p>
+                            <button type="submit">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+
+
+            <!--Employee-->
+            <div id="employee" class="container tab-pane fade">
+                <form>
+                    <div class="row">
+                        <div class="col-2">
+                            <label for="emplBranch">Branch:</label>
+                            <select class="form-control" id="emplBranch">
+                                <option>Select one:</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                        <div class="col-2">
+                            <label for="emplSalary">Salary:</label>
+                            <input type="text" id="emplSalary" placeholder="Salary" />
+                        </div>
+                        <div class="col-5">
+                            <label for="emplPosition">Position:</label>
+                            <input type="text" id="emplPosition" placeholder="Position" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <label for="emplFirst">First Name:</label>
+                            <input type="text" id="emplFirst" placeholder="First Name" />
+                        </div>
+                        <div class="col-1">
+                            <label for="emplMI">M.I.:</label>
+                            <input type="text" id="emplMI" placeholder="MI" />
+                        </div>
+                        <div class="col-4">
+                            <label for="emplLast">Last Name:</label>
+                            <input type="text" id="emplLast" placeholder="Last Name" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-9">
+                            <label for="emplAddr">Street Address:</label>
+                            <input type="text" id="emplAddr" placeholder="Street Address" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <label for="emplCity">City:</label>
+                            <input type="text" id="emplCity" placeholder="City" />
+                        </div>
+                        <div class="col-1">
+                            <label for="emplState">State:</label>
+                            <input type="text" id="emplState" placeholder="ST" />
+                        </div>
+                        <div class="col-4">
+                            <label for="emplZip">Zip Code:</label>
+                            <input type="text" id="emplZip" placeholder="Zip" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <label for="emplPhone">Phone:</label>
+                            <input type="text" id="emplPhone" placeholder="XXX - XXX - XXXX" />
+                        </div>
+                        <div class="col-4">
+                            <label for="emplEmail">Email:</label>
+                            <input type="text" id="emplEmail" placeholder="Email" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-9">
+                            <p class="text-info">Employee ID will be generated automatically.</p>
+                            <button type="submit">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+
+
+            <!--Sale-->
+            <div id="sale" class="container tab-pane">
+                <form>
+                    <div class="row">
+                        <div class="col-1">
+                            <label>Invoice #:</label>
+                        </div>
+                        <div class="col-3">
+                            <input type="text" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1">
+                            <label>Date:</label>
+                        </div>
+                        <div class="col-3">
+                            <input type="text" placeholder="mm/dd/yyyy" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1">
+                            <label>Customer:</label>
+                        </div>
+                        <div class="col-3">
+                            <input type="text" placeholder="ID" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1">
+                            <label>Employee:</label>
+                        </div>
+                        <div class="col-3">
+                            <input type="text" placeholder="ID" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1">
+                            <label>Description:</label>
+                        </div>
+                        <div class="col-3">
+                            <textarea></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1">
+                            <label>Cost:</label>
+                        </div>
+                        <div class="col-3">
+                            <input type="text" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1">
+                            <label>Price:</label>
+                        </div>
+                        <div class="col-3">
+                            <input type="text" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <button type="submit">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+
+
+            <!--Job-->
+            <div id="job" class="container tab-pane">
+                <form>
+                    <div class="row">
+                        <div class="col-1">
+                            <label>Customer:</label>
+                        </div>
+                        <div class="col-3">
+                            <input type="text" placeholder="ID" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1">
+                            <label>Order #:</label>
+                        </div>
+                        <div class="col-3">
+                            <input type="text" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1">
+                            <label>Description:</label>
+                        </div>
+                        <div class="col-3">
+                            <textarea></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1">
+                            <label>Total Cost:</label>
+                        </div>
+                        <div class="col-3">
+                            <input type="text" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1">
+                            <label>Total Price:</label>
+                        </div>
+                        <div class="col-3">
+                            <input type="text" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <p class="text-info">Job ID will be generated automatically.</p>
+                            <button type="submit">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+
+
+            <!--Job Bid-->
+            <div id="bid" class="container tab-pane">
+                <form>
+                    <div class="row">
+                        <div class="col-1">
+                            <label>Date:</label>
+                        </div>
+                        <div class="col-3">
+                            <input type="text" placeholder="mm/dd/yyyy" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1">
+                            <label>Customer:</label>
+                        </div>
+                        <div class="col-3">
+                            <input type="text" placeholder="ID" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1">
+                            <label>Description:</label>
+                        </div>
+                        <div class="col-3">
+                            <textarea></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1">
+                            <label>Budget:</label>
+                        </div>
+                        <div class="col-3">
+                            <input type="text" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1">
+                            <label>Quote:</label>
+                        </div>
+                        <div class="col-3">
+                            <input type="text" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <p class="text-info">Bid ID will be generated automatically.</p>
+                            <button type="submit">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+
+
+            <!--Branch-->
+            <div id="branch" class="container tab-pane fade">
+                <form>
+                    <div class="row">
+                        <div class="col-9">
+                            <label for="branchAddr">Street Address:</label>
+                            <input type="text" id="addr" placeholder="Street Address" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <label for="branchCity">City:</label>
+                            <input type="text" id="city" placeholder="City" />
+                        </div>
+                        <div class="col-1">
+                            <label for="branchState">State:</label>
+                            <input type="text" id="branchState" placeholder="ST" />
+                        </div>
+                        <div class="col-4">
+                            <label for="branchZip">Zip Code:</label>
+                            <input type="text" id="branchZip" placeholder="Zip" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <label for="branchPhone">Phone:</label>
+                            <input type="text" id="branchPhone" placeholder="XXX - XXX - XXXX" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-9">
+                            <p class="text-info">Branch ID will be generated automatically.</p>
+                            <button type="submit">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+</body>
+</html>
