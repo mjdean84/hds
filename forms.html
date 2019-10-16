@@ -261,9 +261,9 @@
                         </div>
                         <div class="col-4">
                             <label for="zip">Zip Code:</label>
-                            <input type="text" id="zip" placeholder="Zip" required />
+                            <input type="tel" id="zip" pattern="[0-9]{5}" placeholder="Zip" required />
                             <div class="valid-feedback">Valid</div>
-                            <div class="invalid-feedback">This field is required</div>
+                            <div class="invalid-feedback">Please enter a valid zip code</div>
                         </div>
                     </div>
                     <div class="row">
@@ -623,7 +623,7 @@
                         </div>
                         <div class="col-4">
                             <label for="branchZip">Zip Code:</label>
-                            <input type="number" id="branchZip" placeholder="Zip" required />
+                            <input type="tel" id="branchZip" pattern="[0-9]{5}" placeholder="Zip" required />
                             <div class="valid-feedback">Valid</div>
                             <div class="invalid-feedback">Please enter a valid zip code</div>
                         </div>
