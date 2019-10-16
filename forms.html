@@ -20,7 +20,7 @@
 
         .jumbotron {
             background: url('images/resources.jpg')no-repeat fixed;
-            background-size:100%;
+            background-size: 100%;
             height: 17em;
         }
 
@@ -34,12 +34,30 @@
         $(document).ready(function () {
             $('form input').addClass('form-control');
             $('form textarea').addClass('form-control');
-            $('form button').addClass('form-control btn btn-info');
+            $('form button').addClass('btn btn-info btn-block');
             $('form div').addClass('my-1');
         })
     </script>
+
+    <script>
+        (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+                var forms = document.getElementsByClassName('needs-validation');
+                var validation = Array.prototype.filter.call(forms, function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
 </head>
-<body onload="createInv()">
+<body>
     <!--Navbar-->
     <nav class="navbar navbar-expand-md bg-primary navbar-dark sticky-top">
         <a class="navbar-brand brand" href="index.html">HDS</a>
@@ -120,13 +138,15 @@
 
             <!--Inventory-->
             <div id="inventory" class="container tab-pane active">
-                <form>
+                <form class="needs-validation" novalidate>
                     <div class="row">
                         <div class="col-1">
                             <label>Serial:</label>
                         </div>
                         <div class="col-3">
-                            <input type="text" />
+                            <input type="text" required />
+                            <div class="valid-feedback">Valid</div>
+                            <div class="invalid-feedback">This field is required</div>
                         </div>
                     </div>
                     <div class="row">
@@ -134,7 +154,9 @@
                             <label>Model:</label>
                         </div>
                         <div class="col-3">
-                            <input type="text" />
+                            <input type="text" required />
+                            <div class="valid-feedback">Valid</div>
+                            <div class="invalid-feedback">This field is required</div>
                         </div>
                     </div>
                     <div class="row">
@@ -142,7 +164,9 @@
                             <label>Brand:</label>
                         </div>
                         <div class="col-3">
-                            <input type="text" />
+                            <input type="text" required />
+                            <div class="valid-feedback">Valid</div>
+                            <div class="invalid-feedback">This field is required</div>
                         </div>
                     </div>
                     <div class="row">
@@ -150,7 +174,9 @@
                             <label>Type:</label>
                         </div>
                         <div class="col-3">
-                            <input type="text" />
+                            <input type="text" required />
+                            <div class="valid-feedback">Valid</div>
+                            <div class="invalid-feedback">This field is required</div>
                         </div>
                     </div>
                     <div class="row">
@@ -158,7 +184,7 @@
                             <label>Description:</label>
                         </div>
                         <div class="col-3">
-                            <textarea></textarea>
+                            <textarea class="form-control"></textarea>
                         </div>
                     </div>
                     <div class="row">
@@ -166,7 +192,9 @@
                             <label>Cost:</label>
                         </div>
                         <div class="col-3">
-                            <input type="text" />
+                            <input type="text" required />
+                            <div class="valid-feedback">Valid</div>
+                            <div class="invalid-feedback">This field is required</div>
                         </div>
                     </div>
                     <div class="row">
@@ -174,7 +202,9 @@
                             <label>Price:</label>
                         </div>
                         <div class="col-3">
-                            <input type="text" />
+                            <input type="text" required />
+                            <div class="valid-feedback">Valid</div>
+                            <div class="invalid-feedback">This field is required</div>
                         </div>
                     </div>
                     <div class="row">
@@ -189,11 +219,13 @@
 
             <!--Client-->
             <div id="client" class="container tab-pane fade">
-                <form>
+                <form class="needs-validation" novalidate>
                     <div class="row">
                         <div class="col-4">
                             <label for="fname">First Name:</label>
-                            <input type="text" id="fname" placeholder="First Name" />
+                            <input type="text" id="fname" placeholder="First Name" required />
+                            <div class="valid-feedback">Valid</div>
+                            <div class="invalid-feedback">This field is required</div>
                         </div>
                         <div class="col-1">
                             <label for="mi">M.I.:</label>
@@ -201,33 +233,45 @@
                         </div>
                         <div class="col-4">
                             <label for="fname">Last Name:</label>
-                            <input type="text" id="lname" placeholder="Last Name" />
+                            <input type="text" id="lname" placeholder="Last Name" required />
+                            <div class="valid-feedback">Valid</div>
+                            <div class="invalid-feedback">This field is required</div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-9">
                             <label for="addr">Street Address:</label>
-                            <input type="text" id="addr" placeholder="Street Address" />
+                            <input type="text" id="addr" placeholder="Street Address" required />
+                            <div class="valid-feedback">Valid</div>
+                            <div class="invalid-feedback">This field is required</div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-4">
                             <label for="city">City:</label>
-                            <input type="text" id="city" placeholder="City" />
+                            <input type="text" id="city" placeholder="City" required />
+                            <div class="valid-feedback">Valid</div>
+                            <div class="invalid-feedback">This field is required</div>
                         </div>
                         <div class="col-1">
                             <label for="state">State:</label>
-                            <input type="text" id="state" placeholder="ST" />
+                            <input type="text" id="state" placeholder="ST" required />
+                            <div class="valid-feedback">Valid</div>
+                            <div class="invalid-feedback">This field is required</div>
                         </div>
                         <div class="col-4">
                             <label for="zip">Zip Code:</label>
-                            <input type="text" id="zip" placeholder="Zip" />
+                            <input type="text" id="zip" placeholder="Zip" required />
+                            <div class="valid-feedback">Valid</div>
+                            <div class="invalid-feedback">This field is required</div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-4">
                             <label for="phone">Phone:</label>
-                            <input type="text" id="phone" placeholder="XXX - XXX - XXXX" />
+                            <input type="tel" id="phone" placeholder="XXX - XXX - XXXX" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
+                            <div class="valid-feedback">Valid</div>
+                            <div class="invalid-feedback">Please enter valid phone number</div>
                         </div>
                     </div>
                     <div class="row">
@@ -243,32 +287,40 @@
 
             <!--Employee-->
             <div id="employee" class="container tab-pane fade">
-                <form>
+                <form class="needs-validation" novalidate>
                     <div class="row">
                         <div class="col-2">
                             <label for="emplBranch">Branch:</label>
-                            <select class="form-control" id="emplBranch">
-                                <option>Select one:</option>
+                            <select class="form-control" id="emplBranch" required>
+                                <option value="" disabled selected>Select one:</option>
                                 <option>1</option>
                                 <option>2</option>
                                 <option>3</option>
                                 <option>4</option>
                                 <option>5</option>
                             </select>
+                            <div class="valid-feedback">Valid</div>
+                            <div class="invalid-feedback">This field is required</div>
                         </div>
                         <div class="col-2">
                             <label for="emplSalary">Salary:</label>
-                            <input type="text" id="emplSalary" placeholder="Salary" />
+                            <input type="text" id="emplSalary" placeholder="Salary" required />
+                            <div class="valid-feedback">Valid</div>
+                            <div class="invalid-feedback">This field is required</div>
                         </div>
                         <div class="col-5">
                             <label for="emplPosition">Position:</label>
-                            <input type="text" id="emplPosition" placeholder="Position" />
+                            <input type="text" id="emplPosition" placeholder="Position" required />
+                            <div class="valid-feedback">Valid</div>
+                            <div class="invalid-feedback">This field is required</div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-4">
                             <label for="emplFirst">First Name:</label>
-                            <input type="text" id="emplFirst" placeholder="First Name" />
+                            <input type="text" id="emplFirst" placeholder="First Name" required />
+                            <div class="valid-feedback">Valid</div>
+                            <div class="invalid-feedback">This field is required</div>
                         </div>
                         <div class="col-1">
                             <label for="emplMI">M.I.:</label>
@@ -276,37 +328,51 @@
                         </div>
                         <div class="col-4">
                             <label for="emplLast">Last Name:</label>
-                            <input type="text" id="emplLast" placeholder="Last Name" />
+                            <input type="text" id="emplLast" placeholder="Last Name" required />
+                            <div class="valid-feedback">Valid</div>
+                            <div class="invalid-feedback">This field is required</div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-9">
                             <label for="emplAddr">Street Address:</label>
-                            <input type="text" id="emplAddr" placeholder="Street Address" />
+                            <input type="text" id="emplAddr" placeholder="Street Address" required />
+                            <div class="valid-feedback">Valid</div>
+                            <div class="invalid-feedback">This field is required</div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-4">
                             <label for="emplCity">City:</label>
-                            <input type="text" id="emplCity" placeholder="City" />
+                            <input type="text" id="emplCity" placeholder="City" required />
+                            <div class="valid-feedback">Valid</div>
+                            <div class="invalid-feedback">This field is required</div>
                         </div>
                         <div class="col-1">
                             <label for="emplState">State:</label>
-                            <input type="text" id="emplState" placeholder="ST" />
+                            <input type="text" id="emplState" placeholder="ST" required />
+                            <div class="valid-feedback">Valid</div>
+                            <div class="invalid-feedback">This field is required</div>
                         </div>
                         <div class="col-4">
                             <label for="emplZip">Zip Code:</label>
-                            <input type="text" id="emplZip" placeholder="Zip" />
+                            <input type="tel" id="emplZip" pattern="[0-9]{5}" placeholder="Zip" required />
+                            <div class="valid-feedback">Valid</div>
+                            <div class="invalid-feedback">Please enter valid zip code</div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-4">
                             <label for="emplPhone">Phone:</label>
-                            <input type="text" id="emplPhone" placeholder="XXX - XXX - XXXX" />
+                            <input type="tel" id="emplPhone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="XXX - XXX - XXXX" required />
+                            <div class="valid-feedback">Valid</div>
+                            <div class="invalid-feedback">Please enter valid telephone number</div>
                         </div>
                         <div class="col-4">
                             <label for="emplEmail">Email:</label>
-                            <input type="text" id="emplEmail" placeholder="Email" />
+                            <input type="email" id="emplEmail" placeholder="Email" required />
+                            <div class="valid-feedback">Valid</div>
+                            <div class="invalid-feedback">Please enter valid email address</div>
                         </div>
                     </div>
                     <div class="row">
@@ -322,13 +388,15 @@
 
             <!--Sale-->
             <div id="sale" class="container tab-pane">
-                <form>
+                <form class="needs-validation" novalidate>
                     <div class="row">
                         <div class="col-1">
                             <label>Invoice #:</label>
                         </div>
                         <div class="col-3">
-                            <input type="text" />
+                            <input type="text" required />
+                            <div class="valid-feedback">Valid</div>
+                            <div class="invalid-feedback">This field is required</div>
                         </div>
                     </div>
                     <div class="row">
@@ -336,7 +404,9 @@
                             <label>Date:</label>
                         </div>
                         <div class="col-3">
-                            <input type="text" placeholder="mm/dd/yyyy" />
+                            <input type="date" required />
+                            <div class="valid-feedback">Valid</div>
+                            <div class="invalid-feedback">This field is required</div>
                         </div>
                     </div>
                     <div class="row">
@@ -344,7 +414,9 @@
                             <label>Customer:</label>
                         </div>
                         <div class="col-3">
-                            <input type="text" placeholder="ID" />
+                            <input type="number" placeholder="ID" required />
+                            <div class="valid-feedback">Valid</div>
+                            <div class="invalid-feedback">This field is required</div>
                         </div>
                     </div>
                     <div class="row">
@@ -352,7 +424,9 @@
                             <label>Employee:</label>
                         </div>
                         <div class="col-3">
-                            <input type="text" placeholder="ID" />
+                            <input type="number" placeholder="ID" required />
+                            <div class="valid-feedback">Valid</div>
+                            <div class="invalid-feedback">This field is required</div>
                         </div>
                     </div>
                     <div class="row">
@@ -360,7 +434,9 @@
                             <label>Description:</label>
                         </div>
                         <div class="col-3">
-                            <textarea></textarea>
+                            <textarea required></textarea>
+                            <div class="valid-feedback">Valid</div>
+                            <div class="invalid-feedback">This field is required</div>
                         </div>
                     </div>
                     <div class="row">
@@ -368,7 +444,9 @@
                             <label>Cost:</label>
                         </div>
                         <div class="col-3">
-                            <input type="text" />
+                            <input type="number" required />
+                            <div class="valid-feedback">Valid</div>
+                            <div class="invalid-feedback">This field is required</div>
                         </div>
                     </div>
                     <div class="row">
@@ -376,7 +454,9 @@
                             <label>Price:</label>
                         </div>
                         <div class="col-3">
-                            <input type="text" />
+                            <input type="number" required />
+                            <div class="valid-feedback">Valid</div>
+                            <div class="invalid-feedback">This field is required</div>
                         </div>
                     </div>
                     <div class="row">
@@ -391,13 +471,15 @@
 
             <!--Job-->
             <div id="job" class="container tab-pane">
-                <form>
+                <form class="needs-validation" novalidate>
                     <div class="row">
                         <div class="col-1">
                             <label>Customer:</label>
                         </div>
                         <div class="col-3">
-                            <input type="text" placeholder="ID" />
+                            <input type="number" placeholder="ID" required />
+                            <div class="valid-feedback">Valid</div>
+                            <div class="invalid-feedback">This field is required</div>
                         </div>
                     </div>
                     <div class="row">
@@ -405,7 +487,9 @@
                             <label>Order #:</label>
                         </div>
                         <div class="col-3">
-                            <input type="text" />
+                            <input type="number" required />
+                            <div class="valid-feedback">Valid</div>
+                            <div class="invalid-feedback">This field is required</div>
                         </div>
                     </div>
                     <div class="row">
@@ -413,7 +497,9 @@
                             <label>Description:</label>
                         </div>
                         <div class="col-3">
-                            <textarea></textarea>
+                            <textarea required></textarea>
+                            <div class="valid-feedback">Valid</div>
+                            <div class="invalid-feedback">This field is required</div>
                         </div>
                     </div>
                     <div class="row">
@@ -421,7 +507,9 @@
                             <label>Total Cost:</label>
                         </div>
                         <div class="col-3">
-                            <input type="text" />
+                            <input type="number" required />
+                            <div class="valid-feedback">Valid</div>
+                            <div class="invalid-feedback">This field is required</div>
                         </div>
                     </div>
                     <div class="row">
@@ -429,7 +517,9 @@
                             <label>Total Price:</label>
                         </div>
                         <div class="col-3">
-                            <input type="text" />
+                            <input type="number" required />
+                            <div class="valid-feedback">Valid</div>
+                            <div class="invalid-feedback">This field is required</div>
                         </div>
                     </div>
                     <div class="row">
@@ -445,13 +535,15 @@
 
             <!--Job Bid-->
             <div id="bid" class="container tab-pane">
-                <form>
+                <form class="needs-validation" novalidate>
                     <div class="row">
                         <div class="col-1">
                             <label>Date:</label>
                         </div>
                         <div class="col-3">
-                            <input type="text" placeholder="mm/dd/yyyy" />
+                            <input type="date" required />
+                            <div class="valid-feedback">Valid</div>
+                            <div class="invalid-feedback">This field is required</div>
                         </div>
                     </div>
                     <div class="row">
@@ -459,7 +551,9 @@
                             <label>Customer:</label>
                         </div>
                         <div class="col-3">
-                            <input type="text" placeholder="ID" />
+                            <input type="number" placeholder="ID" required />
+                            <div class="valid-feedback">Valid</div>
+                            <div class="invalid-feedback">This field is required</div>
                         </div>
                     </div>
                     <div class="row">
@@ -467,7 +561,9 @@
                             <label>Description:</label>
                         </div>
                         <div class="col-3">
-                            <textarea></textarea>
+                            <textarea required></textarea>
+                            <div class="valid-feedback">Valid</div>
+                            <div class="invalid-feedback">This field is required</div>
                         </div>
                     </div>
                     <div class="row">
@@ -475,7 +571,9 @@
                             <label>Budget:</label>
                         </div>
                         <div class="col-3">
-                            <input type="text" />
+                            <input type="number" required />
+                            <div class="valid-feedback">Valid</div>
+                            <div class="invalid-feedback">This field is required</div>
                         </div>
                     </div>
                     <div class="row">
@@ -483,7 +581,9 @@
                             <label>Quote:</label>
                         </div>
                         <div class="col-3">
-                            <input type="text" />
+                            <input type="number" required />
+                            <div class="valid-feedback">Valid</div>
+                            <div class="invalid-feedback">This field is required</div>
                         </div>
                     </div>
                     <div class="row">
@@ -499,31 +599,41 @@
 
             <!--Branch-->
             <div id="branch" class="container tab-pane fade">
-                <form>
+                <form class="needs-validation" novalidate>
                     <div class="row">
                         <div class="col-9">
                             <label for="branchAddr">Street Address:</label>
-                            <input type="text" id="addr" placeholder="Street Address" />
+                            <input type="text" id="addr" placeholder="Street Address" required />
+                            <div class="valid-feedback">Valid</div>
+                            <div class="invalid-feedback">This field is required</div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-4">
                             <label for="branchCity">City:</label>
-                            <input type="text" id="city" placeholder="City" />
+                            <input type="text" id="city" placeholder="City" required />
+                            <div class="valid-feedback">Valid</div>
+                            <div class="invalid-feedback">This field is required</div>
                         </div>
                         <div class="col-1">
                             <label for="branchState">State:</label>
-                            <input type="text" id="branchState" placeholder="ST" />
+                            <input type="text" id="branchState" placeholder="ST" required />
+                            <div class="valid-feedback">Valid</div>
+                            <div class="invalid-feedback">This field is required</div>
                         </div>
                         <div class="col-4">
                             <label for="branchZip">Zip Code:</label>
-                            <input type="text" id="branchZip" placeholder="Zip" />
+                            <input type="number" id="branchZip" placeholder="Zip" required />
+                            <div class="valid-feedback">Valid</div>
+                            <div class="invalid-feedback">Please enter a valid zip code</div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-4">
                             <label for="branchPhone">Phone:</label>
-                            <input type="text" id="branchPhone" placeholder="XXX - XXX - XXXX" />
+                            <input type="tel" id="branchPhone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="XXX - XXX - XXXX" required />
+                            <div class="valid-feedback">Valid</div>
+                            <div class="invalid-feedback">Please enter a valid telephone number</div>
                         </div>
                     </div>
                     <div class="row">
