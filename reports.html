@@ -103,6 +103,9 @@
                 <li class="nav-item bg-light" id="clientsTab">
                     <a id="clientsTab" class="nav-link" data-toggle="tab" href="#clients">Clients</a>
                 </li>
+                <li class="nav-item bg-light" id="clientsTab">
+                    <a id="salesTab" class="nav-link" data-toggle="tab" href="#sales">Sales</a>
+                </li>
             </ul>
         </div>
 
@@ -170,6 +173,31 @@
                         </tr>
                     </tbody>
                 </table>
+            </div>
+
+            <!--Sales-->
+            <div id="sales" class="container tab-pane active">
+                <label for="startDate">Start Date:</label>
+                <input type="date" id="startDate" />
+                <label for="endDate">End Date:</label>
+                <input type="date" id="endDate" />
+                <button onclick="findDates()">Search</button>
+                <button onclick="resetDates()">Reset</button>
+                <table class="table table-striped bg-white" id="salesTable">
+                    <thead class="thead-dark" id="salesHead">
+                        <tr>
+                            <th>Invoice</th>
+                            <th>Date</th>
+                            <th>Customer ID</th>
+                            <th>Employee ID</th>
+                            <th>Description</th>
+                            <th>Cost</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody id="salesBody"></tbody>
+                </table>
+                <p class="lead text-danger" id="errorMessage"></p>
             </div>
         </div>
     </section>
