@@ -327,7 +327,7 @@ function createClients() {
         new Client(8, 'Adams', 'Robert', 'Q', '1411 RaAZh Drive', 'Phoenix', 'AZ', 85004),
         new Client(9, 'Adams', 'Thomas', 'C', '1220 Bradford Way', 'Phoenix', 'AZ', 85004),
         new Client(10, 'Akers', 'Kim', 'C', '1619 Stillman Court', 'Phoenix', 'AZ', 85004)
-    )
+    );
     displayClients();
 }
 
