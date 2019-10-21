@@ -258,6 +258,7 @@ function createInv() {
         new Product('Oven', 'Dacor', 'HWO230PS', '98561257', '30" Heritage Collection Pro Style Double Oven', 3985, 5399)
     );
     displayInv();
+    createClients();
     createSales();
 }
 
@@ -299,7 +300,44 @@ function sortDes() {
 
 //Clients
 
-var clients = [];
+var clientsArr = [];
+
+class Client {
+    constructor(id, lName, fName, mInit, address, city, state, zip) {
+        this.id = id;
+        this.lName = lName;
+        this.fName = fName;
+        this.mInit = mInit;
+        this.address = address;
+        this.city = city;
+        this.state = state;
+        this.zip = zip;
+    }
+}
+
+function createClients() {
+    clientsArr.push(
+        new Client(1, 'Abercrombie', 'Kim', 'B', '1226 Shoe St.', 'Scottsdale', 'AZ', 85256),
+        new Client(2, 'Abolrous', 'Hazem', 'E', '1399 Firestone Drive', 'Yuma', 'AZ', 85364),
+        new Client(3, 'Adams', 'Angel', 'C', '6872 Thornwood Dr.', 'Yuma', 'AZ', 85364),
+        new Client(4, 'Adams', 'Edward', 'C', '10203 Acorn Avenue', 'Yuma', 'AZ', 85364),
+        new Client(5, 'Adams', 'Gabriella', 'K', '1902 Santa Cruz', 'Yuma', 'AZ', 85364),
+        new Client(6, 'Adams', 'Jason', 'C', '1285 Greenbrier Street', 'Yuma', 'AZ', 85364),
+        new Client(7, 'Adams', 'Kaitlyn', 'A', '1356 Grove Way', 'Phoenix', 'AZ', 85004),
+        new Client(8, 'Adams', 'Robert', 'Q', '1411 RaAZh Drive', 'Phoenix', 'AZ', 85004),
+        new Client(9, 'Adams', 'Thomas', 'C', '1220 Bradford Way', 'Phoenix', 'AZ', 85004),
+        new Client(10, 'Akers', 'Kim', 'C', '1619 Stillman Court', 'Phoenix', 'AZ', 85004)
+    )
+    displayClients();
+}
+
+function displayClients() {
+    $('#clientsBody').empty();
+    for (let i = 0; i < clientsArr.length; i++) {
+        $('#clientsBody').append('<tr><td>' + clientsArr[i].id + '</td><td>' + clientsArr[i].lName + '</td><td>' + clientsArr[i].fName + '</td><td>' + clientsArr[i].mInit + '</td><td>' + clientsArr[i].address + '</td><td>' + clientsArr[i].city + '</td><td>' + clientsArr[i].state + '</td><td>' + clientsArr[i].zip + '</td></tr>');
+    }
+}
+
 
 
 //Sales
