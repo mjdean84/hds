@@ -13,7 +13,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
           integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <script src="reportsScript.js"></script>
+    <script src="scripts/reports.js"></script>
+    <script src="scripts/employees.js"></script>
     <style>
         .brand {
             border: 2px solid white;
@@ -38,7 +39,7 @@
         }
     </style>
 </head>
-<body onload="createInv()">
+<body onload="createInv(); createEmployees();">
     <!--Navbar-->
     <nav class="navbar navbar-expand-md bg-primary navbar-dark sticky-top">
         <a class="navbar-brand brand" href="index.html">HDS</a>
@@ -106,6 +107,9 @@
                 <li class="nav-item bg-light" id="clientsTab">
                     <a id="salesTab" class="nav-link" data-toggle="tab" href="#sales">Sales</a>
                 </li>
+                <li class="nav-item bg-light" id="employeesTab">
+                    <a id="sTab" class="nav-link" data-toggle="tab" href="#employees">Employees</a>
+                </li>
             </ul>
         </div>
 
@@ -169,6 +173,31 @@
                         </tr>
                     </thead>
                     <tbody id="salesBody"></tbody>
+                </table>
+                <p class="lead text-danger" id="errorMessage"></p>
+            </div>
+
+            <!--Employees-->
+            <div id="employees" class="tab-pane fade">
+                <table class="table table-striped bg-white" id="employeessTable">
+                    <thead class="thead-dark" id="employeesHead">
+                        <tr>
+                            <th>ID</th>
+                            <th>Last Name</th>
+                            <th>First Name</th>
+                            <th>MI</th>
+                            <th>Branch ID</th>
+                            <th>Position</th>
+                            <th>Salary</th>
+                            <th>Address</th>
+                            <th>City</th>
+                            <th>State</th>
+                            <th>Zip</th>
+                            <th>Telephone</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody id="employeesBody"></tbody>
                 </table>
                 <p class="lead text-danger" id="errorMessage"></p>
             </div>
