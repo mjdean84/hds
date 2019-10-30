@@ -85,7 +85,6 @@ function createProducts() {
     for (let i = 0; i < productArr.length; i++) {
         productArr[i].popularity = i + 1;
     }
-    //tempArr = productArr;
     displayProducts();
 }
 

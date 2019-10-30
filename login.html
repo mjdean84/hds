@@ -5,14 +5,14 @@
     <meta charset="utf-8" />
     <meta name="google" content="notranslate" />
     <meta http-equiv="content-language" content="en" />
-    <title>Employee Resources</title>
+    <title>Employee Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/4.3.1/flatly/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" 
-        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+          integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <style>
         .brand {
             border: 2px solid white;
@@ -20,18 +20,18 @@
             padding: 4px;
         }
 
-        thead:hover{
-            cursor:pointer;
-        }    
-        
-        #resources{
-            display:none;
+        thead:hover {
+            cursor: pointer;
         }
 
-        .jumbotron{
-            background:url('images/resources.jpg')no-repeat fixed;
-            background-size:100%;
-            height:17em;
+        #resources {
+            display: none;
+        }
+
+        .jumbotron {
+            background: url('images/resources.jpg')no-repeat fixed;
+            background-size: 100%;
+            height: 17em;
         }
 
         .jumbo {
@@ -39,8 +39,19 @@
             color: black;
             border-radius: 20px;
         }
-
     </style>
+    <script>
+        function checkPassword() {
+            let password = document.getElementById('password').value;
+
+            if (password == 'password') {
+                alert('The database will be demonstrated locally');
+                location.replace("empResources.html");
+            } else {
+                alert('The password is "password"');
+            }
+        }
+    </script>
 </head>
 <body onload="createInv()">
     <!--Navbar-->
@@ -93,12 +104,13 @@
             </div>
         </div>
     </div>
-
+        
     <div class="container">
-        <h4>Your Resources:</h4>
-        <a href="reports.html" class="lead">Reports</a><br />
-        <a href="forms.html" class="lead">Forms</a><br />
-        <a href="lists.html" class="lead">Lists</a>
+        <h4>
+            Password: <input type="text" id="password" /><button type="button" onclick="checkPassword()">
+            Submit
+            </button>
+        </h4>
     </div>
 
 </body>

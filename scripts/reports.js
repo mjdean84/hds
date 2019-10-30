@@ -1,19 +1,23 @@
+var id = false;
 var type = false;
 var brand = false;
-var model = false;
-var serial = false;
 var desc = false;
+var sold = false;
+var onHand = false;
 var cost = false;
 var price = false;
+var delivery = false;
 
 function setFalse() {
+    id = false;
     type = false;
     brand = false;
-    model = false;
-    serial = false;
     desc = false;
+    sold = false;
+    onHand = false;
     cost = false;
     price = false;
+    delivery = false;
 }
 
 //Inventory Clicks
@@ -21,17 +25,38 @@ $(document).ready(function () {
     //Search Input
     $('#searchInput').on('keyup', function () {
         let value = $(this).val().toLowerCase();
-        $('#invBody tr').filter(function () {
+        $('#prodBody tr').filter(function () {
             $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
         });
 
-        $('#clientsBody tr').filter(function () {
+        $('#custBody tr').filter(function () {
             $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
         });
 
         $('#salesBody tr').filter(function () {
             $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
         });
+
+        $('#employeesBody tr').filter(function () {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+    });
+
+    //ID
+    $('#idHead').click(function () {
+        for (let i = 0; i < invArr.length; i++) {
+            invArr[i].temp = invArr[i].id;
+        }
+        if (id == false) {
+            sortAsc();
+            setFalse();
+            id = true;
+            toggleClass('#idIcon', 'down');
+        } else {
+            sortDes();
+            id = false;
+            toggleClass('#idIcon', 'up');
+        }
     });
 
     //Type
@@ -68,40 +93,6 @@ $(document).ready(function () {
         }
     });
 
-    //Model
-    $('#modelHead').click(function () {
-        for (let i = 0; i < invArr.length; i++) {
-            invArr[i].temp = invArr[i].model;
-        }
-        if (model == false) {
-            sortAsc();
-            setFalse();
-            model = true;
-            toggleClass('#modelIcon', 'down');
-        } else {
-            sortDes();
-            model = false;
-            toggleClass('#modelIcon', 'up');
-        }
-    });
-
-    //Serial
-    $('#serialHead').click(function () {
-        for (let i = 0; i < invArr.length; i++) {
-            invArr[i].temp = invArr[i].serial;
-        }
-        if (serial == false) {
-            sortAsc();
-            setFalse();
-            serial = true;
-            toggleClass('#serialIcon', 'down');
-        } else {
-            sortDes();
-            serial = false;
-            toggleClass('#serialIcon', 'up');
-        }
-    });
-
     //Description
     $('#descHead').click(function () {
         for (let i = 0; i < invArr.length; i++) {
@@ -116,6 +107,40 @@ $(document).ready(function () {
             sortDes();
             desc = false;
             toggleClass('#descIcon', 'up');
+        }
+    });
+
+    //Sold
+    $('#soldHead').click(function () {
+        for (let i = 0; i < invArr.length; i++) {
+            invArr[i].temp = invArr[i].sold;
+        }
+        if (sold == false) {
+            sortAsc();
+            setFalse();
+            sold = true;
+            toggleClass('#soldIcon', 'down');
+        } else {
+            sortDes();
+            sold = false;
+            toggleClass('#soldIcon', 'up');
+        }
+    });
+
+    //On-Hand
+    $('#onHandHead').click(function () {
+        for (let i = 0; i < invArr.length; i++) {
+            invArr[i].temp = invArr[i].onHand;
+        }
+        if (onHand == false) {
+            sortAsc();
+            setFalse();
+            onHand = true;
+            toggleClass('#onHandIcon', 'down');
+        } else {
+            sortDes();
+            onHand = false;
+            toggleClass('#onHandIcon', 'up');
         }
     });
 
@@ -153,17 +178,38 @@ $(document).ready(function () {
             toggleClass('#priceIcon', 'up');
         }
     });
+
+    //Delivery
+    $('#deliveryHead').click(function () {
+        for (let i = 0; i < invArr.length; i++) {
+            invArr[i].temp = invArr[i].delivery;
+        }
+        if (delivery == false) {
+            sortAsc();
+            setFalse();
+            delivery = true;
+            toggleClass('#deliveryIcon', 'down');
+        }
+        else if (delivery == true) {
+            sortDes();
+            delivery = false;
+            toggleClass('#deliveryIcon', 'up');
+        }
+    });
 });
 
 //Toggle Icon Classes
 function toggleClass(icon, dir) {
+    $('#idIcon').removeClass();
     $('#typeIcon').removeClass();
     $('#brandIcon').removeClass();
-    $('#modelIcon').removeClass();
     $('#serialIcon').removeClass();
     $('#descIcon').removeClass();
+    $('#soldIcon').removeClass();
+    $('#onHandIcon').removeClass();
     $('#costIcon').removeClass();
     $('#priceIcon').removeClass();
+    $('#deliveryIcon').removeClass();
     $(icon).addClass('fa fa-angle-' + dir);
 }
 
@@ -178,94 +224,65 @@ var convUSD = new Intl.NumberFormat('en-US', {
 
 //Inventory
 class Product {
-    constructor(type, brand, model, serial, description, cost, listPrice) {
+    constructor(type, brand, id, description, sold, onHand, cost, listPrice, delivery) {
         this.type = type;
         this.brand = brand;
-        this.model = model;
-        this.serial = serial;
+        this.id = id;
         this.description = description;
+        this.sold = sold;
+        this.onHand = onHand;
         this.cost = cost;
         this.listPrice = listPrice;
+        this.delivery = delivery;
         this.temp;
     }
 }
 
 function createInv() {
     invArr.push(
-        new Product('Microwave', 'GE', 'JVM136C', '10225688', 'Over-the-Range Microwave', 355, 499),
-        new Product('Microwave', 'GE', 'JVM136B', '10255688', 'Over-the-Range Microwave', 325, 429),
-        new Product('Microwave', 'GE', 'JVM136B', '10255687', 'Over-the-Range Microwave', 325, 429),
-        new Product('Dishwasher', 'GE', 'GSD2600', '10899455', 'Dishwasher', 299, 375),
-        new Product('Dishwasher', 'GE', 'GSD2600', '10899456', 'Dishwasher', 299, 375),
-        new Product('Dishwasher', 'GE', 'GSD2600', '10899457', 'Dishwasher', 299, 375),
-        new Product('Dishwasher', 'GE', 'GSD2600', '10899458', 'Dishwasher', 299, 375),
-        new Product('Dishwasher', 'GE', 'GSD2600', '10899459', 'Dishwasher', 299, 375),
-        new Product('Dishwasher', 'Bosch', 'SHY99A0x', '58344566', 'Dishwasher', 599, 899),
-        new Product('Dishwasher', 'Bosch', 'SHY99A0x', '58344544', 'Dishwasher', 599, 899),
-        new Product('Dishwasher', 'Bosch', 'SHY99A0x', '58344533', 'Dishwasher', 599, 899),
-        new Product('Dishwasher', 'Bosch', 'SHU33A0X', '56799922', 'Dishwasher', 499, 739),
-        new Product('Dishwasher', 'Bosch', 'SHU33A0X', '56799924', 'Dishwasher', 499, 739),
-        new Product('Dishwasher', 'Bosch', 'SHU33A0X', '56799926', 'Dishwasher', 499, 739),
-        new Product('Washer', 'Bosch', 'WFL 2060', '98752454', 'Laundry Washer', 579, 799),
-        new Product('Washer', 'Bosch', 'WFL 2060', '98752459', 'Laundry Washer', 579, 799),
-        new Product('Washer', 'Bosch', 'WFL 2060', '98752469', 'Laundry Washer', 579, 799),
-        new Product('Dryer', 'Bosch', 'WTA 3510', '97522146', 'Laundry Dryer', 399, 579),
-        new Product('Dryer', 'Bosch', 'WTA 3510', '97522149', 'Laundry Dryer', 399, 579),
-        new Product('Dryer', 'Bosch', 'WTA 3510', '97522167', 'Laundry Dryer', 399, 579),
-        new Product('Refrigerator', 'Sub-Zero', 'SZ632', '14825844', 'Built-in Refrigerator - 48"', 2799, 3850),
-        new Product('Refrigerator', 'Sub-Zero', 'SZ632', '14825848', 'Built-in Refrigerator - 48"', 2799, 3850),
-        new Product('Refrigerator', 'Sub-Zero', 'SZ680', '14556688', 'Built-in Refrigerator - 42"', 2499, 3450),
-        new Product('Wine', 'Sub-Zero', 'SZ424/S', '25544886', 'Built-in Wine Cooler - under counter', 399, 599),
-        new Product('Range', 'Viking', 'VGIC-24', '95778966', '24" Professional Gas Range SS', 3295, 3995),
-        new Product('Range', 'Viking', 'VGIC-24', '95778998', '24" Professional Gas Range SS', 3295, 3995),
-        new Product('Range', 'Viking', 'VGIC-24', '95778983', '24" Professional Gas Range SS', 3295, 3995),
-        new Product('Coffee', 'Miele', 'CVA615', '10897781', 'Built-in Coffee System', 1499, 2059),
-        new Product('Oven', 'Miele', 'H398BP2', '10755389', 'Double Wall Oven', 2399, 3750),
-        new Product('Oven', 'Miele', 'H398BP2', '10755880', 'Double Wall Oven', 2399, 3750),
-        new Product('Oven', 'Miele', 'H398BP2', '10757078', 'Double Wall Oven', 2399, 3750),
-        new Product('Cooktop', 'Jenn-Air', 'JGD8348B', '34981101', '48" Prostyle Downdraft Cooktop', 1499, 2059),
-        new Product('Cooktop', 'Jenn-Air', 'JGD8348B', '34981115', '48" Prostyle Downdraft Cooktop', 1499, 2059),
-        new Product('Cooktop', 'Jenn-Air', 'JGD8348B', '34981137', '48" Prostyle Downdraft Cooktop', 1499, 2059),
-        new Product('Cooktop', 'Jenn-Air', 'CVEX4270', '34987109', 'Double Electric Cooktop', 699, 959),
-        new Product('Cooktop', 'Jenn-Air', 'CVEX4270', '34987131', 'Double Electric Cooktop', 699, 959),
-        new Product('Cooktop', 'Jenn-Air', 'CVEX4270', '34987166', 'Double Electric Cooktop', 699, 959),
-        new Product('Cooktop', 'Jenn-Air', 'CVEX4270', '34987189', 'Double Electric Cooktop', 699, 959),
-        new Product('Cooktop', 'Jenn-Air', 'JGD8345A', '34986911', '45" Downdraft Cooktop', 899, 1489),
-        new Product('Range', 'Thermador', 'RDFS30QB', '28946653', 'Black Free Stand Convection Range', 1799, 2479),
-        new Product('Range', 'Thermador', 'RDFS30QB', '28946659', 'Black Free Stand Convection Range', 1799, 2479),
-        new Product('Range', 'Thermador', 'RDFS30QB', '28946667', 'Stainless 30" Free Convection Range', 1719, 2359),
-        new Product('Range', 'Thermador', 'RDFS30QB', '28946678', 'Stainless 30" Free Convection Range', 1719, 2359),
-        new Product('Refrigerator', 'Amana', 'ARSE665B', '05897125', 'SS Side-by-Side Refrigerator', 1249, 1959),
-        new Product('Refrigerator', 'Amana', 'ARSE665B', '05897134', 'SS Side-by-Side Refrigerator', 1249, 1959),
-        new Product('Refrigerator', 'Amana', 'ARSE665B', '05897167', 'BL Side-by-Side Refrigerator', 1049, 1669),
-        new Product('Refrigerator', 'Amana', 'ACD2238H', '05789661', 'SS Side-by-Side Refrigerator', 1495, 2219),
-        new Product('Refrigerator', 'Amana', 'ACD2238H', '05789690', 'SS Side-by-Side Refrigerator', 1495, 2219),
-        new Product('Disposal', 'Insinkerator', '777ss', '55124789', 'In-Sink Disposer', 129, 229),
-        new Product('Disposal', 'Insinkerator', '777ss', '55124791', 'In-Sink Disposer', 129, 229),
-        new Product('Disposal', 'Insinkerator', '777ss', '55124799', 'In-Sink Disposer', 129, 229),
-        new Product('Disposal', 'Insinkerator', 'Badger5', '55247891', 'In-Sink Disposer', 49, 99.95),
-        new Product('Disposal', 'Insinkerator', 'Badger5', '55247912', 'In-Sink Disposer', 49, 99.95),
-        new Product('Disposal', 'Insinkerator', 'Septic120', '55347925', 'In-Sink Disposer for Septic System', 99, 199.95),
-        new Product('Disposal', 'Insinkerator', 'Septic120', '55347937', 'In-Sink Disposer for Septic System', 99, 199.95),
-        new Product('Wine', 'U-Line', '75wc', '67555211', 'Wine Captain 75 Bottle - SS', 699, 999),
-        new Product('Wine', 'U-Line', '75wc', '67555237', 'Wine Captain 75 Bottle - Black', 599, 889),
-        new Product('Icemaker', 'U-Line', 'B198', '67455891', 'Icemaker - Black', 499, 798),
-        new Product('Microwave', 'GE', 'JE2160SF', '15784991', 'Microwave - SS', 179, 239),
-        new Product('Range', 'Dacor', 'DOP36M94', '87599365', 'Range - 36" Pro Dual-Fuel', 4395, 6949),
-        new Product('Range', 'Dacor', 'HGER30SNG', '87569821', 'Heritage 30" Stainless Range', 2589, 3999),
-        new Product('Range', 'Dacor', 'RNRP36GS', '87589209', 'Renaissance 36" Stainless Range', 3899, 5498),
-        new Product('Oven', 'Dacor', 'HWO127PS', '98562234', '27" Heritage Collection Wall Oven', 2950, 4019),
-        new Product('Oven', 'Dacor', 'HWO230PS', '98561257', '30" Heritage Collection Pro Style Double Oven', 3985, 5399)
+        new Product('Microwave', 'GE', 'MW001', 'Over-the-Range Microwave', 15, 1, 355, 499, 25),
+        new Product('Microwave', 'GE', 'MW002', 'Over-the-Range Microwave', 22, 2, 325, 429, 25),
+        new Product('Dishwasher', 'GE', 'DW001', 'Dishwasher', 37, 5, 299, 375, 25),
+        new Product('Dishwasher', 'Bosch', 'DW002', 'Dishwasher', 9, 3, 599, 899, 25),
+        new Product('Dishwasher', 'Bosch', 'DW003', 'Dishwasher', 21, 3, 499, 739, 25),
+        new Product('Washer', 'Bosch', 'LW001', 'Laundry Washer', 16, 3, 579, 799, 25),
+        new Product('Dryer', 'Bosch', 'LD001', 'Laundry Dryer', 18, 3, 399, 579, 25),
+        new Product('Refrigerator', 'Sub-ZerO', 'REF001', 'Built-in Refrigerator - 48"', 13, 2, 2799, 3850, 125),
+        new Product('Refrigerator', 'Sub-Zero', 'REF002', 'Built-in Refrigerator - 42"', 15, 1, 2499, 3450, 125),
+        new Product('Wine', 'Sub-Zero', 'WC001', 'Built-in Wine Cooler - under counter', 13, 1, 399, 599, 25),
+        new Product('Range', 'Viking', 'GR001', '24" Professional Gas Range SS', 15, 3, 3295, 3995, 125),
+        new Product('Coffee', 'Miele', 'CS001', 'Built-in Coffee System', 7, 1, 1499, 2059, 25),
+        new Product('Oven', 'Miele', 'OV001', 'Double Wall Oven', 16, 3, 2399, 3750, 125),
+        new Product('Cooktop', 'Jenn-Air', 'CT001', '48" Prostyle Downdraft Cooktop', 32, 3, 1499, 2059, 125),
+        new Product('Cooktop', 'Jenn-Air', 'CT002', 'Double Electric Cooktop', 33, 4, 699, 959, 25),
+        new Product('Cooktop', 'Jenn-Air', 'CT003', '45" Downdraft Cooktop', 12, 1, 899, 1489, 25),
+        new Product('Range', 'Thermador', 'CR001', 'Black Free Stand Convection Range', 17, 2, 1799, 2479, 125),
+        new Product('Range', 'Thermador', 'CR002', 'Stainless 30" Free Convection Range', 19, 2, 1719, 2359, 125),
+        new Product('Refrigerator', 'Amana', 'REF003', 'SS Side-by-Side Refrigerator', 22, 2, 1249, 1959, 125),
+        new Product('Refrigerator', 'Amana', 'REF004', 'BL Side-by-Side Refrigerator', 19, 1, 1049, 1669, 125),
+        new Product('Refrigerator', 'Amana', 'REF005', 'SS Side-by-Side Refrigerator', 12, 2, 1495, 2219, 125),
+        new Product('Disposal', 'Insinkerator', 'DIS001', 'In-Sink Disposer', 57, 3, 129, 229, 25),
+        new Product('Disposal', 'Insinkerator', 'DIS002', 'In-Sink Disposer', 38, 2, 49, 99.95, 25),
+        new Product('Disposal', 'Insinkerator', 'DIS003', 'In-Sink Disposer for Septic System', 62, 2, 99, 199.95, 25),
+        new Product('Wine', 'U-Line', 'WC002', 'Wine Captain 75 Bottle - SS', 7, 1, 699, 999, 25),
+        new Product('Wine', 'U-Line', 'WC003', 'Wine Captain 75 Bottle - Black', 13, 1, 599, 889, 25),
+        new Product('Icemaker', 'U-Line', 'ICE001', 'Icemaker - Black', 9, 1, 499, 798, 25),
+        new Product('Microwave', 'GE', 'MW003', 'Microwave - SS', 22, 1, 179, 239, 25),
+        new Product('Range', 'Dacor', 'FR001', 'Range - 36" Pro Dual-Fuel', 14, 1, 4395, 6949, 125),
+        new Product('Range', 'Dacor', 'SR001', 'Heritage 30" Stainless Range', 10, 1, 2589, 3999, 125),
+        new Product('Range', 'Dacor', 'SR002', 'Renaissance 36" Stainless Range', 11, 1, 3899, 5498, 125),
+        new Product('Oven', 'Dacor', 'OV002', '27" Heritage Collection Wall Oven', 31, 1, 2950, 4019, 125),
+        new Product('Oven', 'Dacor', 'OV003', '30" Heritage Collection Pro Style Double Oven', 42, 1, 3985, 5399, 125)
     );
     displayInv();
-    createClients();
+    createCustomers();
     createSales();
 }
 
 function displayInv() {
     $('#invBody').empty();
     for (let i = 0; i < invArr.length; i++) {
-        $('#invBody').append('<tr><td>' + invArr[i].type + '</td><td>' + invArr[i].brand + '</td><td>' + invArr[i].model + '</td><td>' + invArr[i].serial + '</td><td>' + invArr[i].description + '</td><td>' + convUSD.format(invArr[i].cost) + '</td><td>' + convUSD.format(invArr[i].listPrice) + '</td></tr>');
+        $('#invBody').append('<tr><td>' + invArr[i].id + '</td><td>' + invArr[i].type + '</td><td>' + invArr[i].brand + '</td><td>' + invArr[i].description + '</td><td>' + invArr[i].sold + '</td><td>' + invArr[i].onHand + '</td><td>' + convUSD.format(invArr[i].cost) + '</td><td>' + convUSD.format(invArr[i].listPrice) + '</td><td>' + convUSD.format(invArr[i].delivery) + '</td></tr>');
     }
 }
 
@@ -300,9 +317,9 @@ function sortDes() {
 
 //Clients
 
-var clientsArr = [];
+var customersArr = [];
 
-class Client {
+class Customer {
     constructor(id, lName, fName, mInit, address, city, state, zip) {
         this.id = id;
         this.lName = lName;
@@ -315,26 +332,26 @@ class Client {
     }
 }
 
-function createClients() {
-    clientsArr.push(
-        new Client(1, 'Abercrombie', 'Kim', 'B', '1226 Shoe St.', 'Scottsdale', 'AZ', 85256),
-        new Client(2, 'Abolrous', 'Hazem', 'E', '1399 Firestone Drive', 'Yuma', 'AZ', 85364),
-        new Client(3, 'Adams', 'Angel', 'C', '6872 Thornwood Dr.', 'Yuma', 'AZ', 85364),
-        new Client(4, 'Adams', 'Edward', 'C', '10203 Acorn Avenue', 'Yuma', 'AZ', 85364),
-        new Client(5, 'Adams', 'Gabriella', 'K', '1902 Santa Cruz', 'Yuma', 'AZ', 85364),
-        new Client(6, 'Adams', 'Jason', 'C', '1285 Greenbrier Street', 'Yuma', 'AZ', 85364),
-        new Client(7, 'Adams', 'Kaitlyn', 'A', '1356 Grove Way', 'Phoenix', 'AZ', 85004),
-        new Client(8, 'Adams', 'Robert', 'Q', '1411 RaAZh Drive', 'Phoenix', 'AZ', 85004),
-        new Client(9, 'Adams', 'Thomas', 'C', '1220 Bradford Way', 'Phoenix', 'AZ', 85004),
-        new Client(10, 'Akers', 'Kim', 'C', '1619 Stillman Court', 'Phoenix', 'AZ', 85004)
+function createCustomers() {
+    customersArr.push(
+        new Customer(1, 'Abercrombie', 'Kim', 'B', '1226 Shoe St.', 'Scottsdale', 'AZ', 85256),
+        new Customer(2, 'Abolrous', 'Hazem', 'E', '1399 Firestone Drive', 'Yuma', 'AZ', 85364),
+        new Customer(3, 'Adams', 'Angel', 'C', '6872 Thornwood Dr.', 'Yuma', 'AZ', 85364),
+        new Customer(4, 'Adams', 'Edward', 'C', '10203 Acorn Avenue', 'Yuma', 'AZ', 85364),
+        new Customer(5, 'Adams', 'Gabriella', 'K', '1902 Santa Cruz', 'Yuma', 'AZ', 85364),
+        new Customer(6, 'Adams', 'Jason', 'C', '1285 Greenbrier Street', 'Yuma', 'AZ', 85364),
+        new Customer(7, 'Adams', 'Kaitlyn', 'A', '1356 Grove Way', 'Phoenix', 'AZ', 85004),
+        new Customer(8, 'Adams', 'Robert', 'Q', '1411 RaAZh Drive', 'Phoenix', 'AZ', 85004),
+        new Customer(9, 'Adams', 'Thomas', 'C', '1220 Bradford Way', 'Phoenix', 'AZ', 85004),
+        new Customer(10, 'Akers', 'Kim', 'C', '1619 Stillman Court', 'Phoenix', 'AZ', 85004)
     );
-    displayClients();
+    displayCustomers();
 }
 
-function displayClients() {
-    $('#clientsBody').empty();
-    for (let i = 0; i < clientsArr.length; i++) {
-        $('#clientsBody').append('<tr><td>' + clientsArr[i].id + '</td><td>' + clientsArr[i].lName + '</td><td>' + clientsArr[i].fName + '</td><td>' + clientsArr[i].mInit + '</td><td>' + clientsArr[i].address + '</td><td>' + clientsArr[i].city + '</td><td>' + clientsArr[i].state + '</td><td>' + clientsArr[i].zip + '</td></tr>');
+function displayCustomers() {
+    $('#custBody').empty();
+    for (let i = 0; i < customersArr.length; i++) {
+        $('#custBody').append('<tr><td>' + customersArr[i].id + '</td><td>' + customersArr[i].lName + '</td><td>' + customersArr[i].fName + '</td><td>' + customersArr[i].mInit + '</td><td>' + customersArr[i].address + '</td><td>' + customersArr[i].city + '</td><td>' + customersArr[i].state + '</td><td>' + customersArr[i].zip + '</td></tr>');
     }
 }
 

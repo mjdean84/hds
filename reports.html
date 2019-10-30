@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="google" content="notranslate" />
     <meta http-equiv="content-language" content="en" />
-    <title>Services</title>
+    <title>Reports</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/4.3.1/flatly/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -85,7 +85,7 @@
         <div class="container my-3">
 
             <h1>Reports</h1>
-            <a href="forms.html">Go to forms</a>
+            <a href="empResources.html">Back to resources</a>
             <div class="row">
                 <div class="col-4"></div>
                 <div class="col-4">
@@ -98,45 +98,28 @@
         <!--Tabs-->
         <div class="container mt-3">
             <ul class="nav nav-tabs">
+                <li class="nav-item bg-light" id="custTab">
+                    <a class="nav-link active" data-toggle="tab" href="#customer">Customer</a>
+                </li>
                 <li class="nav-item bg-light">
-                    <a id="invTab" class="nav-link active" data-toggle="tab" href="#inventory">Inventory</a>
+                    <a class="nav-link" data-toggle="tab" href="#product">Product</a>
                 </li>
-                <li class="nav-item bg-light" id="clientsTab">
-                    <a id="clientsTab" class="nav-link" data-toggle="tab" href="#clients">Clients</a>
-                </li>
-                <li class="nav-item bg-light" id="clientsTab">
-                    <a id="salesTab" class="nav-link" data-toggle="tab" href="#sales">Sales</a>
+                <li class="nav-item bg-light" id="salesTab">
+                    <a class="nav-link" data-toggle="tab" href="#sales">Sales</a>
                 </li>
                 <li class="nav-item bg-light" id="employeesTab">
-                    <a id="sTab" class="nav-link" data-toggle="tab" href="#employees">Employees</a>
+                    <a class="nav-link" data-toggle="tab" href="#employees">Employee</a>
                 </li>
             </ul>
         </div>
 
         <!--Tables-->
         <div class="tab-content">
-            <!--Inventory-->
-            <div id="inventory" class="container tab-pane active">
-                <table class="table table-striped bg-white" id="invTable">
-                    <thead class="thead-dark" id="invHead">
-                        <tr>
-                            <th id="typeHead">Type <i id="typeIcon"></i></th>
-                            <th id="brandHead">Brand <i id="brandIcon"></i></th>
-                            <th id="modelHead">Model # <i id="modelIcon"></i></th>
-                            <th id="serialHead">Serial # <i id="serialIcon"></i></th>
-                            <th id="descHead">Description <i id="descIcon"></i></th>
-                            <th id="costHead">Cost <i id="costIcon"></i></th>
-                            <th id="priceHead">List Price <i id="priceIcon"></i></th>
-                        </tr>
-                    </thead>
-                    <tbody id="invBody"></tbody>
-                </table>
-            </div>
 
-            <!--Clients-->
-            <div id="clients" class="container tab-pane fade">
-                <table class="table table-striped bg-white" id="clientsTable">
-                    <thead class="thead-dark" id="clientsHead">
+            <!--Customer-->
+            <div id="customer" class="container tab-pane active">
+                <table class="table table-striped bg-white" id="custTable">
+                    <thead class="thead-dark" id="custHead">
                         <tr>
                             <th>ID</th>
                             <th>Last Name</th>
@@ -148,7 +131,27 @@
                             <th>Zip</th>
                         </tr>
                     </thead>
-                    <tbody id="clientsBody"></tbody>
+                    <tbody id="custBody"></tbody>
+                </table>
+            </div>
+
+            <!--Product-->
+            <div id="product" class="tab-pane fade">
+                <table class="table table-striped bg-white" id="invTable">
+                    <thead class="thead-dark" id="invHead">
+                        <tr>
+                            <th id="idHead">ID <i id="idIcon"></i></th>
+                            <th id="typeHead">Type <i id="typeIcon"></i></th>
+                            <th id="brandHead">Brand <i id="brandIcon"></i></th>
+                            <th id="descHead">Description <i id="descIcon"></i></th>
+                            <th id="soldHead">Sold <i id="soldIcon"></i></th>
+                            <th id="onHandHead">On-Hand <i id="onHandIcon"></i></th>
+                            <th id="costHead">Cost <i id="costIcon"></i></th>
+                            <th id="priceHead">List Price <i id="priceIcon"></i></th>
+                            <th id="deliveryHead">Delivery Cost <i id="deliveryIcon"></i></th>
+                        </tr>
+                    </thead>
+                    <tbody id="invBody"></tbody>
                 </table>
             </div>
 

@@ -77,6 +77,10 @@
             text-decoration:underline;
         }
 
+        .map{
+            outline:0;
+        }
+
     </style>
 
 </head>
@@ -129,7 +133,53 @@
             <!--Car Image 1-->
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="img-fluid" src="images/index/kitchen_appliances.jpg" />
+                    <img class="img-fluid" src="images/index/kitchen_appliances.jpg" usemap="#appliances" />
+
+
+
+                    <map name="appliances">
+                        <area class="map" id="fridgeArea" shape="rect" coords="0, 0, 400, 750" href="appliances.html" alt="refrigerator"
+                              data-toggle="modal" data-target="#fridgeModal" />
+                        <area class="map" id="ovenArea" shape="rect" coords="500, 200, 800, 650" href="appliances.html" alt="oven" data-toggle="modal"
+                              data-target="#ovenModal" />
+                    </map>
+                    <div class="modal" id="fridgeModal">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Thermador</h4>
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                                <div class="modal-body">
+                                    <img class="img-fluid mx-auto d-block" src="images/appliances/range.jpg" />
+                                    <hr />
+                                    <h4>Black Free Stand Convection Range</h4>
+                                    Long Description<br />
+                                    RDFS30QB<br />
+                                    <strong>$2,479.00</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal" id="ovenModal">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Thermador</h4>
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                                <div class="modal-body">
+                                    <img class="img-fluid mx-auto d-block" src="images/appliances/range.jpg" />
+                                    <hr />
+                                    <h4>Black Free Stand Convection Range</h4>
+                                    Long Description<br />
+                                    RDFS30QB<br />
+                                    <strong>$2,479.00</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="carousel-caption">
                         <div class="row">
                             <div data-target="#car1" data-slide-to="0" class="col-4 carCap carCap-active py-3">
@@ -257,9 +307,10 @@
                     </p>
                     <div class="btn-group mt-5">
                         <a class="btn btn-primary" href="lighting.html">Lighting</a>
-                        <a class="btn btn-primary" href="countertops.html">Countertops</a>
                         <a class="btn btn-primary" href="cabinets.html">Cabinets</a>
                         <a class="btn btn-primary" href="appliances.html">Appliances</a>
+                        <a class="btn btn-primary" href="countertops.html">Countertops</a>
+                        <a class="btn btn-primary" href="plumbing.html">Plumbing</a>
                         <a class="btn btn-primary" href="flooring.html">Flooring</a>
                     </div>
                 </div>
@@ -338,7 +389,7 @@
                         <a href="locations.html">Contacts</a><br />
                         <a href="services.html">Fees</a><br />
                         <a href="manufacturers.html">Manufacturers</a><br />
-                        <a href="empResources.html">Employee Resources</a>
+                        <a href="login.html">Employee Resources</a>
                     </div>
                     <div class="col-4">
                         <h4>Headquarters</h4>
