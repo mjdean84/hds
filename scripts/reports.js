@@ -222,7 +222,7 @@ var convUSD = new Intl.NumberFormat('en-US', {
 });
 
 
-//Inventory
+//Inventory---------------------------------------------------------------------------------------
 class Product {
     constructor(type, brand, id, description, sold, onHand, cost, listPrice, delivery) {
         this.type = type;
@@ -315,12 +315,12 @@ function sortDes() {
 
 
 
-//Clients
+//Customers--------------------------------------------------------------------------------------
 
 var customersArr = [];
 
 class Customer {
-    constructor(id, lName, fName, mInit, address, city, state, zip) {
+    constructor(id, lName, fName, mInit, address, city, state, zip, purchases) {
         this.id = id;
         this.lName = lName;
         this.fName = fName;
@@ -329,21 +329,22 @@ class Customer {
         this.city = city;
         this.state = state;
         this.zip = zip;
+        this.purchases = purchases;
     }
 }
 
 function createCustomers() {
     customersArr.push(
-        new Customer(1, 'Abercrombie', 'Kim', 'B', '1226 Shoe St.', 'Scottsdale', 'AZ', 85256),
-        new Customer(2, 'Abolrous', 'Hazem', 'E', '1399 Firestone Drive', 'Yuma', 'AZ', 85364),
-        new Customer(3, 'Adams', 'Angel', 'C', '6872 Thornwood Dr.', 'Yuma', 'AZ', 85364),
-        new Customer(4, 'Adams', 'Edward', 'C', '10203 Acorn Avenue', 'Yuma', 'AZ', 85364),
-        new Customer(5, 'Adams', 'Gabriella', 'K', '1902 Santa Cruz', 'Yuma', 'AZ', 85364),
-        new Customer(6, 'Adams', 'Jason', 'C', '1285 Greenbrier Street', 'Yuma', 'AZ', 85364),
-        new Customer(7, 'Adams', 'Kaitlyn', 'A', '1356 Grove Way', 'Phoenix', 'AZ', 85004),
-        new Customer(8, 'Adams', 'Robert', 'Q', '1411 RaAZh Drive', 'Phoenix', 'AZ', 85004),
-        new Customer(9, 'Adams', 'Thomas', 'C', '1220 Bradford Way', 'Phoenix', 'AZ', 85004),
-        new Customer(10, 'Akers', 'Kim', 'C', '1619 Stillman Court', 'Phoenix', 'AZ', 85004)
+        new Customer(1, 'Abercrombie', 'Kim', 'B', '1226 Shoe St.', 'Scottsdale', 'AZ', 85256, 'Full Kitchen Remodel'),
+        new Customer(2, 'Abolrous', 'Hazem', 'E', '1399 Firestone Drive', 'Yuma', 'AZ', 85364, 'Bath Retile'),
+        new Customer(3, 'Adams', 'Angel', 'C', '6872 Thornwood Dr.', 'Yuma', 'AZ', 85364, 'Refrigerator SZ680 <br />Range VGIC-24'),
+        new Customer(4, 'Adams', 'Edward', 'C', '10203 Acorn Avenue', 'Yuma', 'AZ', 85364, 'Kitchen and Bath Granite Countertops'),
+        new Customer(5, 'Adams', 'Gabriella', 'K', '1902 Santa Cruz', 'Yuma', 'AZ', 85364, 'Microwave JVM136C<br />Washer WFL 2060<br />Dryer WTA 3510'),
+        new Customer(6, 'Adams', 'Jason', 'C', '1285 Greenbrier Street', 'Yuma', 'AZ', 85364, 'Full Bath Remodel'),
+        new Customer(7, 'Adams', 'Kaitlyn', 'A', '1356 Grove Way', 'Phoenix', 'AZ', 85004, 'Bath Sinks and Tub'),
+        new Customer(8, 'Adams', 'Robert', 'Q', '1411 RaAZh Drive', 'Phoenix', 'AZ', 85004, 'Hardwood Floor Kitchen'),
+        new Customer(9, 'Adams', 'Thomas', 'C', '1220 Bradford Way', 'Phoenix', 'AZ', 85004, 'Bath Onyx Countertop with Backlighting'),
+        new Customer(10, 'Akers', 'Kim', 'C', '1619 Stillman Court', 'Phoenix', 'AZ', 85004, 'Kitchen Cabinets Maple')
     );
     displayCustomers();
 }
@@ -351,7 +352,7 @@ function createCustomers() {
 function displayCustomers() {
     $('#custBody').empty();
     for (let i = 0; i < customersArr.length; i++) {
-        $('#custBody').append('<tr><td>' + customersArr[i].id + '</td><td>' + customersArr[i].lName + '</td><td>' + customersArr[i].fName + '</td><td>' + customersArr[i].mInit + '</td><td>' + customersArr[i].address + '</td><td>' + customersArr[i].city + '</td><td>' + customersArr[i].state + '</td><td>' + customersArr[i].zip + '</td></tr>');
+        $('#custBody').append('<tr><td>' + customersArr[i].id + '</td><td>' + customersArr[i].lName + '</td><td>' + customersArr[i].fName + '</td><td>' + customersArr[i].mInit + '</td><td>' + customersArr[i].address + '</td><td>' + customersArr[i].city + '</td><td>' + customersArr[i].state + '</td><td>' + customersArr[i].zip + '</td><td>' + customersArr[i].purchases + '</td></tr>');
     }
 }
 
