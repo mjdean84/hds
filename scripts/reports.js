@@ -337,9 +337,9 @@ function createCustomers() {
     customersArr.push(
         new Customer(1, 'Abercrombie', 'Kim', 'B', '1226 Shoe St.', 'Scottsdale', 'AZ', 85256, 'Full Kitchen Remodel'),
         new Customer(2, 'Abolrous', 'Hazem', 'E', '1399 Firestone Drive', 'Yuma', 'AZ', 85364, 'Bath Retile'),
-        new Customer(3, 'Adams', 'Angel', 'C', '6872 Thornwood Dr.', 'Yuma', 'AZ', 85364, 'Refrigerator SZ680 <br />Range VGIC-24'),
+        new Customer(3, 'Adams', 'Angel', 'C', '6872 Thornwood Dr.', 'Yuma', 'AZ', 85364, 'Refrigerator SZ680 <br>Range VGIC-24'),
         new Customer(4, 'Adams', 'Edward', 'C', '10203 Acorn Avenue', 'Yuma', 'AZ', 85364, 'Kitchen and Bath Granite Countertops'),
-        new Customer(5, 'Adams', 'Gabriella', 'K', '1902 Santa Cruz', 'Yuma', 'AZ', 85364, 'Microwave JVM136C<br />Washer WFL 2060<br />Dryer WTA 3510'),
+        new Customer(5, 'Adams', 'Gabriella', 'K', '1902 Santa Cruz', 'Yuma', 'AZ', 85364, 'Microwave JVM136C<br>Washer WFL 2060<br>Dryer WTA 3510'),
         new Customer(6, 'Adams', 'Jason', 'C', '1285 Greenbrier Street', 'Yuma', 'AZ', 85364, 'Full Bath Remodel'),
         new Customer(7, 'Adams', 'Kaitlyn', 'A', '1356 Grove Way', 'Phoenix', 'AZ', 85004, 'Bath Sinks and Tub'),
         new Customer(8, 'Adams', 'Robert', 'Q', '1411 RaAZh Drive', 'Phoenix', 'AZ', 85004, 'Hardwood Floor Kitchen'),
