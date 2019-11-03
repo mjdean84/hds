@@ -1,5 +1,4 @@
 //Sorting
-/*
 let sInvoice = false;
 let sDate = false;
 let sCustId = false;
@@ -180,57 +179,98 @@ function sortSDes() {
     }
     displaySales(salesArr);
 }
-*/
-//Employees---------------------------------------------------------------------------------
-var employeesArr = [];
 
-class Employee {
-    constructor(id, lName, fName, mInit, branchID, position, salary, address, city, state, zip, phone, email) {
-        this.id = id;
-        this.lName = lName;
-        this.fName = fName;
-        this.mInit = mInit;
-        this.branchID = branchID;
-        this.position = position;
-        this.salary = salary;
-        this.address = address;
-        this.city = city;
-        this.state = state;
-        this.zip = zip;
-        this.phone = phone;
-        this.email = email;
+//Sales---------------------------------------------------------------------------------
+var salesArr = [];
+var datesArr = [];
+
+class Sale {
+    constructor(invoice, date, custID, empID, desc, cost, price) {
+        this.invoice = invoice;
+        this.date = date;
+        this.custID = custID;
+        this.empID = empID;
+        this.desc = desc;
+        this.cost = cost;
+        this.price = price;
+        this.temp;
     }
 }
 
-function createEmployees() {
-    employeesArr.push(
-        new Employee(111111, 'Herold', 'Joe', 'J', 1, 'President and CEO', 1000000, '123 Broad St', 'Phoenix', 'AZ',
-            85001, '123-456-7890', 'jherold@hds.com'),
-        new Employee(111112, 'Herold', 'Emily', 'E', 1, 'Vice President and CFO', 2000000, '123 Broad St', 'Phoenix',
-            'AZ', 85001, '123-456-7890', 'eherold@hds.com'),
-        new Employee(123456, 'Doe', 'John', 'Q', 2, 'Sales Rep', 65000, '789 South St', 'Scottsdale', 'AZ', 85250,
-            '123-456-7890', 'jdoe@hds.com'),
-        new Employee(123457, 'Jane', 'Doe', 'F', 3, 'Branch Manager', 85000, '111 Orange Ave', 'Tucson', 'AZ', 85756,
-            '123-456-7890', 'jfdoe@hds.com'),
-        new Employee(225544, 'Dangerously', 'Johnny', 'B', 4, 'Sales Rep', 500000, '55 Green Blvd', 'Las Vegas', 'NV',
-            89102, '123-456-7890', 'jdangerously.hds.com'),
-        new Employee(234567, 'Smith', 'Michael', 'M', 3, 'Assistant Branch Manager', 50000, '798 One Way Dr', 'Tucson',
-            'AZ', 85756, '123-456-7890', 'msmith@hds.com'),
-        new Employee(654321, 'Feltson', 'Eddie', 'F', 5, 'HR Manager', 35000, '8546 Harmony Way', 'Albuquerque', 'NM',
-            87105, '123-456-7890', 'efeltson@hds.com'),
-        new Employee(666555, 'Krelborn', 'Seymour', 'A', 4, 'Assistant Branch Manager', 50000, '9955 Elm St', 'Las Vegas',
-            'NV', 89102, '123-456-7890', 'skrelborn@hds.com'),
-        new Employee(778899, 'Vega', 'Vincent', 'L', 5, 'Accountant', 75000, '654 Seminole Circle', 'Albuquerque', 'NM',
-            87105, '123-456-7890', 'vvega@hds.com'),
-        new Employee(789456, 'Kimble', 'Rod', 'R', 1, 'Branch Manager', 85000, '621 Riverside Rd', 'Phoenix', 'AZ', 85003,
-            '123-456-7890', 'rkimble@hds.com')
-    )
-    displayEmployees(employeesArr);
+function createSales() {
+    salesArr.push(
+        new Sale(1, new Date('11/25/2018'), 120, 123456, 'Kitchen remodel', 7000, 12000),
+        new Sale(2, new Date('1/1/2019'), 658, 112244, 'Kitchen Retile', 3000, 5000),
+        new Sale(3, new Date('2/15/2019'), 23, 654987, 'New sinks kitchen and bath', 3500, 7500),
+        new Sale(4, new Date('4/7/2019'), 999, 998877, 'Bath remodel', 4500, 8000),
+        new Sale(5, new Date('4/28/2019'), 840, 888555, 'kitchen countertops', 3000, 5500),
+        new Sale(6, new Date('5/3/2019'), 1000, 111222, 'hardwood full house', 30000, 50000),
+        new Sale(7, new Date('5/7/2019'), 410, 444555, 'remodel full house', 100000, 1000000),
+        new Sale(8, new Date('5/9/2019'), 120, 123456, 'platinum/diamond microwave', 5000000, 100000000),
+        new Sale(9, new Date('5/10/2019'), 500, 456123, 'Bath remodel', 4500, 7500),
+        new Sale(10, new Date('7/12/2019'), 750, 654321, 'Kitchen and bath remodel', 22000, 30000)
+    );
+    displaySales(salesArr);
 }
 
-function displayEmployees(arr) {
-    $('#employeesBody').empty();
+function findDates() {
+    datesArr.length = 0;
+    let date1 = $('#startDate').val();
+    let startDate = new Date(date1.replace(/-/g, '\/'));
+    let date2 = $('#endDate').val();
+    let endDate = new Date(date2.replace(/-/g, '\/'));
+
+    if (startDate == 'Invalid Date') {
+        $('#errorMessage').html('*Invalid start-date');
+    }
+    else if (endDate == 'Invalid Date') {
+        $('#errorMessage').html('*Invalid end-date');
+    }
+    else if (startDate > endDate) {
+        $('#errorMessage').html('*Start-date must be before end-date');
+    }
+    else {
+        $('#errorMessage').html('');
+    }
+
+    for (let i = 0; i < salesArr.length; i++) {
+        if (startDate <= salesArr[i].date && salesArr[i].date <= endDate) {
+            datesArr.push(salesArr[i]);
+        }
+    }
+    displaySales(datesArr);
+}
+
+function displaySales(arr) {
+    $('#salesBody').empty();
+    if (arr.length == 0) {
+        $('#errorMessage').html('*No records found');
+    }
+
+    let dateObj;
+    let month;
+    let day;
+    let year;
+    let date;
+
     for (let i = 0; i < arr.length; i++) {
-        $('#employeesBody').append('<tr><td>' + arr[i].id + '</td><td>' + arr[i].lName + '</td><td>' + arr[i].fName + '</td><td>' + arr[i].mInit + '</td><td>' + arr[i].branchID + '</td><td>' + arr[i].position + '</td><td>' + convUSD.format(arr[i].salary) + '</td><td>' + arr[i].address + '</td><td>' + arr[i].city + '</td><td>' + arr[i].state + '</td><td>' + arr[i].zip + '</td><td>' + arr[i].phone + '</td><td>' + arr[i].email + '</td></tr>');
+        dateObj = arr[i].date;
+        month = dateObj.getUTCMonth();
+        month++;
+
+        day = dateObj.getUTCDate();
+        year = dateObj.getUTCFullYear();
+
+        date = month + "/" + day + "/" + year;
+
+        $('#salesBody').append('<tr><td>' + arr[i].invoice + '</td><td>' + date + '</td><td>' + arr[i].custID + '</td><td>' + arr[i].empID + '</td><td class="text-capitalize">' + arr[i].desc + '</td><td>' + convUSD.format(arr[i].cost) + '</td><td>' + convUSD.format(arr[i].price) + '</td></tr>');
     }
+}
+
+
+function resetDates() {
+    displaySales(salesArr);
+    $('#startDate').val('');
+    $('#endDate').val('');
+    $('#errorMessage').html('');
 }

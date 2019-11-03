@@ -13,8 +13,10 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
           integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <script src="scripts/reports.js"></script>
+    <script src="scripts/products.js"></script>
+    <script src="scripts/customers.js"></script>
     <script src="scripts/employees.js"></script>
+    <script src="scripts/sales.js"></script>
     <style>
         .brand {
             border: 2px solid white;
@@ -121,15 +123,15 @@
                 <table class="table table-striped bg-white" id="custTable">
                     <thead class="thead-dark" id="custHead">
                         <tr>
-                            <th>ID</th>
-                            <th>Last Name</th>
-                            <th>First Name</th>
-                            <th>MI</th>
-                            <th>Address</th>
-                            <th>City</th>
-                            <th>State</th>
-                            <th>Zip</th>
-                            <th>Purchases</th>
+                            <th id="cIdHead">ID <i id="cIdIcon"></i></th>
+                            <th id="cLastHead">Last Name <i id="cLastIcon"></i></th>
+                            <th id="cFirstHead">First Name <i id="cFirstIcon"></i></th>
+                            <th id="cMiHead">MI <i id="cMiIcon"></i></th>
+                            <th id="cAddressHead">Address <i id="cAddressIcon"></i></th>
+                            <th id="cCityHead">City <i id="cCityIcon"></i></th>
+                            <th id="cStateHead">State <i id="cStateIcon"></i></th>
+                            <th id="cZipHead">Zip <i id="cZipIcon"></i></th>
+                            <th id="cPurchasesHead">Purchases <i id="cPurchasesIcon"></i></th>
                         </tr>
                     </thead>
                     <tbody id="custBody"></tbody>
@@ -167,13 +169,13 @@
                 <table class="table table-striped bg-white" id="salesTable">
                     <thead class="thead-dark" id="salesHead">
                         <tr>
-                            <th>Invoice</th>
-                            <th>Date</th>
-                            <th>Customer ID</th>
-                            <th>Employee ID</th>
-                            <th>Description</th>
-                            <th>Cost</th>
-                            <th>Price</th>
+                            <th id="sInvoiceHead">Invoice <i id="sInvoiceIcon"></i></th>
+                            <th id="sDateHead">Date <i id="sDateIcon"></i></th>
+                            <th id="sCustIdHead">Customer ID <i id="sCustIdIcon"></i></th>
+                            <th id="sEmpIdHead">Employee ID <i id="sEmpIdIcon"></i></th>
+                            <th id="sDescHead">Description <i id="sDescIcon"></i></th>
+                            <th id="sCostHead">Cost <i id="sCostIcon"></i></th>
+                            <th id="sPriceHead">Price <i id="sPriceIcon"></i></th>
                         </tr>
                     </thead>
                     <tbody id="salesBody"></tbody>
