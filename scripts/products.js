@@ -26,7 +26,7 @@ $(document).ready(function () {
     //Search Input
     $('#searchInput').on('keyup', function () {
         let value = $(this).val().toLowerCase();
-        $('#prodBody tr').filter(function () {
+        $('#invBody tr').filter(function () {
             $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
         });
 
