@@ -15,14 +15,6 @@
             height:100%;
         }
 
-        #logoffBtn{
-            display:none;
-        }
-        
-        #inventoryBtn {
-            display: none;
-        }
-
         .carCap{
             background:rgba(0, 0, 0, 0.1);
             color:rgb(200, 200, 200);
@@ -49,15 +41,6 @@
 
         .carCap-active button{
             opacity:1;
-        }
-
-        .house-item:hover{
-            cursor:pointer;
-        }
-
-        .house-item-active{
-            background:rgb(0, 0, 0);
-            color:white;
         }
 
         hr{
@@ -130,6 +113,13 @@
         <!--Carousel-->
         <div class="carousel slide mt-5" id="car1" data-ride="carousel">
 
+            <!--Indicators-->
+            <ul class="carousel-indicators d-md-none">
+                <li data-target="#car1" data-slide-to="0" class="active"></li>
+                <li data-target="#car1" data-slide-to="1"></li>
+                <li data-target="#car1" data-slide-to="2"></li>
+            </ul>
+
             <!--Car Image 1-->
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -137,7 +127,7 @@
 
 
 
-
+                    <!--Image Map-->
                     <map name="appliances">
                         <area class="map" id="fridgeArea" shape="rect" coords="0, 0, 400, 750" href="appliances.html" alt="refrigerator"
                               data-toggle="modal" data-target="#fridgeModal" />
@@ -149,31 +139,31 @@
                               data-toggle="modal" data-target="#dishModal" />
                     </map>
 
-                    <div class="carousel-caption">
+                    <div class="carousel-caption  d-none d-md-block">
                         <div class="row">
-                            <div data-target="#car1" data-slide-to="0" class="col-4 carCap carCap-active py-3">
+                            <div class="col-4 carCap carCap-active py-3" data-target="#car1" data-slide-to="0">
                                 <h3>Kitchen</h3>
                                 <p>Appliances, Cabinets, and more</p>
-                                <button type="button" onclick="location.href='#kitchen'" class="btn btn-info btn-block">Take me there</button>
+                                <button class="btn btn-info btn-block" type="button" onclick="location.href='#kitchen'">Take me there</button>
                             </div>
-                            <div data-target="#car1" data-slide-to="1" class="col-4 carCap py-3">
+                            <div class="col-4 carCap py-3" data-target="#car1" data-slide-to="1">
                                 <h3>Bath</h3>
                                 <p>Showers, Tubs, Plumbing</p>
-                                <button type="button" onclick="location.href='#bath'" class="btn btn-info btn-block">Take me there</button>
+                                <button class="btn btn-info btn-block" type="button" onclick="location.href='#bath'">Take me there</button>
                             </div>
-                            <div data-target="#car1" data-slide-to="2" class="col-4 carCap py-3">
+                            <div class="col-4 carCap py-3" data-target="#car1" data-slide-to="2">
                                 <h3>Bed/General</h3>
                                 <p>Flooring, Lighting, Countertops</p>
-                                <button type="button" onclick="location.href='#general'" class="btn btn-info btn-block">Take me there</button>
+                                <button class="btn btn-info btn-block" type="button" onclick="location.href='#general'">Take me there</button>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!--Car Image 2-->
-                <div class="carousel-item">
+                <div class="carousel-item ">
                     <img class="img-fluid" src="images/index/bathroom.jpg" />
-                    <div class="carousel-caption pt-3">
+                    <div class="carousel-caption d-none d-md-block pt-3">
                         <div class="row">
                             <div data-target="#car1" data-slide-to="0" class="col-4 carCap py-3">
                                 <h3>Kitchen</h3>
@@ -197,22 +187,22 @@
                 <!--Car Image 3-->
                 <div class="carousel-item">
                     <img class="img-fluid" src="images/index/general-home.jpg" />
-                    <div class="carousel-caption pt-3">
+                    <div class="carousel-caption d-none d-md-block pt-3">
                         <div class="row">
-                            <div data-target="#car1" data-slide-to="0" class="col-4 carCap py-3">
+                            <div class="col-4 carCap py-3" data-target="#car1" data-slide-to="0">
                                 <h3>Kitchen</h3>
                                 <p>Appliances, Cabinets, and more</p>
-                                <button type="button" onclick="location.href='#kitchen'" class="btn btn-info btn-block">Take me there</button>
+                                <button class="btn btn-info btn-block" type="button" onclick="location.href='#kitchen'">Take me there</button>
                             </div>
-                            <div data-target="#car1" data-slide-to="1" class="col-4 carCap py-3">
+                            <div class="col-4 carCap py-3" data-target="#car1" data-slide-to="1">
                                 <h3>Bath</h3>
                                 <p>Showers, Tubs, Plumbing</p>
-                                <button type="button" onclick="location.href='#bath'" class="btn btn-info btn-block">Take me there</button>
+                                <button class="btn btn-info btn-block" type="button" onclick="location.href='#bath'">Take me there</button>
                             </div>
-                            <div data-target="#car1" data-slide-to="2" class="col-4 carCap carCap-active py-3">
+                            <div class="col-4 carCap carCap-active py-3" data-target="#car1" data-slide-to="2">
                                 <h3>Bed/General</h3>
                                 <p>Flooring, Lighting, Countertops</p>
-                                <button type="button" onclick="location.href='#general'" class="btn btn-info btn-block">Take me there</button>
+                                <button class="btn btn-info btn-block" type="button" onclick="location.href='#general'">Take me there</button>
                             </div>
                         </div>
                     </div>
@@ -346,8 +336,9 @@
     <section id="kitchen" class="offset">
         <div class="container">
             <div class="row">
-                <div class="col-6 text-center">
+                <div class="col-md-6 text-center">
                     <h2>Kitchen</h2>
+                    <img class="img-fluid d-md-none" src="images/index/kitchen.jpg" />
                     <p class="lead mt-3">
                         We have the resources and expertise to take care of all your kitchen needs.
                         If you're looking for a full overhaul, we've got you covered.  We do everything
@@ -357,7 +348,7 @@
                         If you just want to put on some finishing touches or upgrade your equipment,
                         we have access to top of the line and current models.
                     </p>
-                    <div class="btn-group mt-5">
+                    <div class="btn-group my-3">
                         <a class="btn btn-primary" href="lighting.html">Lighting</a>
                         <a class="btn btn-primary" href="cabinets.html">Cabinets</a>
                         <a class="btn btn-primary" href="appliances.html">Appliances</a>
@@ -366,7 +357,7 @@
                         <a class="btn btn-primary" href="flooring.html">Flooring</a>
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-6 d-none d-md-block">
                     <img class="img-fluid" src="images/index/kitchen.jpg" />
                 </div>
             </div>
@@ -380,11 +371,12 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-6">
+                <div class="col-6 d-none d-md-block">
                     <img class="img-fluid" src="images/index/bath.jpg" />
                 </div>
-                <div class="col-6 text-center">
+                <div class="col-md-6 text-center">
                     <h2>Bath</h2>
+                    <img class="img-fluid d-md-none" src="images/index/bath.jpg" />
                     <p class="lead my-3">
                         Our master craftsmen will create the bathroom of your dreams. Bathroom flooring, showers, tubs,
                         sinks, and counters are among our specialties. <a href="locations.html">Give us a call</a> today
@@ -408,8 +400,9 @@
     <section id="general" class="offset">
         <div class="container">
             <div class="row">
-                <div class="col-6 text-center">
+                <div class="col-md-6 text-center">
                     <h2>Bedrooms and General Areas</h2>
+                    <img class="img-fluid d-md-none" src="images/index/bedroom.jpg" />
                     <p class="lead my-3">
                         Our skills with flooring, cabinetry and lighting are universal.  So no matter what area
                         of your home you're looking to remodel, we'll get the job done right.  We can even take care
@@ -421,7 +414,7 @@
                         <a class="btn btn-primary" href="flooring.html">Flooring</a>
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-6 d-none d-md-block">
                     <img class="img-fluid" src="images/index/bedroom.jpg" />
                 </div>
             </div>
