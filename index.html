@@ -10,6 +10,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <style>
+        .brand-xs {
+            border: 2px solid white;
+            border-radius: 12px;
+            padding: 4px;
+        }
+
         .carousel-inner img{
             width:100%;
             height:100%;
@@ -71,7 +77,8 @@
     <header class="bg-primary mb-4">
         <!--Navbar-->
         <nav class="navbar navbar-expand-md bg-primary navbar-dark fixed-top py-2">
-            <a class="navbar-brand brand font-italic" href="index.html"><h3><u>Home Design Solutions</u></h3></a>
+            <a class="d-none d-sm-block navbar-brand brand font-italic" href="index.html"><h3><u>Home Design Solutions</u></h3></a>
+            <a class="d-sm-none navbar-brand brand brand-xs" href="index.html">HDS</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
                 <span class="navbar-toggler-icon"></span>
             </button>
