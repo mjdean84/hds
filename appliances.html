@@ -45,7 +45,7 @@
             max-height:200px;
         }
 
-        .jumbotron {
+        .jtron {
             background: url('images/appliances/kitchen_banner.jpg')no-repeat fixed;
             height: 30em;
             font-weight: bold;
@@ -107,7 +107,7 @@
     </nav>
 
     <!--Jumbo-->
-    <div class="jumbotron d-none d-md-block">
+    <div class="jumbotron jtron d-none d-md-block">
         <div class="row">
             <div class="col-lg-9">
                 <div class="jumbo">
@@ -151,8 +151,10 @@
         </div>
     </div>
 
-    <div class="container">
-        <h1 class="mt-5 d-md-none">Popular Appliances</h1>
+    <div class="bg-secondary d-md-none py-4">
+        <div class="container">
+            <h1 class="mt-5 my-auto">Popular Appliances</h1>
+        </div>
     </div>
 
     <div class="container">
@@ -176,7 +178,7 @@
 
 
     <div class="row">
-        <div class="col-sm-2">
+        <div class="col-md-2">
             <div class="ml-3">
                 <h5 class="filter-head" id="type-filter-head">Product Types +</h5>
                 <hr color="black" />
@@ -325,14 +327,14 @@
     </div>
 
     <!--Footer-->
-    <footer class="bg-primary">
-        <div class="footer text-white py-5 mt-5">
+    <footer>
+        <div class="footer bg-primary text-white py-5 mt-5">
             <div class="container">
                 <div class="row">
-                    <div class="col-4">
+                    <div class="col d-none d-sm-block">
                         <img class="img-fluid" src="images/nkba.jpg" />
                     </div>
-                    <div class="col-4">
+                    <div class="col">
                         <h4>Resources</h4>
                         <a href="faqs.html">FAQs</a><br />
                         <a href="locations.html">Contacts</a><br />
@@ -340,7 +342,7 @@
                         <a href="manufacturers.html">Manufacturers</a><br />
                         <a href="login.html">Employee Resources</a>
                     </div>
-                    <div class="col-4">
+                    <div class="col">
                         <h4>Headquarters</h4>
                         <p>
                             101 Sedalia Dr<br />
@@ -351,6 +353,7 @@
                         </p>
                     </div>
                 </div>
+                <img class="img-fluid d-sm-none" src="images/nkba.jpg" />
             </div>
         </div>
     </footer>
