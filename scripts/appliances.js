@@ -142,7 +142,8 @@ function displayProducts() {
         for (let i = 0; i < productArr.length; i++) {
             tempArr.push(productArr[i]);
         }
-        //$('#all-types').prop('checked', true);
+        //Not working?
+        $('#all-types').prop('checked', true);
     }
 
     if (brandArr.length > 0) {
@@ -154,7 +155,8 @@ function displayProducts() {
             }
         }
     } else {
-        //$('#all-brands').prop('checked', true);
+        //Not working?
+        $('#all-brands').prop('checked', true);
     }
 
     let sortBy = document.getElementById('sortSel').value;
