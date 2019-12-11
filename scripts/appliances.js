@@ -181,7 +181,7 @@ function displayProducts() {
         let id = 'prod' + x;
         let prodId = '#' + id;
 
-        $(row).append('<div class="col-md-3 product shadow" id="' + id + '" data-toggle="modal" data-target="#modal' + x + '"></div>');
+        $(row).append('<div class="col-sm-6 col-md-3 product shadow" id="' + id + '" data-toggle="modal" data-target="#modal' + x + '"></div>');
         $(prodId).append('<img class= "img-fluid d-block mx-auto" src = "' + image + '" /><br /> <strong>' + brand + '</strong> <br />');
         $(prodId).append(desc + ' <br /> <i>' + model + '</i> <br /> <strong>' + listPrice + '</strong>');
 
