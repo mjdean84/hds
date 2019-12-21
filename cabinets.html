@@ -16,7 +16,7 @@
             padding: 4px;
         }
 
-        .jumbotron {
+        .jtron {
             background: url('images/cabinets/cabinet_banner.png')no-repeat fixed;
             height: 25em;
             font-weight: bold;
@@ -83,7 +83,7 @@
     </nav>
 
     <!--Banner-->
-    <div class="jumbotron">
+    <div class="jumbotron jtron d-none d-md-block">
         <div class="row">
             <div class="col-9">
                 <div class="jumbo py-3 px-3">
@@ -93,24 +93,32 @@
         </div>
     </div>
 
+    <div class="jumbotron bg-light d-md-none">
+        <div class="container">
+            <h1 class="display-4">Countertops</h1>
+        </div>
+    </div>
+
+    <img class="img-fluid mb-3 d-md-none" src="images/cabinets/cabinet_banner.png" />
+
     <section class="text-center">
         <div class="container">
             <h1>The Process</h1>
             <hr />
             <div class="row">
-                <div class="col-2"></div>
-                <div class="col-8">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
                     <p class="lead">
                         To ensure our clients get the perfect cabinets for their unique tastes, HDS does not
                         keep cabinets in stock.  We begin with a consultation with the client where the style
                         and colors are determined.  We then custom order the cabinets from our manufacturers.
                         If you'd like to get ideas of what may work for you, you can check out some of our
-                        completed works below, stop by one of our locations or visit our 
+                        completed works below, stop by one of our locations or visit our
                         <a href="manufacturers.html">manufacturers' websites.</a> Each of our convenient locations
                         are fitted with beautiful kitchen displays.
                     </p>
                 </div>
-                <div class="col-2"></div>
+                <div class="col-md-2"></div>
             </div>
             <hr class="my-5" />
         </div>
@@ -121,15 +129,16 @@
 
             <!--Red Oak-->
             <div class="row">
-                <div class="col-6 my-auto">
+                <div class="col-md-6 my-auto">
                     <h1>Red Oak</h1>
-                    <p class="lead">
+                    <img class="img-fluid mb-3 d-md-none" src="images/cabinets/red_oak_cabinets.jpg" data-toggle="modal" data-target="#redOakModal" />
+                    <p class="lead mt-3">
                         Red Oak is commonly used for more traditionally styled cabinets.  Its rich grain
                         patterns give it a naturally classic appearance.  This wood is known for being
                         strong, durable, and relatively inexpensive.
                     </p>
                 </div>
-                <div class="col-6">
+                <div class="col-6 d-none d-md-block">
                     <img class="img-fluid" src="images/cabinets/red_oak_cabinets.jpg" data-toggle="modal" data-target="#redOakModal" />
                 </div>
             </div>
@@ -152,11 +161,12 @@
 
             <!--White Oak-->
             <div class="row">
-                <div class="col-6">
+                <div class="col-6 d-none d-md-block">
                     <img class="img-fluid" src="images/cabinets/white_oak_cabinets.jpg" data-toggle="modal" data-target="#whiteOakModal" />
                 </div>
-                <div class="col-6 my-auto">
+                <div class="col-md-6 my-auto">
                     <h1>White Oak</h1>
+                    <img class="img-fluid mb-3 d-md-none" src="images/cabinets/white_oak_cabinets.jpg" />
                     <p class="lead">
                         White Oak has less pronounced grain patterns.  It gives the room a more subtle, artsy
                         look.  It is just as durable as Red Oak but stronger.  Great for the more modern of
@@ -183,15 +193,16 @@
 
             <!--Maple-->
             <div class="row">
-                <div class="col-6 my-auto">
+                <div class="col-md-6 my-auto">
                     <h1>Maple</h1>
+                    <img class="img-fluid mb-3 d-md-none" src="images/cabinets/hard_maple_cabinets.jpg" />
                     <p class="lead">
                         Hard Maple is another wonderful option.  It's fine-grain and range golden to deep
                         mahogany tones provide the perfect canvas for a variety of finishes.  It is considered
                         one of the hardest woods suitable for cabinetry.
                     </p>
                 </div>
-                <div class="col-6">
+                <div class="col-md-6 d-none d-md-block">
                     <img class="img-fluid" src="images/cabinets/hard_maple_cabinets.jpg" data-toggle="modal" data-target="#mapleModal" />
                 </div>
             </div>
@@ -214,11 +225,12 @@
 
             <!--Hickory-->
             <div class="row">
-                <div class="col-6">
+                <div class="col-md-6 d-none d-md-block">
                     <img class="img-fluid" src="images/cabinets/hickory_cabinets.jpg" data-toggle="modal" data-target="#hickoryModal" />
                 </div>
-                <div class="col-6 my-auto">
+                <div class="col-md-6 my-auto">
                     <h1>Hickory</h1>
+                    <img class="img-fluid mb-3 d-md-none" src="images/cabinets/hickory_cabinets.jpg" />
                     <p class="lead">
                         Hickory is known for its more rustic style.  Natural finishes bring out its inner
                         beauty.  Hickory is lighter than Oak yet similar in strength.
@@ -244,15 +256,16 @@
 
             <!--Cherry-->
             <div class="row">
-                <div class="col-6 my-auto">
+                <div class="col-md-6 my-auto">
                     <h1>Cherry</h1>
+                    <img class="img-fluid mb-3 d-md-none" src="images/cabinets/cherry_cabinets.jpg" />
                     <p class="lead">
                         Cherry wood provides a beautifully elegant and formal look.  It plays well to more
                         traditional style.  It darkens with age and commonly stained for a more uniformed
                         color.  Cherry is strong enough to withstand a beating.
                     </p>
                 </div>
-                <div class="col-6">
+                <div class="col-6 d-none d-md-block">
                     <img class="img-fluid" src="images/cabinets/cherry_cabinets.jpg" data-toggle="modal" data-target="#cherryModal" />
                 </div>
             </div>
@@ -275,11 +288,12 @@
 
             <!--Birch-->
             <div class="row">
-                <div class="col-6">
+                <div class="col-6 d-none d-md-block">
                     <img class="img-fluid" src="images/cabinets/birch_cabinets.jpg" data-toggle="modal" data-target="#birchModal" />
                 </div>
-                <div class="col-6 my-auto">
+                <div class="col-md-6 my-auto">
                     <h1>Birch</h1>
+                    <img class="img-fluid mb-3 d-md-none" src="images/cabinets/birch_cabinets.jpg" />
                     <p class="lead">
                         Birch is a pale wood and looks best with a natural finish.  It is popular in more
                         traditional kitchens.  It is not as strong as some other woods but inexpensive, great
@@ -306,14 +320,15 @@
 
             <!--Ash-->
             <div class="row">
-                <div class="col-6 my-auto">
+                <div class="col-md-6 my-auto">
                     <h1>Ash</h1>
+                    <img class="img-fluid mb-3 d-md-none" src="images/cabinets/ash_cabinets.jpg" />
                     <p class="lead">
                         Ash wood is great for more contemporary styles.  Looks great with a clear or natural
                         finish.  Ash is similar to Oak in strength and durability but lighter in color.
                     </p>
                 </div>
-                <div class="col-6">
+                <div class="col-6 d-none d-md-block">
                     <img class="img-fluid" src="images/cabinets/ash_cabinets.jpg" data-toggle="modal" data-target="#ashModal" />
                 </div>
             </div>
@@ -336,11 +351,12 @@
 
             <!--Pine-->
             <div class="row">
-                <div class="col-6">
+                <div class="col-6 d-none d-md-block">
                     <img class="img-fluid" src="images/cabinets/pine_cabinets.jpg" data-toggle="modal" data-target="#pineModal" />
                 </div>
-                <div class="col-6 my-auto">
+                <div class="col-md-6 my-auto">
                     <h1>Pine</h1>
+                    <img class="img-fluid mb-3 d-md-none" src="images/cabinets/pine_cabinets.jpg" />
                     <p class="lead">
                         Pine provides a more traditional and country style.  It is the only softwood used in
                         cabinetry making it more susceptible to denting.
@@ -365,14 +381,14 @@
     </section>
 
     <!--Footer-->
-    <footer class="bg-primary">
-        <div class="footer text-white py-5 mt-5">
+    <footer>
+        <div class="footer bg-primary text-white py-5 mt-5">
             <div class="container">
                 <div class="row">
-                    <div class="col-4">
+                    <div class="col d-none d-sm-block">
                         <img class="img-fluid" src="images/nkba.jpg" />
                     </div>
-                    <div class="col-4">
+                    <div class="col">
                         <h4>Resources</h4>
                         <a href="faqs.html">FAQs</a><br />
                         <a href="locations.html">Contacts</a><br />
@@ -380,7 +396,7 @@
                         <a href="manufacturers.html">Manufacturers</a><br />
                         <a href="login.html">Employee Resources</a>
                     </div>
-                    <div class="col-4">
+                    <div class="col">
                         <h4>Headquarters</h4>
                         <p>
                             101 Sedalia Dr<br />
@@ -391,6 +407,7 @@
                         </p>
                     </div>
                 </div>
+                <img class="img-fluid d-sm-none" src="images/nkba.jpg" />
             </div>
         </div>
     </footer>
