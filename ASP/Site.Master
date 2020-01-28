@@ -1,0 +1,120 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="HDS1.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <meta name="google" content="notranslate" />
+    <meta http-equiv="content-language" content="en" />
+
+    <title><%: Page.Title %></title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+</head>
+<body>
+    <form runat="server" class="needs-validation" novalidate>
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+            <a class="navbar-brand brand" runat="server" href="HTML/index.html">HDS</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav ml-auto">
+
+                    <!--Links-->
+                    <li class="nav-item">
+                        <a class="nav-link" runat="server" href="HTML/index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Products</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="HTML/appliances.html">Appliances</a>
+                            <a class="dropdown-item" href="HTML/cabinets.html">Cabinets</a>
+                            <a class="dropdown-item" href="HTML/lighting.html">Lighting</a>
+                            <a class="dropdown-item" href="HTML/plumbing.html">Plumbing</a>
+                            <a class="dropdown-item" href="HTML/countertops.html">Countertops</a>
+                            <a class="dropdown-item" href="HTML/flooring.html">Flooring</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="HTML/services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" runat="server" href="HTML/locations.html">Locations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" runat="server" href="HTML/aboutUs.html">About us</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
+
+        <div class="body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>            
+        </div>
+
+
+    <footer class="footer bg-dark">
+            <div class="footer text-white py-5 mt-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-4">
+                            <img class="img-fluid" src="/Images/nkba.jpg" />
+                        </div>
+
+                        <div class="col-4">
+                            <h4>Resources</h4>
+                            <a href="HTML/faqs.html">FAQs</a><br />
+                            <a href="HTML/locations.html">Contacts</a><br />
+                            <a href="HTML/services.html">Fees</a><br />
+                            <a href="HTML/manufacturers.html">Manufacturers</a><br />
+                            <a href="HTML/login.html">Employee Resources</a>
+                        </div>
+                        <div class="col-4">
+                            <h4>Headquarters</h4>
+                            <p>
+                                101 Sedalia Dr<br />
+                                Pheonix, AZ<br />
+                                85001<br />
+                                <strong>Phone:</strong> 123-456-7890<br />
+                                <strong>Fax:</strong> 123-456-7890
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>        
+    </form>
+</body>
+</html>
